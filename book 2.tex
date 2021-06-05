@@ -82,6 +82,16 @@
 \newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
 \newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
 \newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
 \usepackage{graphicx}
 \makeatletter
 \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
@@ -98,24 +108,15 @@
 \setlength{\emergencystretch}{3em} % prevent overfull lines
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
-\setcounter{secnumdepth}{5}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
 \usepackage{booktabs}
 \usepackage{siunitx}
 \usepackage{amssymb,amsmath}
-\usepackage[french]{babel}
+\usepackage{fixltx2e}
+\usepackage[OT1]{fontenc}
+\usepackage[utf8]{inputenc}
 \usepackage{eurosym}
-\newtheorem{definition}{Définition}
-\newtheorem{theorem}{A retenir}
 
-
-
-\renewcommand\thesection       {\Roman{section}.}
-\renewcommand\thesubsection    {\thesection \arabic{subsection}.}
-\renewcommand\thesubsubsection {\thesubsection \alph{subsubsection})}
-\renewcommand\theparagraph     {\thesubsubsection.\arabic{paragraph}}
-\renewcommand\thesubparagraph  {\theparagraph.\arabic{subparagraph}}
-\setcounter{secnumdepth}{4}
-\def\tightlist{}
 \newcommand{\fiche}[3]{
 	\begin{center}
 		\textsc{#1}\\
@@ -123,17 +124,36 @@
 	\end{center}
 	\hrule\vspace{\baselineskip}
 }
-
 \newcounter{numeroexo}
 \newcommand{\exo}{\par\noindent\stepcounter{numeroexo}
 	\hspace{-.25cm}\fbox{\textbf{Exercice \arabic{numeroexo}}}\quad}
 \ifluatex
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newenvironment{CSLReferences}[2] % #1 hanging-ident, #2 entry spacing
+ {% don't indent paragraphs
+  \setlength{\parindent}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1 \everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces\fi
+  % set entry spacing
+  \ifnum #2 > 0
+  \setlength{\parskip}{#2\baselineskip}
+  \fi
+ }%
+ {}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{#1\hfill\break}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}\break}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
 
 \title{A Minimal Book Example}
 \author{Yihui Xie}
-\date{2021-06-05}
+\date{2021-06-04}
 
 \begin{document}
 \frontmatter
@@ -151,23 +171,12 @@ The \textbf{bookdown} package can be installed from CRAN or Github:
 
 \exo
 
-\hypertarget{sous-section}{%
-\section{sous section}\label{sous-section}}
+Autre bloc
 
-\hypertarget{sou-sous-sedctpo}{%
-\subsection{sou sous sedctpo,}\label{sou-sous-sedctpo}}
+\BeginKnitrBlock{example}
 
-emzfe \BeginKnitrBlock{theorem}
-\protect\hypertarget{thm:unnamed-chunk-1}{}{(\#thm:unnamed-chunk-1)
-}Here is my theorem. \EndKnitrBlock{theorem}
-
-\hypertarget{eflzef-f}{%
-\chapter{eflzef f}\label{eflzef-f}}
-
-\BeginKnitrBlock{definition}
-
-\protect\hypertarget{def:unnamed-chunk-2}{}{(\#def:unnamed-chunk-2) }Un
-court circuit est un circuit court.. \EndKnitrBlock{definition}
+\protect\hypertarget{exm:unnamed-chunk-1}{}{(\#exm:unnamed-chunk-1)
+}J'aim bien les exemples \EndKnitrBlock{example}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -184,67 +193,84 @@ To compile this example to PDF, you need XeLaTeX. You are recommended to
 install TinyTeX (which includes XeLaTeX):
 \url{https://yihui.org/tinytex/}.
 
-\hypertarget{duxe9monstration}{%
-\chapter*{Démonstration}\label{duxe9monstration}}
-\addcontentsline{toc}{chapter}{Démonstration}
+\hypertarget{intro}{%
+\chapter{Introduction}\label{intro}}
 
-\hypertarget{grand-titre}{%
-\section{Grand titre}\label{grand-titre}}
-
-\hypertarget{sous-titre}{%
-\subsection{Sous titre}\label{sous-titre}}
-
-\hypertarget{sousous-titre}{%
-\subsubsection{Sousous titre}\label{sousous-titre}}
-
-Et voici une équation inline \(E=mc^2\). Affichage d'un résultat avec SI
-units: \(\SI{3.2e12}{\kilo\gram\per\second}\). Ne fonctionne pas en
-HTML..
-
-Equation en ligne \[2x  = 3 -\sqrt{2}\] \begin{align}
-x &= 2x +5 \\
--x &= 5 \\
-x &= -5 
-\end{align}
-
-Les vecteurs colonnes miam:
-\[\overrightarrow{v(t)} = \begin{pmatrix}v_x(t) &=& x'(t)\\
-v_y(t) &=& y'(t)
-\end{pmatrix}\]
-
-Insérer une image en utilisant le code markdown
-\texttt{!{[}image{]}(figures/fig.png)}
-
-\begin{figure}
-\centering
-\includegraphics{figures/fig.png}
-\caption{image}
-\end{figure}
-
-En modifiant la largeur: 200px \includegraphics{figures/fig.png}\{
-width: 200px; \}
-
-En utilisant knitr:
-
-\includegraphics[width=0.5\linewidth]{figures/fig}
+You can label chapter and section titles using \texttt{\{\#label\}}
+after them, e.g., we can reference Chapter @ref(intro). If you do not
+manually label them, there will be automatic labels anyway, e.g.,
+Chapter @ref(methods).
 
 Figures and tables with captions will be placed in \texttt{figure} and
-\texttt{table} environments, respectively
+\texttt{table} environments, respectively.
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{knitr}\SpecialCharTok{::}\FunctionTok{include\_graphics}\NormalTok{(}\StringTok{"figures/fig.png"}\NormalTok{)}
+\FunctionTok{par}\NormalTok{(}\AttributeTok{mar =} \FunctionTok{c}\NormalTok{(}\DecValTok{4}\NormalTok{, }\DecValTok{4}\NormalTok{, .}\DecValTok{1}\NormalTok{, .}\DecValTok{1}\NormalTok{))}
+\FunctionTok{plot}\NormalTok{(pressure, }\AttributeTok{type =} \StringTok{\textquotesingle{}b\textquotesingle{}}\NormalTok{, }\AttributeTok{pch =} \DecValTok{19}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.8\linewidth]{figures/fig} 
+{\centering \includegraphics[width=0.8\linewidth]{book_files/figure-latex/nice-fig-1} 
 
 }
 
 \caption{Here is a nice figure!}\label{fig:nice-fig}
 \end{figure}
+
+Reference a figure by its code chunk label with the \texttt{fig:}
+prefix, e.g., see Figure @ref(fig:nice-fig). Similarly, you can
+reference tables generated from \texttt{knitr::kable()}, e.g., see Table
+@ref(tab:nice-tab).
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{knitr}\SpecialCharTok{::}\FunctionTok{kable}\NormalTok{(}
+  \FunctionTok{head}\NormalTok{(iris, }\DecValTok{20}\NormalTok{), }\AttributeTok{caption =} \StringTok{\textquotesingle{}Here is a nice table!\textquotesingle{}}\NormalTok{,}
+  \AttributeTok{booktabs =} \ConstantTok{TRUE}
+\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{longtable}[]{@{}rrrrl@{}}
+\caption{Here is a nice table!}\tabularnewline
+\toprule
+Sepal.Length & Sepal.Width & Petal.Length & Petal.Width & Species \\
+\midrule
+\endfirsthead
+\toprule
+Sepal.Length & Sepal.Width & Petal.Length & Petal.Width & Species \\
+\midrule
+\endhead
+5.1 & 3.5 & 1.4 & 0.2 & setosa \\
+4.9 & 3.0 & 1.4 & 0.2 & setosa \\
+4.7 & 3.2 & 1.3 & 0.2 & setosa \\
+4.6 & 3.1 & 1.5 & 0.2 & setosa \\
+5.0 & 3.6 & 1.4 & 0.2 & setosa \\
+5.4 & 3.9 & 1.7 & 0.4 & setosa \\
+4.6 & 3.4 & 1.4 & 0.3 & setosa \\
+5.0 & 3.4 & 1.5 & 0.2 & setosa \\
+4.4 & 2.9 & 1.4 & 0.2 & setosa \\
+4.9 & 3.1 & 1.5 & 0.1 & setosa \\
+5.4 & 3.7 & 1.5 & 0.2 & setosa \\
+4.8 & 3.4 & 1.6 & 0.2 & setosa \\
+4.8 & 3.0 & 1.4 & 0.1 & setosa \\
+4.3 & 3.0 & 1.1 & 0.1 & setosa \\
+5.8 & 4.0 & 1.2 & 0.2 & setosa \\
+5.7 & 4.4 & 1.5 & 0.4 & setosa \\
+5.4 & 3.9 & 1.3 & 0.4 & setosa \\
+5.1 & 3.5 & 1.4 & 0.3 & setosa \\
+5.7 & 3.8 & 1.7 & 0.3 & setosa \\
+5.1 & 3.8 & 1.5 & 0.3 & setosa \\
+\bottomrule
+\end{longtable}
+
+You can write citations, too. For example, we are using the
+\textbf{bookdown} package (\protect\hyperlink{ref-R-bookdown}{Xie 2021})
+in this sample book, which was built on top of R Markdown and
+\textbf{knitr} (\protect\hyperlink{ref-xie2015}{Xie 2015}).
 
 \hypertarget{literature}{%
 \chapter{Literature}\label{literature}}
@@ -271,6 +297,18 @@ Some \emph{significant} applications are demonstrated in this chapter.
 \chapter{Final Words}\label{final-words}}
 
 We have finished a nice book.
+
+\hypertarget{refs}{}
+\begin{CSLReferences}{1}{0}
+\leavevmode\hypertarget{ref-xie2015}{}%
+Xie, Yihui. 2015. \emph{Dynamic Documents with {R} and Knitr}. 2nd ed.
+Boca Raton, Florida: Chapman; Hall/CRC. \url{http://yihui.org/knitr/}.
+
+\leavevmode\hypertarget{ref-R-bookdown}{}%
+---------. 2021. \emph{Bookdown: Authoring Books and Technical Documents
+with r Markdown}. \url{https://CRAN.R-project.org/package=bookdown}.
+
+\end{CSLReferences}
 
 \backmatter
 \end{document}
