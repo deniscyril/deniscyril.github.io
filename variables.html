@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapitre 3 Variables | A Minimal Book Example</title>
+  <meta name="description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapitre 3 Variables | A Minimal Book Example" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapitre 3 Variables | A Minimal Book Example" />
+  
+  <meta name="twitter:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  
+
+<meta name="author" content="Yihui Xie" />
+
+
+<meta name="date" content="2021-06-09" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="eflzef-f.html"/>
+<link rel="next" href="literature.html"/>
+<script src="libs/header-attrs-2.8/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Minimal Book Example</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Prerequisites</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#sous-section"><i class="fa fa-check"></i><b>1.1</b> sous section</a>
+<ul>
+<li class="chapter" data-level="1.1.1" data-path="index.html"><a href="index.html#sou-sous-sedctpo"><i class="fa fa-check"></i><b>1.1.1</b> sou sous sedctpo,</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="eflzef-f.html"><a href="eflzef-f.html"><i class="fa fa-check"></i><b>2</b> eflzef f</a></li>
+<li class="chapter" data-level="3" data-path="variables.html"><a href="variables.html"><i class="fa fa-check"></i><b>3</b> Variables</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="variables.html"><a href="variables.html#les-types-de-variables"><i class="fa fa-check"></i><b>3.1</b> Les Types de variables</a></li>
+<li class="chapter" data-level="3.2" data-path="variables.html"><a href="variables.html#activité-1-float-et-int"><i class="fa fa-check"></i><b>3.2</b> Activité 1: float et int</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="variables.html"><a href="variables.html#activité-2-divisions-et-modulo"><i class="fa fa-check"></i><b>3.2.1</b> Activité 2: Divisions et modulo</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="variables.html"><a href="variables.html#activité-3-chaînes"><i class="fa fa-check"></i><b>3.3</b> Activité 3: Chaînes</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="variables.html"><a href="variables.html#activité-4-affichage-de-chaines"><i class="fa fa-check"></i><b>3.3.1</b> Activité 4: Affichage de chaines</a></li>
+<li class="chapter" data-level="3.3.2" data-path="variables.html"><a href="variables.html#corrigés-des-activités"><i class="fa fa-check"></i><b>3.3.2</b> Corrigés des Activités</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="literature.html"><a href="literature.html"><i class="fa fa-check"></i><b>4</b> Literature</a></li>
+<li class="chapter" data-level="5" data-path="methods.html"><a href="methods.html"><i class="fa fa-check"></i><b>5</b> Methods</a></li>
+<li class="chapter" data-level="6" data-path="applications.html"><a href="applications.html"><i class="fa fa-check"></i><b>6</b> Applications</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="applications.html"><a href="applications.html#example-one"><i class="fa fa-check"></i><b>6.1</b> Example one</a></li>
+<li class="chapter" data-level="6.2" data-path="applications.html"><a href="applications.html#example-two"><i class="fa fa-check"></i><b>6.2</b> Example two</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="final-words.html"><a href="final-words.html"><i class="fa fa-check"></i><b>7</b> Final Words</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">A Minimal Book Example</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="variables" class="section level1" number="3">
+<h1><span class="header-section-number">Chapitre 3</span> Variables</h1>
+<div id="les-types-de-variables" class="section level2" number="3.1">
+<h2><span class="header-section-number">3.1</span> Les Types de variables</h2>
+</div>
+<div id="activité-1-float-et-int" class="section level2" number="3.2">
+<h2><span class="header-section-number">3.2</span> Activité 1: float et int</h2>
+<p>Dans une console Python, saisie les entrées suivantes:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="variables.html#cb2-1" aria-hidden="true" tabindex="-1"></a>nombre_entier <span class="op">=</span> <span class="dv">3</span> </span>
+<span id="cb2-2"><a href="variables.html#cb2-2" aria-hidden="true" tabindex="-1"></a>nombre_flottant <span class="op">=</span> <span class="fl">3.14</span></span>
+<span id="cb2-3"><a href="variables.html#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(nombre_entier)</span></code></pre></div>
+<pre><code>## &lt;class &#39;int&#39;&gt;</code></pre>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="variables.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(nombre_flottant)</span></code></pre></div>
+<pre><code>## &lt;class &#39;float&#39;&gt;</code></pre>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="variables.html#cb6-1" aria-hidden="true" tabindex="-1"></a>double <span class="op">=</span> nombre_entier <span class="op">*</span> <span class="dv">2</span></span>
+<span id="cb6-2"><a href="variables.html#cb6-2" aria-hidden="true" tabindex="-1"></a>somme <span class="op">=</span> nombre_entier <span class="op">+</span> nombre_flottant</span>
+<span id="cb6-3"><a href="variables.html#cb6-3" aria-hidden="true" tabindex="-1"></a>double</span></code></pre></div>
+<pre><code>## 6</code></pre>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="variables.html#cb8-1" aria-hidden="true" tabindex="-1"></a>somme</span></code></pre></div>
+<pre><code>## 6.140000000000001</code></pre>
+<ol style="list-style-type: decimal">
+<li>Quel est le type de la variable <code>double</code>. Vérifie en utilisant l’instruction <code>type(double)</code>.</li>
+<li>Quel est le type de la variable <code>somme</code>.</li>
+<li>Quelle est l’erreur commise par Python lors du calcul de la somme ? Propose une explication.</li>
+</ol>
+<div style="page-break-after: always;"></div>
+<div id="activité-2-divisions-et-modulo" class="section level3" number="3.2.1">
+<h3><span class="header-section-number">3.2.1</span> Activité 2: Divisions et modulo</h3>
+<p>Il existe deux opérations divisions en Python:</p>
+<ol style="list-style-type: decimal">
+<li><p>La division entière <code>//</code></p></li>
+<li><p>La division habituelle: <code>/</code></p></li>
+<li><p>Saisie dans la console Python les calculs suivants:</p></li>
+</ol>
+<div class="sourceCode" id="cb10"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb10-1"><a href="variables.html#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="dv">16</span> <span class="op">/</span> <span class="dv">5</span></span></code></pre></div>
+<pre><code>## 3.2</code></pre>
+<div class="sourceCode" id="cb12"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb12-1"><a href="variables.html#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="dv">16</span> <span class="op">//</span> <span class="dv">5</span></span></code></pre></div>
+<pre><code>## 3</code></pre>
+<div class="sourceCode" id="cb14"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb14-1"><a href="variables.html#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="dv">16</span> <span class="op">%</span> <span class="dv">5</span></span></code></pre></div>
+<pre><code>## 1</code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li>Réécrire le code précédent mais en utilisant des variables pour stocker 16 et 5 ainsi que les résultats des calculs.</li>
+<li>Quelle différence y a-t-il entre les deux divisions ?</li>
+<li>Quelle opération permet d’obtenir le quotient entier de la division ?</li>
+</ol>
+<p>L’opération <code>%</code> s’appelle modulo, elle retourne le reste de la division. Puisque <span class="math inline">\(16= 3\times 5 + 1\)</span> on a <code>16//5 = 3</code> et <code>16%5 = 1</code>.</p>
+<ol start="4" style="list-style-type: decimal">
+<li>Vérifie dans la console que le modulo d’un entier pair vaut toujours 0 et que le modulo d’un entier impaire vaut 1. C’est un moyen de tester rapidement si un entier est pair ou non.</li>
+<li>Un sac content 257 popcorns, calcule avec la console Python comment répartir les popcorns entre 3 personnes. Les popcorns restant seront pour le chien. Combien Médor reçoit-il de popcorn ?</li>
+</ol>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+<div id="activité-3-chaînes" class="section level2" number="3.3">
+<h2><span class="header-section-number">3.3</span> Activité 3: Chaînes</h2>
+<p>Objectifs: type chaine, concaténation, conversion de type, affichage</p>
+<p>Les chaînes sont un type de variable pouvant contenir: un caractère, un mot, un texte.</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb16-1"><a href="variables.html#cb16-1" aria-hidden="true" tabindex="-1"></a>ma_chaine <span class="op">=</span> <span class="st">&quot;Hello world !&quot;</span></span></code></pre></div>
+<ol style="list-style-type: decimal">
+<li>Vérifie avec l’instruction <code>type</code> le type de la variable <code>ma_chaine</code>.</li>
+</ol>
+<div class="sourceCode" id="cb17"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb17-1"><a href="variables.html#cb17-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="st">&quot;Je&quot;</span></span>
+<span id="cb17-2"><a href="variables.html#cb17-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="st">&quot; vois&quot;</span></span>
+<span id="cb17-3"><a href="variables.html#cb17-3" aria-hidden="true" tabindex="-1"></a>nb <span class="op">=</span> <span class="dv">3</span></span>
+<span id="cb17-4"><a href="variables.html#cb17-4" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> <span class="st">&quot; pommes dans cet arbre.&quot;</span></span></code></pre></div>
+<ol start="2" style="list-style-type: decimal">
+<li>Ajoute les chaînes a et b. Quel résultat obtiens-tu ? On dit que les chaînes a et b ont été <code>concaténées</code>.</li>
+<li>Stocke le résultat de <code>a+b</code> dans une variable <code>chaine_1</code>.</li>
+<li>Essaye d’ajouter <code>chaine_1</code> à <code>nb</code>. Relève le message d’erreur qui apparaît. Explique cette erreur.</li>
+</ol>
+<p>L’opération <code>+</code> n’est pas la même entre 2 chaînes et 2 nombres même si on utilise le même symbole + dans le code.</p>
+<ol start="5" style="list-style-type: decimal">
+<li>Saisie le code suivant:</li>
+</ol>
+<div class="sourceCode" id="cb18"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb18-1"><a href="variables.html#cb18-1" aria-hidden="true" tabindex="-1"></a>chaine_nb <span class="op">=</span> <span class="bu">str</span>(nb)</span>
+<span id="cb18-2"><a href="variables.html#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(chaine_nb)</span></code></pre></div>
+<p>Explique à quoi sert <code>str()</code></p>
+<ol start="6" style="list-style-type: decimal">
+<li>Complète le programme pour que <code>message</code> contienne la chaîne: “Je vois 3 pommes dans cet arbre”</li>
+</ol>
+<div class="sourceCode" id="cb19"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb19-1"><a href="variables.html#cb19-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="st">&quot;Je vois &quot;</span></span>
+<span id="cb19-2"><a href="variables.html#cb19-2" aria-hidden="true" tabindex="-1"></a>nb <span class="op">=</span> <span class="dv">3</span></span>
+<span id="cb19-3"><a href="variables.html#cb19-3" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> <span class="st">&quot; pommes dans cet arbre&quot;</span></span>
+<span id="cb19-4"><a href="variables.html#cb19-4" aria-hidden="true" tabindex="-1"></a>nombre <span class="op">=</span> ...</span>
+<span id="cb19-5"><a href="variables.html#cb19-5" aria-hidden="true" tabindex="-1"></a>message <span class="op">=</span> a <span class="op">+</span> nombre <span class="op">+</span> c</span></code></pre></div>
+<div style="page-break-after: always;"></div>
+<div id="activité-4-affichage-de-chaines" class="section level3" number="3.3.1">
+<h3><span class="header-section-number">3.3.1</span> Activité 4: Affichage de chaines</h3>
+<p><strong>Découverte</strong></p>
+<p>Jusqu’ici pour connaître le contenu d’une variable, on a tappé son nom dans la console puis appuyer sur entrée. On peut aussi utiliser une instruction pour afficher dans la console le contenu d’une variable ou une chaine de caractère.</p>
+<ol style="list-style-type: decimal">
+<li>Saisie dans la console python le code suivant:</li>
+</ol>
+<div class="sourceCode" id="cb20"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb20-1"><a href="variables.html#cb20-1" aria-hidden="true" tabindex="-1"></a>c1 <span class="op">=</span> <span class="st">&quot;bonjour&quot;</span></span>
+<span id="cb20-2"><a href="variables.html#cb20-2" aria-hidden="true" tabindex="-1"></a>c2 <span class="op">=</span> <span class="st">&#39; le monde !&#39;</span></span>
+<span id="cb20-3"><a href="variables.html#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;hello&#39;</span>)</span>
+<span id="cb20-4"><a href="variables.html#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(c1 <span class="op">+</span> c2)</span></code></pre></div>
+<ol start="2" style="list-style-type: decimal">
+<li>Détaille ligne à ligne l’exécution de ce script.</li>
+<li>Modifie la dernière ligne du script afin d’affiche: <code>bonjour bonjour le monde !</code></li>
+</ol>
+<p><strong>fstrings</strong> sont des chaînes de caractère plus complexes mais très utiles pour afficher des messages contenant des informations variables.</p>
+<ol style="list-style-type: decimal">
+<li>Saisie dans la console python le code suivant:</li>
+</ol>
+<div class="sourceCode" id="cb21"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb21-1"><a href="variables.html#cb21-1" aria-hidden="true" tabindex="-1"></a>prof <span class="op">=</span> <span class="st">&quot;M.DENIS&quot;</span></span>
+<span id="cb21-2"><a href="variables.html#cb21-2" aria-hidden="true" tabindex="-1"></a>matiere <span class="op">=</span> <span class="st">&quot;NSI&quot;</span></span>
+<span id="cb21-3"><a href="variables.html#cb21-3" aria-hidden="true" tabindex="-1"></a>nb_eleve <span class="op">=</span> <span class="dv">19</span></span>
+<span id="cb21-4"><a href="variables.html#cb21-4" aria-hidden="true" tabindex="-1"></a>msg <span class="op">=</span> <span class="ss">f&quot;</span><span class="sc">{</span>prof<span class="sc">}</span><span class="ss"> enseigne la </span><span class="sc">{</span>matiere<span class="sc">}</span><span class="ss"> a </span><span class="sc">{</span>nb_eleve<span class="sc">}</span><span class="ss"> élèves de première.&quot;</span></span>
+<span id="cb21-5"><a href="variables.html#cb21-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(msg)</span></code></pre></div>
+<ol start="2" style="list-style-type: decimal">
+<li>Détaille ligne à ligne l’exécution de ce script.</li>
+<li>Modifie ce code pour afficher M.MARTIN enseigne la Mathématique a 35 élèves de première.</li>
+<li>Ajoute une nouvelle variable <code>niveau</code> qui contient la chaine “terminale” afin d’afficher: <code>M.MARTIN enseigne la Mathématique a 35 élèves de terminale.</code></li>
+</ol>
+<p><strong>Mise en forme de l’affichage des nombres</strong></p>
+<p>Les fstrings permettent de mettre en forme l’affichage des nombres. Voyons la syntaxe:</p>
+<ul>
+<li><code>f ' &lt;texte&gt; { &lt;expression/variable&gt; : &lt;format&gt; } &lt;texte&gt; ... '</code></li>
+<li>le format s’écrit selon: <code>[alignement][signe][largeur][groupage][.précision][type]</code></li>
+</ul>
+<ol style="list-style-type: decimal">
+<li>Saisie le code suivant:</li>
+</ol>
+<div class="sourceCode" id="cb22"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb22-1"><a href="variables.html#cb22-1" aria-hidden="true" tabindex="-1"></a>n1 <span class="op">=</span> <span class="fl">3.1415926</span></span>
+<span id="cb22-2"><a href="variables.html#cb22-2" aria-hidden="true" tabindex="-1"></a>n2 <span class="op">=</span> <span class="dv">6358</span></span>
+<span id="cb22-3"><a href="variables.html#cb22-3" aria-hidden="true" tabindex="-1"></a>n3 <span class="op">=</span> <span class="op">-</span> <span class="fl">123.0034</span></span>
+<span id="cb22-4"><a href="variables.html#cb22-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f&#39;nombre 1 </span><span class="sc">{n1</span> <span class="sc">:</span> <span class="op">&lt;</span><span class="dv">10</span><span class="sc">_</span><span class="fl">.2</span><span class="sc">f}</span><span class="ss"> nombre 2 </span><span class="sc">{n2</span> <span class="sc">:</span> <span class="op">&lt;</span><span class="dv">10</span><span class="sc">_</span><span class="fl">.3</span><span class="sc">e}</span><span class="ss">&#39;</span>)</span></code></pre></div>
+<ol start="2" style="list-style-type: decimal">
+<li>En utilisant la documentation ci-dessous, détaille et justifie l’affichage du programme ci-dessus.</li>
+</ol>
+<p><strong>Documentation</strong></p>
+<ul>
+<li>alignement: détermine ou le nombre est aligné dans sa zone
+<ul>
+<li>“&gt;” aligne à droite</li>
+<li>“&lt;” aligne à gauche</li>
+<li>“^” centré</li>
+<li>“=” aligne le signe à gauche et le nombre à droite</li>
+</ul></li>
+<li>signe: détermine l’affichage du signe
+<ul>
+<li>“+” indique que le signe + doit être affiché ainsi que le -</li>
+<li>“-“ indique que le signe - doit être affiché (par defaut)</li>
+<li>“ “ n’affiche pas le + mais insére un espace à la place</li>
+</ul></li>
+<li>largeur : détermine la place qui doit être réservée pour l’affichage du nombre</li>
+<li>groupage: détermine le symbole de séparation tous les 3 chiffres
+<ul>
+<li>“_”</li>
+<li>“,”</li>
+</ul></li>
+<li>précision : détermine le nombre de chiffres après la virgule</li>
+<li>type: détermine le mode d’affichage
+<ul>
+<li>“e” ou “E” notation scientifique</li>
+<li>“f” ou “F” affichage classique</li>
+</ul></li>
+</ul>
+<ol start="3" style="list-style-type: decimal">
+<li><p>Modifie le code précédent pour afficher dans un espace de 10 caractères, aligné à gauche, n3 en écriture scientifique avec 3 chiffres derrière la virgule.</p></li>
+<li><p>On veut calculer le poids d’un humain de <code>m=50</code> kg sur la Terre et sur la Lune. <span class="math display">\[F_{Terre}=G\times \frac{m\times M_{Terre}}{r^2}\]</span>. Complète le programme suivant pour qu’il</p></li>
+</ol>
+<div class="sourceCode" id="cb23"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb23-1"><a href="variables.html#cb23-1" aria-hidden="true" tabindex="-1"></a>G <span class="op">=</span> <span class="fl">6.67e-11</span></span>
+<span id="cb23-2"><a href="variables.html#cb23-2" aria-hidden="true" tabindex="-1"></a>M_terre <span class="op">=</span> <span class="fl">5.98e24</span></span>
+<span id="cb23-3"><a href="variables.html#cb23-3" aria-hidden="true" tabindex="-1"></a>M_lune <span class="op">=</span> <span class="fl">7.6e22</span></span>
+<span id="cb23-4"><a href="variables.html#cb23-4" aria-hidden="true" tabindex="-1"></a>m <span class="op">=</span> <span class="dv">50</span></span>
+<span id="cb23-5"><a href="variables.html#cb23-5" aria-hidden="true" tabindex="-1"></a>r_T <span class="op">=</span> <span class="fl">6380e3</span> <span class="co">#rayon de la Terre </span></span>
+<span id="cb23-6"><a href="variables.html#cb23-6" aria-hidden="true" tabindex="-1"></a>r_L <span class="op">=</span> <span class="fl">1737e3</span> <span class="co">#rayon de la Lune </span></span>
+<span id="cb23-7"><a href="variables.html#cb23-7" aria-hidden="true" tabindex="-1"></a>F_T <span class="op">=</span> G<span class="op">*</span>m<span class="op">*</span>M_terre<span class="op">/</span>r_T<span class="op">**</span><span class="dv">2</span> <span class="co">#Calcul du poids sur Terre</span></span>
+<span id="cb23-8"><a href="variables.html#cb23-8" aria-hidden="true" tabindex="-1"></a>F_L <span class="op">=</span> .. à compléter ... </span>
+<span id="cb23-9"><a href="variables.html#cb23-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-10"><a href="variables.html#cb23-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f&#39;Le poids d un homme de </span><span class="sc">{</span> <span class="sc">à</span> compl<span class="sc">é</span>ter<span class="sc">}</span><span class="ss"> kg vaut sur la Terre </span><span class="sc">{</span>F_T <span class="sc">:</span> <span class="op">&lt;</span><span class="fl">10.</span><span class="sc">..</span>compl<span class="sc">é</span>ter<span class="sc">...}</span><span class="ss"> N.&#39;</span>)</span>
+<span id="cb23-11"><a href="variables.html#cb23-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(...Compléter...)</span></code></pre></div>
+</div>
+<div id="corrigés-des-activités" class="section level3" number="3.3.2">
+<h3><span class="header-section-number">3.3.2</span> Corrigés des Activités</h3>
+<div id="activité-1-corrigé" class="section level4" number="3.3.2.1">
+<h4><span class="header-section-number">3.3.2.1</span> Activité 1 corrigé</h4>
+<ol style="list-style-type: decimal">
+<li>double est une variable de type flottant: python renvoie <code>float</code> après exécution de <code>type(double)</code> dans la console.</li>
+<li>Lorsque l’on addition un float avec un int le résultat doit pouvoir contenir la partir décimal du float. C’est pourquoi somme est du type float.</li>
+<li>Python affiche que 6 + 3.14 = 6.140000000000001, il commet une erreur de 0.000000000000001. C’est peu mais c’est une erreur qui risque de se cumuler avec d’autres par la suite. Seul les nombres entiers sont exacts en python.</li>
+</ol>
+<div style="page-break-after: always;"></div>
+</div>
+<div id="activité-2-divisions-et-modulo-correction" class="section level4" number="3.3.2.2">
+<h4><span class="header-section-number">3.3.2.2</span> Activité 2: Divisions et modulo correction</h4>
+<div class="sourceCode" id="cb24"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb24-1"><a href="variables.html#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="dv">16</span> <span class="op">/</span> <span class="dv">5</span></span></code></pre></div>
+<pre><code>## 3.2</code></pre>
+<div class="sourceCode" id="cb26"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb26-1"><a href="variables.html#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="dv">16</span> <span class="op">//</span> <span class="dv">5</span></span></code></pre></div>
+<pre><code>## 3</code></pre>
+<div class="sourceCode" id="cb28"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb28-1"><a href="variables.html#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="dv">16</span> <span class="op">%</span> <span class="dv">5</span></span></code></pre></div>
+<pre><code>## 1</code></pre>
+<div class="sourceCode" id="cb30"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb30-1"><a href="variables.html#cb30-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">16</span></span>
+<span id="cb30-2"><a href="variables.html#cb30-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb30-3"><a href="variables.html#cb30-3" aria-hidden="true" tabindex="-1"></a>quotient <span class="op">=</span> a <span class="op">/</span> b</span>
+<span id="cb30-4"><a href="variables.html#cb30-4" aria-hidden="true" tabindex="-1"></a>quotient_entier <span class="op">=</span> a <span class="op">//</span> b</span>
+<span id="cb30-5"><a href="variables.html#cb30-5" aria-hidden="true" tabindex="-1"></a>reste <span class="op">=</span> a <span class="op">%</span> b</span></code></pre></div>
+<ol start="2" style="list-style-type: decimal">
+<li><code>/</code> calcul le quotient décimal</li>
+<li><code>//</code> renvoie la valeur entière du quotient.</li>
+<li></li>
+</ol>
+<div class="sourceCode" id="cb31"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb31-1"><a href="variables.html#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co"># NB de popcorns pour chaque personne</span></span>
+<span id="cb31-2"><a href="variables.html#cb31-2" aria-hidden="true" tabindex="-1"></a>popcorns <span class="op">=</span> <span class="dv">257</span></span>
+<span id="cb31-3"><a href="variables.html#cb31-3" aria-hidden="true" tabindex="-1"></a>nb_personnes <span class="op">=</span> <span class="dv">3</span></span>
+<span id="cb31-4"><a href="variables.html#cb31-4" aria-hidden="true" tabindex="-1"></a>popcorns <span class="op">//</span> nb_personnes</span>
+<span id="cb31-5"><a href="variables.html#cb31-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Pour Médor</span></span></code></pre></div>
+<pre><code>## 85</code></pre>
+<div class="sourceCode" id="cb33"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb33-1"><a href="variables.html#cb33-1" aria-hidden="true" tabindex="-1"></a>popcorns <span class="op">%</span> nb_personnes</span></code></pre></div>
+<pre><code>## 2</code></pre>
+<div style="page-break-after: always;"></div>
+</div>
+<div id="activité-3-chaînes-correction" class="section level4" number="3.3.2.3">
+<h4><span class="header-section-number">3.3.2.3</span> Activité 3: Chaînes correction</h4>
+<p>Objectifs: type chaine, concaténation, conversion de type, affichage</p>
+<p>Les chaînes sont un type de variable pouvant contenir: un caractère, un mot, un texte.</p>
+<ol style="list-style-type: decimal">
+<li>Vérifie avec l’instruction <code>type</code> le type de la variable <code>ma_chaine</code>.</li>
+</ol>
+<div class="sourceCode" id="cb35"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb35-1"><a href="variables.html#cb35-1" aria-hidden="true" tabindex="-1"></a>ma_chaine <span class="op">=</span> <span class="st">&quot;Hello world !&quot;</span></span>
+<span id="cb35-2"><a href="variables.html#cb35-2" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(ma_chaine)</span></code></pre></div>
+<pre><code>## &lt;class &#39;str&#39;&gt;</code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li>Ajoute les chaînes a et b. Quel résultat obtiens-tu ? On dit que les chaînes a et b ont été <code>concaténées</code>.</li>
+</ol>
+<div class="sourceCode" id="cb37"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb37-1"><a href="variables.html#cb37-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="st">&quot;Je&quot;</span></span>
+<span id="cb37-2"><a href="variables.html#cb37-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="st">&quot; vois&quot;</span></span>
+<span id="cb37-3"><a href="variables.html#cb37-3" aria-hidden="true" tabindex="-1"></a>a<span class="op">+</span>b</span></code></pre></div>
+<pre><code>## &#39;Je vois&#39;</code></pre>
+<ol start="3" style="list-style-type: decimal">
+<li>Stocke le résultat de <code>a+b</code> dans une variable <code>chaine_1</code>.</li>
+</ol>
+<div class="sourceCode" id="cb39"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb39-1"><a href="variables.html#cb39-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="st">&quot;Je&quot;</span></span>
+<span id="cb39-2"><a href="variables.html#cb39-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="st">&quot; vois&quot;</span></span>
+<span id="cb39-3"><a href="variables.html#cb39-3" aria-hidden="true" tabindex="-1"></a>nb <span class="op">=</span> <span class="dv">3</span></span>
+<span id="cb39-4"><a href="variables.html#cb39-4" aria-hidden="true" tabindex="-1"></a>chaine_1 <span class="op">=</span> a <span class="op">+</span> b</span>
+<span id="cb39-5"><a href="variables.html#cb39-5" aria-hidden="true" tabindex="-1"></a>chaine_1</span></code></pre></div>
+<pre><code>## &#39;Je vois&#39;</code></pre>
+<ol start="4" style="list-style-type: decimal">
+<li>Essaye d’ajouter <code>chaine_1</code> à <code>nb</code>. Relève le message d’erreur qui apparaît. Explique cette erreur.</li>
+</ol>
+<div class="sourceCode" id="cb41"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb41-1"><a href="variables.html#cb41-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="st">&quot;Je&quot;</span></span>
+<span id="cb41-2"><a href="variables.html#cb41-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="st">&quot; vois&quot;</span></span>
+<span id="cb41-3"><a href="variables.html#cb41-3" aria-hidden="true" tabindex="-1"></a>nb <span class="op">=</span> <span class="dv">3</span></span>
+<span id="cb41-4"><a href="variables.html#cb41-4" aria-hidden="true" tabindex="-1"></a>chaine_1 <span class="op">=</span> a <span class="op">+</span> b</span>
+<span id="cb41-5"><a href="variables.html#cb41-5" aria-hidden="true" tabindex="-1"></a>chaine_1 <span class="op">+</span> nb</span></code></pre></div>
+<p><strong>Explication</strong> <code>chaine_1</code> et <code>nb</code> sont deux variables qui contiennent des informations de type différents. On ne peut additionner que des données de même type. On peut additionner deux entiers, un flottant avec un entier ou encore deux chaines mais pas une chaine et un entier.</p>
+<ol start="5" style="list-style-type: decimal">
+<li>Saisie le code suivant:</li>
+</ol>
+<div class="sourceCode" id="cb42"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb42-1"><a href="variables.html#cb42-1" aria-hidden="true" tabindex="-1"></a>chaine_nb <span class="op">=</span> <span class="bu">str</span>(nb)</span>
+<span id="cb42-2"><a href="variables.html#cb42-2" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(chaine_nb)</span></code></pre></div>
+<pre><code>## &lt;class &#39;str&#39;&gt;</code></pre>
+<p><code>str()</code> permet de convertir le nombre <code>nb</code> en une donnée de type chaine de caractère. La valeur 3 contenue dans nb est transformée en <strong>chaine de caractère</strong> “3.” Il est alors possible de concaténé “3” avec une autre chaine.</p>
+<ol start="6" style="list-style-type: decimal">
+<li>Complète le programme pour que <code>message</code> contienne la chaîne: “Je vois 3 pommes dans cet arbre”</li>
+</ol>
+<div class="sourceCode" id="cb44"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb44-1"><a href="variables.html#cb44-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="st">&quot;Je vois &quot;</span></span>
+<span id="cb44-2"><a href="variables.html#cb44-2" aria-hidden="true" tabindex="-1"></a>nb <span class="op">=</span> <span class="dv">3</span></span>
+<span id="cb44-3"><a href="variables.html#cb44-3" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> <span class="st">&quot; pommes dans cet arbre&quot;</span></span>
+<span id="cb44-4"><a href="variables.html#cb44-4" aria-hidden="true" tabindex="-1"></a>nombre <span class="op">=</span> <span class="bu">str</span>(nb)</span>
+<span id="cb44-5"><a href="variables.html#cb44-5" aria-hidden="true" tabindex="-1"></a>message <span class="op">=</span> a <span class="op">+</span> nombre <span class="op">+</span> c</span>
+<span id="cb44-6"><a href="variables.html#cb44-6" aria-hidden="true" tabindex="-1"></a>message</span></code></pre></div>
+<pre><code>## &#39;Je vois 3 pommes dans cet arbre&#39;</code></pre>
+
+</div>
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="eflzef-f.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="literature.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["book.pdf", "book.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

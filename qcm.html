@@ -1,0 +1,1746 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapitre 6 QCM | A Minimal Book Example</title>
+  <meta name="description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapitre 6 QCM | A Minimal Book Example" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapitre 6 QCM | A Minimal Book Example" />
+  
+  <meta name="twitter:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  
+
+<meta name="author" content="Yihui Xie" />
+
+
+<meta name="date" content="2021-06-10" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="references.html"/>
+
+<script src="libs/header-attrs-2.8/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Minimal Book Example</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="types-de-variables.html"><a href="types-de-variables.html"><i class="fa fa-check"></i><b>1</b> Types de Variables</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="types-de-variables.html"><a href="types-de-variables.html#activité-1-float-et-int"><i class="fa fa-check"></i><b>1.1</b> Activité 1: float et int</a></li>
+<li class="chapter" data-level="1.2" data-path="types-de-variables.html"><a href="types-de-variables.html#activité-2-divisions-et-modulo"><i class="fa fa-check"></i><b>1.2</b> Activité 2: Divisions et modulo</a></li>
+<li class="chapter" data-level="1.3" data-path="types-de-variables.html"><a href="types-de-variables.html#activité-3-chaînes"><i class="fa fa-check"></i><b>1.3</b> Activité 3: Chaînes</a></li>
+<li class="chapter" data-level="1.4" data-path="types-de-variables.html"><a href="types-de-variables.html#activité-4-affichage-de-chaines"><i class="fa fa-check"></i><b>1.4</b> Activité 4: Affichage de chaines</a></li>
+<li class="chapter" data-level="1.5" data-path="types-de-variables.html"><a href="types-de-variables.html#corrigés-des-activités"><i class="fa fa-check"></i><b>1.5</b> Corrigés des Activités</a>
+<ul>
+<li class="chapter" data-level="1.5.1" data-path="types-de-variables.html"><a href="types-de-variables.html#activité-1-corrigé"><i class="fa fa-check"></i><b>1.5.1</b> Activité 1 corrigé</a></li>
+<li class="chapter" data-level="1.5.2" data-path="types-de-variables.html"><a href="types-de-variables.html#activité-2-divisions-et-modulo-correction"><i class="fa fa-check"></i><b>1.5.2</b> Activité 2: Divisions et modulo correction</a></li>
+<li class="chapter" data-level="1.5.3" data-path="types-de-variables.html"><a href="types-de-variables.html#activité-3-chaînes-correction"><i class="fa fa-check"></i><b>1.5.3</b> Activité 3: Chaînes correction</a></li>
+<li class="chapter" data-level="1.5.4" data-path="types-de-variables.html"><a href="types-de-variables.html#activité-4-fstring-correction"><i class="fa fa-check"></i><b>1.5.4</b> Activité 4: fstring correction</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="structures-conditionnelles.html"><a href="structures-conditionnelles.html"><i class="fa fa-check"></i><b>2</b> Structures Conditionnelles</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="structures-conditionnelles.html"><a href="structures-conditionnelles.html#activité-1-expression-booléenne"><i class="fa fa-check"></i><b>2.1</b> Activité 1: Expression booléenne</a></li>
+<li class="chapter" data-level="2.2" data-path="structures-conditionnelles.html"><a href="structures-conditionnelles.html#activité-2-si-alors"><i class="fa fa-check"></i><b>2.2</b> Activité 2: Si … Alors</a></li>
+<li class="chapter" data-level="2.3" data-path="structures-conditionnelles.html"><a href="structures-conditionnelles.html#activité-3-if..-elif..else"><i class="fa fa-check"></i><b>2.3</b> Activité 3: if.. elif..else</a></li>
+<li class="chapter" data-level="2.4" data-path="structures-conditionnelles.html"><a href="structures-conditionnelles.html#activité-4"><i class="fa fa-check"></i><b>2.4</b> Activité 4:</a></li>
+<li class="chapter" data-level="2.5" data-path="structures-conditionnelles.html"><a href="structures-conditionnelles.html#corrigés-des-activités-1"><i class="fa fa-check"></i><b>2.5</b> Corrigés des activités</a>
+<ul>
+<li class="chapter" data-level="2.5.1" data-path="structures-conditionnelles.html"><a href="structures-conditionnelles.html#activité-1"><i class="fa fa-check"></i><b>2.5.1</b> Activité 1</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="fonctions.html"><a href="fonctions.html"><i class="fa fa-check"></i><b>3</b> Fonctions</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="fonctions.html"><a href="fonctions.html#activité-1-généralités"><i class="fa fa-check"></i><b>3.1</b> Activité 1: Généralités</a></li>
+<li class="chapter" data-level="3.2" data-path="fonctions.html"><a href="fonctions.html#activité-2-plusieurs-arguments"><i class="fa fa-check"></i><b>3.2</b> Activité 2: Plusieurs arguments</a></li>
+<li class="chapter" data-level="3.3" data-path="fonctions.html"><a href="fonctions.html#activité-3-astuces"><i class="fa fa-check"></i><b>3.3</b> Activité 3: Astuces</a></li>
+<li class="chapter" data-level="3.4" data-path="fonctions.html"><a href="fonctions.html#activité-4-modularité"><i class="fa fa-check"></i><b>3.4</b> Activité 4: Modularité</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="structures-itératives.html"><a href="structures-itératives.html"><i class="fa fa-check"></i><b>4</b> Structures Itératives</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="structures-itératives.html"><a href="structures-itératives.html#activité-1-while"><i class="fa fa-check"></i><b>4.1</b> Activité 1: While</a></li>
+<li class="chapter" data-level="4.2" data-path="structures-itératives.html"><a href="structures-itératives.html#activité-2-for"><i class="fa fa-check"></i><b>4.2</b> Activité 2: For</a></li>
+<li class="chapter" data-level="4.3" data-path="structures-itératives.html"><a href="structures-itératives.html#activité-3-boucles-imbriquées"><i class="fa fa-check"></i><b>4.3</b> Activité 3: Boucles imbriquées</a></li>
+<li class="chapter" data-level="4.4" data-path="structures-itératives.html"><a href="structures-itératives.html#activité-4-synthèse"><i class="fa fa-check"></i><b>4.4</b> Activité 4: Synthèse</a></li>
+<li class="chapter" data-level="4.5" data-path="structures-itératives.html"><a href="structures-itératives.html#corrections-des-activités"><i class="fa fa-check"></i><b>4.5</b> Corrections des activités</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="listes-et-tuples.html"><a href="listes-et-tuples.html"><i class="fa fa-check"></i><b>5</b> Listes et tuples</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="listes-et-tuples.html"><a href="listes-et-tuples.html#activité-1-découverte"><i class="fa fa-check"></i><b>5.1</b> Activité 1: Découverte</a></li>
+<li class="chapter" data-level="5.2" data-path="listes-et-tuples.html"><a href="listes-et-tuples.html#activité-2-parcours-dune-liste"><i class="fa fa-check"></i><b>5.2</b> Activité 2: Parcours d’une liste</a></li>
+<li class="chapter" data-level="5.3" data-path="listes-et-tuples.html"><a href="listes-et-tuples.html#activité-3-liste-par-compréhension"><i class="fa fa-check"></i><b>5.3</b> Activité 3: Liste par compréhension</a></li>
+<li class="chapter" data-level="5.4" data-path="listes-et-tuples.html"><a href="listes-et-tuples.html#activité-4-synthèse-1"><i class="fa fa-check"></i><b>5.4</b> Activité 4: Synthèse</a></li>
+<li class="chapter" data-level="5.5" data-path="listes-et-tuples.html"><a href="listes-et-tuples.html#corrections-des-activités-1"><i class="fa fa-check"></i><b>5.5</b> Corrections des activités</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="chapter" data-level="6" data-path="qcm.html"><a href="qcm.html"><i class="fa fa-check"></i><b>6</b> QCM</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="qcm.html"><a href="qcm.html#listes-et-tuples-1"><i class="fa fa-check"></i><b>6.1</b> Listes et tuples</a></li>
+<li class="chapter" data-level="6.2" data-path="qcm.html"><a href="qcm.html#dictionnaires"><i class="fa fa-check"></i><b>6.2</b> Dictionnaires</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">A Minimal Book Example</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="qcm" class="section level1" number="6">
+<h1><span class="header-section-number">Chapitre 6</span> QCM</h1>
+<div id="listes-et-tuples-1" class="section level2" number="6.1">
+<h2><span class="header-section-number">6.1</span> Listes et tuples</h2>
+<p>Q1 - On veut affecter à t la valeur [[0,1,2], [3,4,5], [6,7,8], [9,10,11], [12,13,14]]. Pour cela on utilise le code suivant. Par quoi doit-on remplacer les pointillés …… ?</p>
+<p>n = 5
+p = 3
+t = [ [ …… for j in range(p) ] for i in range(n) ]</p>
+<p>Réponses :</p>
+<p>A- i*j + j</p>
+<p>B- p*i + j</p>
+<p>C- p*j + i</p>
+<p>D- i*(j+1)</p>
+<p>Q2 - On considère le script suivant :</p>
+<p>t = [2, 8, 9, 2]
+t[2] = t[2] + 5</p>
+<p>Quelle est la valeur de t à la fin de son exécution ?</p>
+<p>Réponses :</p>
+<p>A- [2, 13, 9, 2]</p>
+<p>B- [2, 8, 14, 2]</p>
+<p>C- [7, 13, 14, 7]</p>
+<p>D- [7, 13, 9, 2]</p>
+<p>Q3 - On dispose dans le tableau annee2019 les températures mensuelles moyennes d’une région française. On exécute le script suivant :</p>
+<p>annee2019 = [(‘janvier,’6), (‘février,’6), (‘mars,’12),
+(‘avril,’20), (‘mai,’23), (‘juin,’25),
+(‘juillet,’29), (‘août,’25), (‘septembre,’22),
+(‘octobre,’15), (‘novembre,’11), (‘décembre,’7)]</p>
+<p>m = annee2019[0][1]
+for mois in annee2019:
+if (m &gt; mois[1]):
+m = mois[1]</p>
+<p>Que contient la variable m à la fin de cette exécution ?</p>
+<p>Réponses :</p>
+<p>A- le mois le plus froid</p>
+<p>B- le mois le plus chaud</p>
+<p>C- la température moyenne la plus basse</p>
+<p>D- la température moyenne la plus haute</p>
+<p>Q4 - Quelle instruction permet d’affecter la liste [0,1,4,9,16] à la variable tableau ?</p>
+<p>Réponses :</p>
+<p>A- tableau = [ i**2 for i in range(4) ]</p>
+<p>B- tableau = [ i**2 for i in range(5) ]</p>
+<p>C- tableau = [ i**2 for i in range(16) ]</p>
+<p>D- tableau = [ i**2 for i in range(17) ]</p>
+<p>Q5 - Quelle est la valeur de la variable r à la fin de l’exécution du script suivant ?</p>
+<p>t = (10,6,1,12,15)
+r = t[3] - t[1]</p>
+<p>Réponses :</p>
+<p>A- -9</p>
+<p>B- 2</p>
+<p>C- 3</p>
+<p>D- 6</p>
+<p>Q6 - On définit L = [4,25,10,9,7,13]. Quelle est la valeur de L[2] ?</p>
+<p>Réponses :</p>
+<p>A- 4</p>
+<p>B- 25</p>
+<p>C- 10</p>
+<p>D- 9</p>
+<p>Q7 - Quel est le type de l’expression f(4) si la fonction f est définie par :</p>
+<p>def f(x):
+return (x, x**2)</p>
+<p>Réponses :</p>
+<p>A- un entier</p>
+<p>B- un flottant</p>
+<p>C- une liste</p>
+<p>D- un tuple</p>
+<p>Q8 - On considère la liste de listes suivante :</p>
+<p>tictactoe = [[‘X,’ ‘O,’ ‘O’],
+[‘O,’ ‘O,’ ‘O’],
+[‘O,’ ‘O,’ ‘X’]]</p>
+<p>Quelle instruction permet d’obtenir une diagonale de ‘X’ ?</p>
+<p>Réponses :</p>
+<p>A- tictactoe[3] = ‘X’</p>
+<p>B- tictactoe[4] = ‘X’</p>
+<p>C- tictactoe[1][1] = ‘X’</p>
+<p>D- tictactoe[2][2] = ‘X’</p>
+<p>Q9 - On définit ainsi une liste M :</p>
+<p>M = [[‘A,’‘B,’‘C,’‘D’], [‘E,’‘F,’‘G,’‘H’], [‘I,’‘J,’‘K,’‘L’]]</p>
+<p>Quelle expression vaut la chaîne de caractères ‘H’ ?</p>
+<p>Réponses :</p>
+<p>A- M[1][3]</p>
+<p>B- M[3][1]</p>
+<p>C- M(7)</p>
+<p>D- M(8)</p>
+<p>Q10 - On dispose d’une liste définie par L = [15,17,12,23]. Quelle est la valeur de L après l’instruction L[2] = 25 ?</p>
+<p>Réponses :</p>
+<p>A- [15,25,12,23]</p>
+<p>B- [15,17,25,12,23]</p>
+<p>C- [15,17,25,23]</p>
+<p>D- [15,17,12,25,23]</p>
+<p>Q11 - Soient n et p deux entiers au moins égaux à 2. On définit une liste de listes t par le code suivant :</p>
+<p>(n et p sont initialisés dans les lignes précédentes)</p>
+<p>t = [ [ 0 for j in range(p) ] for i in range(n) ]</p>
+<p>for k in range(n*p):
+t[k%n][k%p] = k</p>
+<p>Une et une seule des affirmations suivantes est fausse. Laquelle ?</p>
+<p>Réponses :</p>
+<p>A- La liste t contient des entiers tels que 0 &lt;= k &lt; n x p</p>
+<p>B- Pour tout j tel que 0 &lt;= j &lt; n-1, t[j][0] est un multiple de p.</p>
+<p>C- La liste t[0] contient des entiers qui sont tous multiples de n.</p>
+<p>D- Pour tout j tel que 0 &lt;= j &lt; n-1, t[0][j] est un multiple de p.</p>
+<p>Q12 - Que vaut l’expression [ 2*k for k in range(5) ] ?</p>
+<p>Réponses :</p>
+<p>A- [0,2,4,6,8]</p>
+<p>B- [2,4,6,8,10]</p>
+<p>C- [1,2,4,8,16]</p>
+<p>D- [2,4,8,16,32]</p>
+<p>Q13 - On exécute le code suivant :</p>
+<p>A = [ [1,2,3], [4,5,6], [7,8,9] ]
+B = [ [0,0,0], [0,0,0], [0,0,0] ]
+for i in range(3):
+for j in range(3):
+B[i][j] = A[j][i]</p>
+<p>Que vaut B à la fin de l’exécution ?</p>
+<p>Réponses :</p>
+<p>A- rien du tout, le programme déclenche une erreur d’exécution</p>
+<p>B- [ [3,2,1], [6,5,4], [9,8,7] ]</p>
+<p>C- [ [1,4,7], [2,5,8], [3,6,9] ]</p>
+<p>D- [ [7,8,9], [4,5,6], [1,2,3] ]</p>
+<p>Q14 - Après l’affectation suivante :</p>
+<p>alphabet = [ ‘A,’ ‘B,’ ‘C,’ ‘D,’ ‘E,’ ‘F,’ ‘G,’ ‘H,’ ‘I,’ ‘J,’ ‘K,’ ‘L,’ ‘M,’ ‘N,’ ‘O,’ ‘P,’ ‘Q,’ ‘R,’ ‘S,’ ‘T,’ ‘U,’ ‘V,’ ‘W,’ ‘X,’ ‘Y,’ ‘Z’ ]</p>
+<p>quelle est l’expression qui permet d’accéder à la lettre E ?</p>
+<p>Réponses :</p>
+<p>A- alphabet.E</p>
+<p>B- alphabet[‘E’]</p>
+<p>C- alphabet[4]</p>
+<p>D- alphabet[5]</p>
+<p>Q15 - On définit : L = [10,9,8,7,6,5,4,3,2,1]. Quelle est la valeur de L[L[3]] ?</p>
+<p>Réponses :</p>
+<p>A- 3</p>
+<p>B- 4</p>
+<p>C- 7</p>
+<p>D- 8</p>
+<p>Q16 - On considère le code suivant :</p>
+<p>t = [0, 3, 5, 7, 9]
+t[9] = 3 + t[5]</p>
+<p>Que vaut t à la fin de son exécution ?</p>
+<p>Réponses :</p>
+<p>A- [0, 3, 5, 7, 9]</p>
+<p>B- [0, 3, 5, 7, 9, 3]</p>
+<p>C- [0, 3, 5, 7, 9, 8]</p>
+<p>D- l’exécution déclenche une erreur</p>
+<p>Q17 - On définit :</p>
+<p>resultat = [ i*2 for i in range(10) ]</p>
+<p>Quelle est la valeur de resultat ?</p>
+<p>Réponses :</p>
+<p>A- [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</p>
+<p>B- [0, 2, 4, 6, 8, 10, 12, 14, 16, 18]</p>
+<p>C- [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20]</p>
+<p>D- [2, 4, 6, 8, 10, 12, 14, 16, 18]</p>
+<p>Q18 - On considère la fonction suivante :</p>
+<p>def somme(tab):
+s = 0
+for i in range(len(tab)):
+……
+return s</p>
+<p>Par quelle instruction faut-il remplacer les points de suspension pour que l’appel somme([10,11,12,13,14]) renvoie 60 ?</p>
+<p>Réponses :</p>
+<p>A- s = tab[i]</p>
+<p>B- s = s + tab[i]</p>
+<p>C- tab[i] = tab[i] + s</p>
+<p>D- s = s + i</p>
+<p>Q19 - On exécute le script suivant.</p>
+<p>m = []
+for i in range(5):
+n = []
+for j in range(3):
+n.append(i*j)
+m.append(n)</p>
+<p>Quelle est la valeur de m à la fin de son exécution ?</p>
+<p>Réponses :</p>
+<p>A- [ [0, 0, 0, 0, 0], [0, 1, 2, 3, 4], [0, 2, 4, 6, 8] ]</p>
+<p>B- [ [0, 0, 0], [0, 1, 2], [0, 2, 4], [0, 3, 6], [0, 4, 8] ]</p>
+<p>C- [ [1, 1, 1], [2, 4, 6], [3, 6, 9], [4, 8, 12], [5, 10, 15] ]</p>
+<p>D- [ [1, 1, 1, 1, 1], [2, 4, 6, 8, 10], [3, 6, 9, 12, 15], [4, 8, 12, 16, 20], [5, 10, 15, 20, 25] ]</p>
+<p>Q20 - On considère le code suivant :</p>
+<p>def feed(t):
+for i in range(len(t)):
+t[i] = 0
+return t</p>
+<p>Que renvoie feed([12, 24, 32]) ?</p>
+<p>Réponses :</p>
+<p>A- [120, 240, 320]</p>
+<p>B- [0, 0, 0]</p>
+<p>C- [ ]</p>
+<p>D- [0]</p>
+<p>Q21 - L est une liste d’entiers. On définit la fonction suivante :</p>
+<p>def f(L):
+m = L[0]
+for x in L:
+if x &gt; m:
+m = x
+return m</p>
+<p>Que calcule cette fonction ?</p>
+<p>Réponses :</p>
+<p>A- le maximum de la liste L passée en argument</p>
+<p>B- le minimum de la liste L passée en argument</p>
+<p>C- le premier terme de la liste L passée en argument</p>
+<p>D- le dernier terme de la liste L passée en argument</p>
+<p>Q22 - On considère le code suivant :</p>
+<p>t = [1, 6, 8, 3, 21]
+u = [x for x in t if x &gt; 3]</p>
+<p>Que vaut u à la fin de son exécution ?</p>
+<p>Réponses :</p>
+<p>A- [1, 6, 8, 21]</p>
+<p>B- [6, 8, 3, 21]</p>
+<p>C- [6, 8, 21]</p>
+<p>D- [1, 3, 6, 21]</p>
+<p>Q23 - On exécute le code suivant :</p>
+<p>t = [1,2,3,4,5,6,7,8,9]
+v = [c for c in t if c%3 == 0]</p>
+<p>Quelle est la valeur de la variable v à la fin de cette exécution ?</p>
+<p>Réponses :</p>
+<p>A- 18</p>
+<p>B- [1,4,7]</p>
+<p>C- [3,6,9]</p>
+<p>D- [1,2,3,4,5,6,7,8,9]</p>
+<p>Q24 - On a défini : T = [[1,2,3], [4,5,6], [7,8,9]].</p>
+<p>Quelle expression parmi les suivantes a pour valeur le nombre 8 ?</p>
+<p>Réponses :</p>
+<p>A- T[1,2]</p>
+<p>B- T[1][2]</p>
+<p>C- T[2,1]</p>
+<p>D- T[2][1]</p>
+<p>Q25 - On définit :
+L = [ [“lundi,”10,0.87], [“mardi,”11,0.82], [“mercredi,”12,0.91] ]</p>
+<p>Quel est le type de la variable a définie par a = L[1][2] ?</p>
+<p>Réponses :</p>
+<p>A- nombre entier</p>
+<p>B- liste</p>
+<p>C- nombre flottant</p>
+<p>D- chaîne de caractères</p>
+<p>Q26 - n définit la liste L ainsi : L = [ [1], [1,2], [1,2,3] ]</p>
+<p>Des égalités suivantes, une seule est fausse. Laquelle ?</p>
+<p>Réponses :</p>
+<p>A- len(L[0]) == 1</p>
+<p>B- len(L) == 6</p>
+<p>C- len(L[2]) == 3</p>
+<p>D- L[2][2] == 3</p>
+<p>Q27 - On définit L = [[1,2,3,4,5],[6,7,8,9,10],[11,12,13,14,15]].</p>
+<p>Quelle est la valeur de L[0][2] ?</p>
+<p>Réponses :</p>
+<p>A- 2</p>
+<p>B- 3</p>
+<p>C- 11</p>
+<p>D- 12</p>
+<p>Q28 - On considère deux entiers strictement positifs L et C. On note n = L*C leur produit et on écrit la fonction suivante, qui construit un tableau de L lignes et C colonnes, contenant les entiers consécutifs de 0 à n-1 :</p>
+<p>def construitTable(L,C):
+t = []
+for i in range(L):
+ligne = []
+for j in range(C):
+……
+t.append(ligne)
+return t</p>
+<p>Par exemple, l’appel construitTable(2,3) doit renvoyer la table : [[0, 1, 2],[3, 4, 5]]</p>
+<p>Que faut-il écrire à la place des points de suspension pour obtenir ce résultat ?</p>
+<p>Réponses :</p>
+<p>A- ligne.append(i + C*j)</p>
+<p>B- ligne.append(L*i + j)</p>
+<p>C- ligne.append(i + L*j)</p>
+<p>D- ligne.append(C*i + j)</p>
+<p>Q29 - La fonction ci-dessous prend en argument deux nombres entiers.</p>
+<p>def f(n1,n2):
+etendue = max(n1,n2)-min(n1,n2)
+moyenne = (n1+n2)/2
+return etendue,moyenne</p>
+<p>Quel est le type de la valeur renvoyée par un appel à cette fonction ?</p>
+<p>Réponses :</p>
+<p>A- un entier</p>
+<p>B- un réel (ou flottant)</p>
+<p>C- un tuple</p>
+<p>D- une liste</p>
+<p>Q30 - Si on tape dans la console d’exécution la commande :</p>
+<p>[1,4,3] + [2,4,5]</p>
+<p>qu’obtient-on ?</p>
+<p>Réponses :</p>
+<p>A- [3, 8, 8]</p>
+<p>B- [19]</p>
+<p>C- [1, 4, 3, 2, 4, 5]</p>
+<p>D- un message d’erreur car l’addition n’est pas compatible avec les listes</p>
+<p>Q31 - Quelle est la valeur de l’expression [(a,b) for a in range(3) for b in range(3) if a &gt; b] ?</p>
+<p>Réponses :</p>
+<p>A- [(a,b),(a,b),(a,b),(a,b),(a,b),(a,b),(a,b),(a,b),(a,b)]</p>
+<p>B- [(0,0),(0,1),(0,2),(1,0),(1,1),(1,2),(2,0),(2,1),(2,2)]</p>
+<p>C- [(1,0),(2,0),(2,1)]</p>
+<p>D- [(0,0),(0,1),(0,2),(1,0),(1,1),(1,2),(1,0),(1,1),(1,2)]</p>
+<p>Q32 - Quelle est la valeur de l’expression [[i for i in range(5)] for j in range(3)] ?</p>
+<p>Réponses :</p>
+<p>A- [[0, 1, 2], [0, 1, 2], [0, 1, 2], [0, 1, 2], [0, 1, 2]]</p>
+<p>B- [[0, 1, 2, 3, 4], [0, 1, 2, 3, 4], [0, 1, 2, 3, 4]]</p>
+<p>C- [[0, 1, 2, 3], [0, 1, 2, 3], [0, 1, 2, 3], [0, 1, 2, 3], [0, 1, 2, 3]]</p>
+<p>D- [[0, 1, 2, 3, 4, 5], [0, 1, 2, 3, 4, 5], [0, 1, 2, 3, 4, 5]]</p>
+<p>Q33 - On définit une grille G remplie de 0, sous la forme d’une liste de listes, où toutes les sous-listes ont le même nombre d’éléments.</p>
+<p>G =[[0, 0, 0, …, 0],
+[0, 0, 0, …, 0],
+[0, 0, 0, …, 0]
+….
+[0, 0, 0, …, 0]]</p>
+<p>On appelle hauteur de la grille le nombre de sous-listes contenues dans G et largeur de la grille le nombre d’éléments dans chacune de ces sous-listes. Comment peut-on les obtenir ?</p>
+<p>Réponses :</p>
+<p>A- hauteur = len(G[0])</p>
+<p>largeur = len(G)</p>
+<p>B- hauteur = len(G)</p>
+<p>largeur = len(G[0])</p>
+<p>C- hauteur = len(G[0])</p>
+<p>largeur = len(G[1])</p>
+<p>D- hauteur = len(G[1])</p>
+<p>largeur = len(G[0])</p>
+<p>Q34 - Laquelle des expressions suivantes a-t-elle pour valeur la liste des carrés des premiers entiers qui ne sont pas multiples de 5 ?</p>
+<p>Réponses :</p>
+<p>A- [x*x for x in range (11) if x//5 != 0]</p>
+<p>B- [x*x if x%5 != 0 for x in range (11)]</p>
+<p>C- [x*x if x//5 != 0 for x in range (11)]</p>
+<p>D- [x*x for x in range (11) if x%5 != 0]</p>
+<p>Q35 - On définit :</p>
+<p>tab = [ (‘Léa,’ 14), (‘Guillaume,’ 12), (‘Anthony,’ 16), (‘Anne,’ 15) ]</p>
+<p>Quelle est la valeur de l’expression [x[0] for x in tab if x[1]&gt;=15] ?</p>
+<p>Réponses :</p>
+<p>A- [(‘Anthony,’ 16), (‘Anne,’ 15)]</p>
+<p>B- [‘Anthony,’ ‘Anne’]</p>
+<p>C- [16, 15]</p>
+<p>D- TypeError : ‘tuple’ object is not callable</p>
+<p>Q36 - On définit : matrice = [[1,2,3], [4,5,6], [7,8,9], [10,11,12]].</p>
+<p>Quelle est la valeur de matrice[1][2] ?</p>
+<p>Réponses :</p>
+<p>A- 2</p>
+<p>B- 4</p>
+<p>C- 6</p>
+<p>D- 8</p>
+<p>Q37 - On crée la liste suivante :</p>
+<p>t = [ [1,2,3,4], [5,6,7,8], [9,10,11,12] ]</p>
+<p>Que vaut t[1][2] :</p>
+<p>Réponses :</p>
+<p>A- 2</p>
+<p>B- 7</p>
+<p>C- 10</p>
+<p>D- on obtient un message d’erreur “indexError : list index out of range”</p>
+<p>Q38 - Le premier élément d’une liste Python L est noté :</p>
+<p>Réponses :</p>
+<p>A- L(0)</p>
+<p>B- L(1)</p>
+<p>C- L[0]</p>
+<p>D- L[1]</p>
+<p>Q39 - Quelle expression Python a pour valeur la liste [1,3,5,7,9,11] ?</p>
+<p>Réponses :</p>
+<p>A- [2*i - 1 for i in range(6)]</p>
+<p>B- [2*i + 1 for i in range(6)]</p>
+<p>C- [2*i + 1 for i in range(5)]</p>
+<p>D- [2*i - 1 for i in range(7)]</p>
+<p>Q40 - Après avoir défini m = [[1, 2, 3], [4, 5, 6]]</p>
+<p>laquelle des quatre expressions suivantes a la valeur 4 ?</p>
+<p>Réponses :</p>
+<p>A- m[0][1]</p>
+<p>B- m[1][0]</p>
+<p>C- m(0,1)</p>
+<p>D- m(1,0)</p>
+<p>Q41 - On définit tableau = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]. Quelle est la valeur de tableau[2][1] ?</p>
+<p>Réponses :</p>
+<p>A- 2</p>
+<p>B- 4</p>
+<p>C- 6</p>
+<p>D- 8</p>
+<p>Q42 - On s’intéresse à la valeur 14 présente dans la liste suivante:</p>
+<p>T = [[1,2,3,4,5], [6,7,8,9,10], [11,12,13,14,15], [16,17,18,19,20]].</p>
+<p>Quelle expression vaut 14 parmi les suivantes ?</p>
+<p>Réponses :</p>
+<p>A- T[2][3]</p>
+<p>B- T[3][4]</p>
+<p>C- T[3][2]</p>
+<p>D- T[4][3]</p>
+<p>Q43 - On définit : t = [2, 8, 9, 2]</p>
+<p>Quelle est la valeur de l’expression [ x*x for x in t ] ?</p>
+<p>Réponses :</p>
+<p>A- une erreur</p>
+<p>B- [[2, 8, 9, 2], [2, 8, 9, 2]]</p>
+<p>C- [2, 8, 8, 9, 9, 9, 2, 2, 2, 2]</p>
+<p>D- [4, 64, 81, 4]</p>
+<p>Q44 - De quelle expression la liste suivante est-elle la valeur ?</p>
+<p>[[0,0,0,0], [1,1,1,1], [2,2,2,2]]</p>
+<p>Réponses :</p>
+<p>A- [[i] * 4 for i in range(4)]</p>
+<p>B- [[i] * 3 for i in range(4)]</p>
+<p>C- [[i] * 4 for i in range(3)]</p>
+<p>D- [[i] * 3 for i in range(3)]</p>
+<p>Q45 - On définit :</p>
+<p>notes = [(‘Toto,’ 20), (‘John,’ 12), (‘Johnny,’ 2), (‘Superman,’ 16)]</p>
+<p>Quelle est l’expression donnant la note de Superman ?</p>
+<p>Réponses :</p>
+<p>A- notes[4][2]</p>
+<p>B- notes[3][1]</p>
+<p>C- notes[Superman]</p>
+<p>D- notes[‘Superman’]</p>
+<p>Q46 - Quelle est la valeur de l’expression [[n,n+2] for n in range(3)] ?</p>
+<p>Réponses :</p>
+<p>A- [0,2,1,3,2,4]</p>
+<p>B- [1,3,2,4,3,5]</p>
+<p>C- [[0,2],[1,3],[2,4]]</p>
+<p>D- [[1,3],[2,4],[3,5]]</p>
+<p>Q47 - On construit une matrice par compréhension :</p>
+<p>M = [ [i*j for j in range(4)] for i in range(4) ]</p>
+<p>Laquelle des conditions suivantes est-elle vérifiée ?</p>
+<p>Réponses :</p>
+<p>A- M[4][4] == 16</p>
+<p>B- M[0][1] == 1</p>
+<p>C- M[2][3] == 6</p>
+<p>D- M[1][2] == 3</p>
+<p>Q48 - Quelle est l’expression qui a pour valeur la liste [1,4,9,16,25,36] ?</p>
+<p>Réponses :</p>
+<p>A- { n*n for n in range(1,7) }</p>
+<p>B- { n*n for n in range(6) }</p>
+<p>C- [ n*n for n in range(1,7) ]</p>
+<p>D- [ n*n for n in range(6) ]</p>
+<p>Q49 - On dispose d’une table tab constituée d’une liste de trois sous-listes contenant chacune quatre caractères.</p>
+<p>tab=[[‘A,’ ‘B,’ ‘C,’ ‘D’],
+[‘E,’ ‘F,’ ‘G,’ ‘H’],
+[‘I,’ ‘J,’ ‘K,’ ‘L’] ]</p>
+<p>Parmi les propositions suivantes, laquelle permet de convertir cette table en une liste L contenant dans l’ordre, ligne par ligne, les 12 caractères de tab ?</p>
+<p>à la fin, on a l’égalité :
+L == [ ‘A,’ ‘B,’ ‘C,’ ‘D,’ ‘E,’ ‘F,’ ‘G,’ ‘H,’ ‘I,’ ‘J,’ ‘K,’ ‘L’ ]</p>
+<p>Réponses :</p>
+<p>A-</p>
+<p>L = []
+for i in range(3):
+for j in range(4):
+L.append(tab[i][j])</p>
+<p>B-</p>
+<p>L = []
+for i in range(4):
+for j in range(3):
+L.append(tab[i][j])</p>
+<p>C-</p>
+<p>L = []
+for i in range(3):
+L.append(tab[i])</p>
+<p>D-</p>
+<p>L = []
+for i in range(4):
+L.append(tab[i])</p>
+<p>Q50 - On dispose d’une liste définie par L = [[1,2,3],[4,5,6],[7,8,9]].</p>
+<p>Quelle est la valeur de L[1][2] ?</p>
+<p>Réponses :</p>
+<p>A- 2</p>
+<p>B- 4</p>
+<p>C- 6</p>
+<p>D- 8</p>
+<p>Q51 - Quelle est la valeur de l’expression [[i,2*i] for i in range(3)] ?</p>
+<p>Réponses :</p>
+<p>A- [0,0,1,2,2,4]</p>
+<p>B- [[0,0],[1,2],[2,4]]</p>
+<p>C- [1,2,2,4,3,6]</p>
+<p>D- [[1,2],[2,4],[3,6]]</p>
+<p>Q52 - Voici une définition incomplète d’une fonction qui renvoie le couple du quotient et du reste de la division euclidienne :</p>
+<p>def divEuclid(n,d):
+’‘’renvoie le couple formé du quotient et du reste dans la division de n par d’’’
+q = 0
+while n-d &gt; 0:
+q = q + 1
+n = n - d
+…….</p>
+<p>Par quelle instruction faut-il remplacer la ligne en pointillés pour que l’appel</p>
+<p>(quotient,reste) = divEuclid(15,6)</p>
+<p>affecte les valeurs attendues ?</p>
+<p>Réponses :</p>
+<p>A- (q,n)</p>
+<p>B- (quotient,reste)</p>
+<p>C- return (q,n)</p>
+<p>D- return (quotient,reste)</p>
+<p>Q53 - On considère le tableau suivant : L = [[1,2,3],[4,5,6],[7,8,9]].</p>
+<p>Quelle est la valeur de L[1][0] ?</p>
+<p>Réponses :</p>
+<p>A- 1</p>
+<p>B- 2</p>
+<p>C- 4</p>
+<p>D- 7</p>
+<p>Q54 - Quelle est la valeur de l’expression [(i,i+1) for i in range(2)] ?</p>
+<p>Réponses :</p>
+<p>A- [0,1,1,2]</p>
+<p>B- [(1,2),(2,3)]</p>
+<p>C- [(0,1),(1,2)]</p>
+<p>D- [[0,1],[1,2]]</p>
+<p>Q55 - Soit le code ci-dessous :</p>
+<p>tableau = [5,8,6,9]
+a = tableau[2]</p>
+<p>Après son exécution, quelle valeur contient la variable a ?</p>
+<p>Réponses :</p>
+<p>A- 2</p>
+<p>B- 6</p>
+<p>C- 8</p>
+<p>D- [5, 8]</p>
+<p>Q56 - On définit la variable suivante : citation = “Les nombres gouvernent le monde.” Quelle est la valeur de l’expression citation[5:10] ?</p>
+<p>Réponses :</p>
+<p>A- “ombre”</p>
+<p>B- “ombres”</p>
+<p>C- “nombre”</p>
+<p>D- “nombres”</p>
+<p>Q57 - Quelle expression a pour valeur la liste [7,14,21,28,35,42,49,56,63] ?</p>
+<p>Réponses :</p>
+<p>A- [7*k for k in range(9)]</p>
+<p>B- [7*k for k in range(1,10)]</p>
+<p>C- [7*k for k in range(10)]</p>
+<p>D- [[7*k for k in range(1,9)]</p>
+<p>Q58 - Quelle est la valeur de l’expression [[0] * 3 for i in range(2)] ?</p>
+<p>Réponses :</p>
+<p>A- [[0,0], [0,0], [0,0]]</p>
+<p>B- [[0,0,0], [0,0,0]]</p>
+<p>C- [[0.000], [0.000]]</p>
+<p>D- [[0.00], [0.00], [0.00]]</p>
+<p>Q59 - Quelle est la valeur de la variable S à la fin de l’exécution du script suivant ?</p>
+<p>res = [ [1,2,3], [4,5,6], [7,8,9] ]
+S = 0
+for i in range(3):
+S = S + res[i][2]</p>
+<p>Réponses :</p>
+<p>A- 12</p>
+<p>B- 15</p>
+<p>C- 18</p>
+<p>D- 24</p>
+<p>Q60 - On représente un plateau de jeu d’échec par une liste de listes dans laquelle on place des 1 pour représenter une case où se trouve une tour et des 0 pour représenter les cases vides.</p>
+<p>Par exemple le code</p>
+<p>echiquier = [ [ 0 for i in range(8) ] for j in range(8) ]
+echiquier[2][0] = 1
+echiquier[3][1] = 1</p>
+<p>représente la situation de la figure ci-dessous.</p>
+<p>Deux tours sont en prise si elles se trouvent sur une même ligne ou sur une même colonne.</p>
+<p>Parmi les codes suivants, lequel permet de vérifier que la tour placée en ligne i et en colonne j n’est en prise avec aucune tour placée dans les colonnes à sa gauche ?</p>
+<p>Réponses :</p>
+<p>A-</p>
+<p>def ok(echiquier,i,j):
+for col in range(i):
+if echiquier[i][col] == 1:
+return False
+return True</p>
+<p>B-</p>
+<p>def ok(echiquier,i,j):
+for lig in range(i):
+if echiquier[lig][j] == 1:
+return False
+return True</p>
+<p>C-</p>
+<p>def ok(echiquier,i,j):
+for col in range(j):
+if echiquier[i][col] == 1:
+return False
+return True</p>
+<p>D-</p>
+<p>def ok(echiquier,i,j):
+for lig in range(j):
+if echiquier[lig][j] == 1:
+return False
+return True</p>
+<p>Q61 - On dispose d’une liste L :</p>
+<p>L = [6, 2, 8, 24, 3, 6, 7, 8]</p>
+<p>Quelle est la valeur de M après exécution du code suivant ?</p>
+<p>p = 8
+M = [x for x in L if x&lt;p] + [x for x in L if x==p] + [x for x in L if x&gt;p]</p>
+<p>Réponses :</p>
+<p>A- [2,3,6,6,7,8,8,24]</p>
+<p>B- [6,2,3,6,7,8,8,24]</p>
+<p>C- [6,2,8,24,3,6,7,8]</p>
+<p>D- [[6,2,3,6,7],[8,8],[24]]</p>
+<p>Q62 - On définit en Python la fonction suivante :</p>
+<p>def f(L):
+U = []
+for i in L:
+U.append(i**2 - 1)
+return U</p>
+<p>Que vaut f([-1, 0, 1, 2]) ?</p>
+<p>Réponses :</p>
+<p>A- [0, 0, 1, 3]</p>
+<p>B- [-1, 0, 0, 3]</p>
+<p>C- [0, -1, 0, 3]</p>
+<p>D- [-3, -1, 1, 3]</p>
+<p>Q63 - On définit L = [2,3,5,7,-4].</p>
+<p>En demandant la valeur de L[5], qu’obtient-on ?</p>
+<p>Réponses :</p>
+<p>A- -4</p>
+<p>B- 2</p>
+<p>C- 3</p>
+<p>D- une erreur</p>
+<p>Q64 - Considérons le tableau suivant :</p>
+<p>tableau = [[1,2],[3,4],[5,6]]</p>
+<p>Quelle est la valeur de l’expression tableau[2][1] ?</p>
+<p>Réponses :</p>
+<p>A- 3</p>
+<p>B- 6</p>
+<p>C- [3,4],[1,2]</p>
+<p>D- [5,6],[2,4]</p>
+<p>Q65 - Laquelle des quatre expressions suivantes a-t-elle pour valeur la liste [1, 2, 5, 10] ?</p>
+<p>Réponses :</p>
+<p>A- [i for i in range(4) if i&lt;2]</p>
+<p>B- [i for i in range(4)]</p>
+<p>C- [i*i + 1 for i in range(4)]</p>
+<p>D- [i<em>i - 2</em>i + 2 for i in range(4)]</p>
+<p>Q66 - Considérons le tableau suivant :</p>
+<p>tableau = [ [i+2*j for j in range(4)] for i in range(4)]</p>
+<p>Quelle est la valeur de l’expression tableau[1] ?</p>
+<p>Réponses :</p>
+<p>A- [0,1,2,3]</p>
+<p>B- [1,2,3,4]</p>
+<p>C- [0,2,4,6]</p>
+<p>D- [1,3,5,7]</p>
+<p>Q67 - On définit ainsi le tableau t = [[1,5,7], [8,4,2], [3,9,6]]</p>
+<p>Quel jeu d’indices permet d’obtenir l’élément “9” de ce tableau ?</p>
+<p>Réponses :</p>
+<p>A- t[3][2]</p>
+<p>B- t[2][3]</p>
+<p>C- t[1][2]</p>
+<p>D- t[2][1]</p>
+<p>Q68 - On définit une liste : L = [1, 1, 2, 9, 3, 4, 5, 6, 7].</p>
+<p>Quelle expression a-t-elle pour valeur la liste [4, 16, 36] ?</p>
+<p>Réponses :</p>
+<p>A- [(x * x) % 2 == 0 for x in liste]</p>
+<p>B- [x for x in liste if x % 2 == 0]</p>
+<p>C- [x * x for x in liste]</p>
+<p>D- [x * x for x in liste if x % 2 == 0]</p>
+<p>Q69 - Parmi les propositions suivantes, laquelle permet de créer en Python la liste des nombres impairs de 1 à 399 (inclus) ?</p>
+<p>Réponses :</p>
+<p>A-</p>
+<p>impairs = [1 + nb*2 for nb in range(200)]</p>
+<p>B-</p>
+<p>for nb in range(400) :
+impairs = 1 + 2 * nb</p>
+<p>C-</p>
+<p>impairs = [i + 2 for i in range(1,200)]</p>
+<p>D-</p>
+<p>impairs = [1, 3, 5, 7, 9] * 40</p>
+<p>Q70 - On considère le code suivant :</p>
+<p>def f(L):
+return [x*x for x in L if x%2 == 1]</p>
+<p>carre = f([0,1,2,3,4,5,6,7,8,9])</p>
+<p>Que vaut carre à la fin de son exécution ?</p>
+<p>Réponses :</p>
+<p>A- [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]</p>
+<p>B- [0, 4, 16, 36, 64]</p>
+<p>C- [1, 9, 25, 49, 81]</p>
+<p>D- [0, 2, 4, 6, 8, 10, 12, 14, 16, 19]</p>
+<p>Q71 - L’opérateur % calcule le reste de la division euclidienne de l’opérande de gauche par l’opérande de droite. Par exemple : 7 % 3 vaut 1, 15 % 5 vaut 0 et 18 % 4 vaut 2.</p>
+<p>On crée la liste suivante :</p>
+<p>t = [ x for x in range(2,12) if x % 2 == 1 ]</p>
+<p>Que vaut t :</p>
+<p>Réponses :</p>
+<p>A- [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ]</p>
+<p>B- [ 1, 2, 3, 4, 5 ]</p>
+<p>C- [ 3, 5, 7, 9, 11 ]</p>
+<p>D- [ 0, 1, 0, 1, 0, 1, 0, 1, 0, 1 ]</p>
+<p>Q72 - Quelle expression permet d’accéder à la valeur ‘hello’ après qu’on a défini</p>
+<p>L = [[‘a,’‘b,’‘c’],[‘bonjour,’‘hello’]]</p>
+<p>Réponses :</p>
+<p>A- L[5]</p>
+<p>B- L[1][1]</p>
+<p>C- L[2][2]</p>
+<p>D- L[‘hello’]</p>
+<p>Q73 - t1 est un tableau à n lignes et n colonnes. On souhaite remplir un tableau t2 de mêmes dimensions que t1 avec les contraintes suivantes : les lignes de t2 sont les colonnes de t1 et les colonnes de t2 sont les lignes de t1.</p>
+<p>Par quelle instruction faut-il remplacer la ligne en pointillées du code suivant ?</p>
+<p>for i in range(n):
+for j in range(n):
+……</p>
+<p>Réponses :</p>
+<p>A- t1[i][j] = t2[j][i]</p>
+<p>B- t2[j][i] = t1[j][i]</p>
+<p>C- t1[j][i] = t2[i][j]</p>
+<p>D- t2[i][j] = t1[j][i]</p>
+<p>Q74 - Soit une liste définie de la manière suivante : liste = [18, 23, 45, 38, 12]</p>
+<p>On exécute l’instruction liste.append(45), la liste a alors pour valeur :</p>
+<p>Réponses :</p>
+<p>A- [18, 23, 38, 12, 45]</p>
+<p>B- [18, 23, 38, 12]</p>
+<p>C- [45, 18, 23, 45, 38, 12]</p>
+<p>D- [18, 23, 45, 38, 12, 45]</p>
+<p>Q75 - On dispose d’une liste L constituée de 12 caractères.</p>
+<p>L = [ ‘A,’ ‘B,’ ‘C,’ ‘D,’ ‘E,’ ‘F,’ ‘G,’ ‘H,’ ‘I,’ ‘J,’ ‘K,’ ‘L’ ]</p>
+<p>Parmi les propositions suivantes, laquelle permet de convertir cette liste en une table tab constituée d’une liste de trois sous-listes contenant chacune quatre caractères contenant dans l’ordre, et contenant les 12 caractères de L dans l’ordre.</p>
+<p>à la fin, on a l’égalité :
+tab == [[‘A,’ ‘B,’ ‘C,’ ‘D’],
+[‘E,’ ‘F,’ ‘G,’ ‘H’],
+[‘I,’ ‘J,’ ‘K,’ ‘L’] ]</p>
+<p>Réponses :</p>
+<p>A-</p>
+<p>tab = []
+for i in range(4):
+temp = []
+for j in range(3):
+temp.append(L[4*i + j])
+tab.append(temp)</p>
+<p>B-</p>
+<p>tab = []
+for i in range(4):
+temp = []
+for j in range(3):
+temp.append(L[3*i + j])
+tab.append(temp)</p>
+<p>C-</p>
+<p>tab = []
+for i in range(3):
+temp = []
+for j in range(4):
+temp.append(L[3*i + j])
+tab.append(temp)</p>
+<p>D-</p>
+<p>tab = []
+for i in range(3):
+temp = []
+for j in range(4):
+temp.append(L[4*i + j])
+tab.append(temp)</p>
+<p>Q76 - On exécute l’instruction suivante :</p>
+<p>T = [[12,13,14,15],
+[24,25,26,27],
+[35,36,49,33],
+[61,53,55,58]]</p>
+<p>Quelle expression parmi les quatre suivantes a pour valeur 26 ?</p>
+<p>Réponses :</p>
+<p>A- T[1][2]</p>
+<p>B- T[2][1]</p>
+<p>C- T[2][3]</p>
+<p>D- T[3][2]</p>
+<p>Q77 - Parmi les scripts suivants, un seul ne permet pas de générer le tableau [0,2,4,6,8,10,12,14,16,18] noté T.</p>
+<p>Quel est ce script fautif ?</p>
+<p>Réponses :</p>
+<p>A-</p>
+<p>T = []
+for k in range(10):
+T.append(2*k)</p>
+<p>B-</p>
+<p>T = [0] * 10
+for k in range(9):
+T[k+1] = 2*(k+1)</p>
+<p>C-</p>
+<p>T = [2*k for k in range(10)]</p>
+<p>D-</p>
+<p>T = [0] * 10
+for k in range(0):
+T[k+1] = 2*T[k]</p>
+<p>Q78 - On dispose d’une liste L d’entiers rangés en ordre croissant.</p>
+<p>On désire connaître le nombre de valeurs distinctes contenues dans cette liste.</p>
+<p>Parmi les quatre fonctions proposées, laquelle ne donne pas le résultat attendu ?</p>
+<p>Réponses :</p>
+<p>A-</p>
+<p>def nombreDistincts(L):
+n = 1
+for i in range(1,len(L)):
+if L[i] != L[i-1]:
+n = n + 1
+return n</p>
+<p>B-</p>
+<p>def nombreDistincts(L):
+n = 1
+for i in range(0,len(L)-1):
+if L[i] != L[i+1]:
+n = n + 1
+return n</p>
+<p>C-</p>
+<p>def nombreDistincts(L):
+n = 0
+for i in range(0,len(L)-1):
+if L[i] != L[i+1]:
+n = n + 1
+return n</p>
+<p>D-</p>
+<p>def nombreDistincts(L):
+n = 0
+for i in range(1,len(L)):
+if L[i] != L[i-1]:
+n = n + 1
+return n</p>
+<p>Q79 - On définit ainsi une liste M :</p>
+<p>M = [[‘A,’‘B,’‘C,’‘D’], [‘E,’‘F,’‘G,’‘H’], [‘I,’‘J,’‘K,’‘L’]]</p>
+<p>Que vaut l’expression M[2][1] ?</p>
+<p>Réponses :</p>
+<p>A- ‘G’</p>
+<p>B- ‘J’</p>
+<p>C- ‘E’</p>
+<p>D- ‘B’</p>
+<p>Q80 - Quelle est la valeur de l’expression [2**i for i in range(5)] ?</p>
+<p>Réponses :</p>
+<p>A- [0,1,4,9,16]</p>
+<p>B- [1,4,9,16,25]</p>
+<p>C- [0,2,4,6,8]</p>
+<p>D- [1,2,4,8,16]</p>
+<p>Q81 - Quelle affectation permet de donner à L la valeur [1,9,25,49,81] ?</p>
+<p>Réponses :</p>
+<p>A- L = [i*2 for i in range(9) if i%2 == 0]</p>
+<p>B- L = [i**2 for i in range(10) if i%2 == 0]</p>
+<p>C- L = [i**2 for i in range(10) if i%2 == 1]</p>
+<p>D- L = [i**2 for i in range(10) if i//2 == 1]</p>
+<p>Q82 - On définit : T = [7*n for n in range(10)].</p>
+<p>Quelle est la valeur de l’expression T[7] ?</p>
+<p>Réponses :</p>
+<p>A- 42</p>
+<p>B- 49</p>
+<p>C- 56</p>
+<p>D- 70</p>
+<p>Q83 - On définit en Python la fonction suivante :</p>
+<p>def f(L):
+S = []
+for i in range(len(L)-1):
+S.append(L[i] + L[i+1])
+return S</p>
+<p>Quelle est la liste renvoyée par f([1, 2, 3, 4, 5, 6]) ?</p>
+<p>Réponses :</p>
+<p>A- [3, 5, 7, 9, 11, 13]</p>
+<p>B- [1, 3, 5, 7, 9, 11]</p>
+<p>C- [3, 5, 7, 9, 11]</p>
+<p>D- cet appel de fonction déclenche un message d’erreur</p>
+<p>Q84 - On exécute le script suivant :</p>
+<p>def quoi(liste):
+maListe = []
+for i in range(len(liste))
+maListe.append(liste[i][0])
+return maListe</p>
+<p>L = [[5,8,12,1], [20,11,3,8], [3,12,1,4], [2,13,17,3]]
+m = quoi(L)</p>
+<p>Que contient la variable m à la fin de cette exécution ?</p>
+<p>Réponses :</p>
+<p>A- 26</p>
+<p>B- 30</p>
+<p>C- [5, 20, 3, 2]</p>
+<p>D- [5, 8, 12, 1]</p>
+<p>Q85 - On souhaite construire une table de 4 lignes de 3 éléments que l’on va remplir de 0. Quelle syntaxe Python utilisera-t-on ?</p>
+<p>Réponses :</p>
+<p>A- [ [ 0 ] * 3 for i in range (4) ]</p>
+<p>B- for i in range (4) [ 0 ] * 3</p>
+<p>C- [ 0 ] * 3 for i in range (4)</p>
+<p>D- [ for i in range (4) [ 0 ] * 3 ]</p>
+<p>Q86 - On considère la liste de p-uplets suivante :</p>
+<p>Table = [(‘Grace,’‘Hopper,’‘F,’1906),(‘Tim,’ ‘Berners-Lee,’ ‘H,’ 1955),(‘Ada,’ ‘Lovelace,’ ‘F,’ 1815), (‘Alan,’ ‘Turing,’ ‘H,’ 1912)]</p>
+<p>où chaque p-uplet représente un informaticien ou une informaticienne célèbre ; le premier élément est son prénom, le deuxième élément son nom, le troisième élément son sexe (‘H’ pour un homme, ‘F’ pour une femme) et le quatrième élément son année de naissance (un nombre entier entre 1000 et 2000).</p>
+<p>On définit une fonction :</p>
+<p>def fonctionMystere(table):
+mystere = []
+for ligne in table:
+if ligne[2] == ‘F’:
+mystere.append(ligne[1])
+return mystere</p>
+<p>Que vaut fonctionMystere(table)?</p>
+<p>Réponses :</p>
+<p>A- [‘Grace,’ ‘Ada’]</p>
+<p>B- [(‘Grace,’ ‘Hopper,’ ‘F,’ 1906), (‘Ada,’ ‘Lovelace,’ ‘F,’ 1815)]</p>
+<p>C- [‘Hopper,’ ’Lovelace’]</p>
+<p>D- []</p>
+<p>Q87 - Soit le tableau défini de la manière suivante : tableau = [[1,3,4],[2,7,8],[9,10,6],[12,11,5]]</p>
+<p>On souhaite accéder à la valeur 12, on écrit pour cela :</p>
+<p>Réponses :</p>
+<p>A- tableau[4][1]</p>
+<p>B- tableau[1][4]</p>
+<p>C- tableau[3][0]</p>
+<p>D- tableau[0][3]</p>
+<p>Q88 - Quelle est la valeur de la variable table à la fin de l’exécution du script suivant :</p>
+<p>table = [[1, 2, 3], [1, 2, 3], [1, 2, 3], [1, 2, 3]]
+table [1][2] = 5</p>
+<p>Réponses :</p>
+<p>A- [[1, 5, 3], [1, 2, 3], [1, 2, 3], [1, 2, 3]]</p>
+<p>B- [[1, 2, 3], [5, 2, 3], [1, 2, 3], [1, 2, 3]]</p>
+<p>C- [[1, 2, 3], [1, 2, 5], [1, 2, 3], [1, 2, 3]]</p>
+<p>D- [[1, 2, 3], [1, 2, 3], [1, 2, 3], [1, 5, 3]]</p>
+<p>Q89 - On exécute le code suivant :</p>
+<p>a = [5, 4, 3, 4, 7]
+a.append(4)</p>
+<p>Quelle est la valeur de la variable a à la fin de cette exécution ?</p>
+<p>Réponses :</p>
+<p>A- 2</p>
+<p>B- [4, 4]</p>
+<p>C- [5, 4, 3, 4, 7, 4]</p>
+<p>D- True</p>
+<p>Q90 - Quelle est la valeur de la variable image après exécution du programme Python suivant ?</p>
+<p>image = [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]
+for i in range(4):
+for j in range(4):
+if (i+j) == 3:
+image[i][j] = 1</p>
+<p>Quelle est la valeur de la variable a à la fin de cette exécution ?</p>
+<p>Réponses :</p>
+<p>A- [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [1, 1, 1, 1]]</p>
+<p>B- [[0, 0, 0, 1], [0, 0, 0, 1], [0, 0, 0, 1], [0, 0, 0, 1]]</p>
+<p>C- [[0, 0, 0, 1], [0, 0, 1, 0], [0, 1, 0, 0], [1, 0, 0, 0]]</p>
+<p>D- [[0, 0, 0, 1], [0, 0, 1, 1], [0, 1, 1, 1], [1, 1, 1, 1]]</p>
+<p>Q91 - Laquelle de ces listes de chaînes de caractères est triée en ordre croissant ?</p>
+<p>Réponses :</p>
+<p>A- [“112,” “19,” “27,” “45,” “8”]</p>
+<p>B- [“8,” “19,” “27,” “45,” “112”]</p>
+<p>C- [“8,” “112,” “19,” “27,” “45”]</p>
+<p>D- [“19,” “112,” “27,” “45,” “8”]</p>
+<p>Q92 - On a défini :</p>
+<p>mendeleiev = [[‘H,’‘.’ ‘.’‘.’‘.’‘.’‘.’‘He’],
+[‘Li,’‘Be,’‘B,’‘C,’‘N,’‘O,’‘Fl,’‘Ne’],
+[‘Na,’‘Mg,’‘Al,’‘Si,’‘P,’‘S,’‘Cl,’‘Ar’],
+…… ]</p>
+<p>Une erreur s’est glissée dans le tableau, car le symbole du Fluor est F et non Fl. Quelle instruction permet de rectifier ce tableau ?</p>
+<p>Réponses :</p>
+<p>A- mendeleiev.append(‘F’)</p>
+<p>B- mendeleiev[1][6] = ‘F’</p>
+<p>C- mendeleiev[6][1] = ‘F’</p>
+<p>D- mendeleiev[-1][-1] = ‘F’</p>
+<p>Q93 - On exécute le script suivant :</p>
+<p>asso = []
+L = [ [‘marc,’‘marie’], [‘marie,’‘jean’], [‘paul,’‘marie’], [‘marie,’‘marie’], [‘marc,’‘anne’] ]
+for c in L :
+if c[1]==’marie’:
+asso.append(c[0])</p>
+<p>Que vaut asso à la fin de l’exécution ?</p>
+<p>Réponses :</p>
+<p>A- [‘marc,’ ‘jean,’ ‘paul’]</p>
+<p>B- [[‘marc,’‘marie’], [‘paul,’‘marie’], [‘marie,’‘marie’]]</p>
+<p>C- [‘marc,’ ‘paul,’ ‘marie’]</p>
+<p>D- [‘marie,’ ‘anne’]</p>
+<p>Q94 - On exécute le script suivant :</p>
+<p>a = [1, 2, 3]
+b = [4, 5, 6]
+c = a + b</p>
+<p>Que contient la variable c à la fin de cette exécution ?</p>
+<p>Réponses :</p>
+<p>A- [5,7,9]</p>
+<p>B- [1,4,2,5,3,6]</p>
+<p>C- [1,2,3,4,5,6]</p>
+<p>D- [1,2,3,5,7,9]</p>
+<p>Q95 - On a défini :</p>
+<p>mendeleiev = [[‘H,’‘.’ ‘.’‘.’‘.’‘.’‘.’‘He’],
+[‘Li,’‘Be,’‘B,’‘C,’‘N,’‘O,’‘Fl,’‘Ne’],
+[‘Na,’‘Mg,’‘Al,’‘Si,’‘P,’‘S,’‘Cl,’‘Ar’],
+…… ]</p>
+<p>Comment construire la liste des gaz rares, c’est-à-dire la liste des éléments de la dernière colonne ?</p>
+<p>Réponses :</p>
+<p>A- gaz_rares = [ periode[7] for periode in mendeleiev]</p>
+<p>B- gaz_rares = [ periode for periode in mendeleiev[7]]</p>
+<p>C- gaz_rares = [ periode for periode[7] in mendeleiev]</p>
+<p>D- gaz_rares = [ periode[8] for periode in mendeleiev]</p>
+<p>Q96 - On a défini deux tables de données :</p>
+<p>data1 = [(‘Bruce,’ ’Wayne’), (‘Chuck,’ ‘Norris’), (‘Bruce,’ ‘Lee’), (‘Clark,’ ‘Kent’)]
+data2 = [(‘Diana,’ ’Prince’), (‘Chuck,’ ‘Norris’), (‘Peter,’ ‘Parker’)]</p>
+<p>Quelle instruction permet de construire une table data regroupant l’ensemble des informations de data1 et data2 ?</p>
+<p>Réponses :</p>
+<p>A- data = data1 + data2</p>
+<p>B- data == data1 + data2</p>
+<p>C- data = [element for element in data1 or data2]</p>
+<p>D- data = [data1] + [data2]</p>
+<p>Q97 - On déifnit la fonction suivante qui prend en argument un tableau non vide d’entiers.</p>
+<p>def f(T):
+s = 0
+for k in T:
+if k == 8:
+s = s+1
+if s &gt; 1:
+return True
+else:
+return False</p>
+<p>Dans quel cas cette fonction renvoie-t-elle la valeur True ?</p>
+<p>Réponses :</p>
+<p>A- dans le cas où 8 est présent au moins une fois dans le tableau T</p>
+<p>B- dans le cas où 8 est présent au moins deux fois dans le tableau T</p>
+<p>C- dans le cas où 8 est présent exactement une fois dans le tableau T</p>
+<p>D- dans le cas où 8 est présent exactement deux fois dans le tableau T</p>
+<p>Q98 - Quelle est la valeur de l’expression [ 2*k + 1 for k in range(4) ] ?</p>
+<p>Réponses :</p>
+<p>A- [1,3,5,7]</p>
+<p>B- [0,1,2,3]</p>
+<p>C- [3,5,7,9]</p>
+<p>D- [1,2,3,4]</p>
+<p>Q99 - On exécute le code suivant :</p>
+<p>collection = [(‘Renault,’ ‘4L,’ 1974, 30),
+(‘Peugeot,’ ‘504,’ 1970, 82),
+(‘Citroën,’ ‘Traction,’ 1950, 77)]</p>
+<p>Que vaut collection[1][2] ?</p>
+<p>Réponses :</p>
+<p>A- 1970</p>
+<p>B- ‘4L’</p>
+<p>C- (‘Peugeot,’ ‘504,’ 1970, 82)</p>
+<p>D- (‘Renault,’ ‘4L,’ 1974, 30)</p>
+<p>Q100 - On exécute le code suivant :</p>
+<p>def maxi(t):
+m = t[0]
+for x in t:
+if x[1] &gt;= m[1]:
+m = x
+return m</p>
+<p>L = [(‘Alice,’ 17), (‘Barnabé,’ 17),(‘Casimir,’ 17), (‘Doriane,’ 17),(‘Emilien,’ 14), (‘Fabienne,’ 16)]</p>
+<p>Quelle est alors la valeur de maxi(L) ?</p>
+<p>Réponses :</p>
+<p>A- (‘Alice,’17)</p>
+<p>B- (‘Doriane,’17)</p>
+<p>C- (‘Fabienne,’17)</p>
+<p>D- (‘Emilien,’14)</p>
+<p>Q101 - Dans une course de chevaux, chaque participant est représenté par un numéro de dossard unique , son nom et sa ville sous la forme d’un couple formé d’un entier et d’une liste : (dossard, [nom, ville]).</p>
+<p>Les données de quelques participants sont réunies au sein de la liste course ci-dessous :</p>
+<p>course = [(5,[‘Mistral,’‘Lille’]), (3,[‘Zéphir,’‘Paris’]),(7,[‘Ouragan,’‘Bordeaux’]), ……, ……. ]</p>
+<p>Quelle expression permet d’obtenir la ville du cheval nommé Zéphir ?</p>
+<p>Réponses :</p>
+<p>A- course[1][1][1]</p>
+<p>B- course[1][1][2]</p>
+<p>C- course[1][2][1]</p>
+<p>D- course[2][1][1]</p>
+<p>Q102 - Quelle est la valeur de la variable t1 à la fin de l’exécution du script suivant :</p>
+<p>t1 = [[‘Valenciennes,’ 24],[‘Lille,’ 23],[‘Laon,’ 31],[‘Arras,’ 18]]
+t2 = [[‘Lille,’ 62],[‘Arras,’ 53],[‘Valenciennes,’ 67],[‘Laon,’ 48]]</p>
+<p>for i in range(len(t1)):
+for v in t2:
+if v[0] == t1[i][0]:
+t1[i].append(v[1])</p>
+<p>Réponses :</p>
+<p>A- [[‘Valenciennes,’ 67], [‘Lille,’ 62], [‘Laon,’ 48], [‘Arras,’ 53]]</p>
+<p>B- [[‘Valenciennes,’ 24, 67], [‘Lille,’ 23, 62], [‘Laon,’ 31, 48], [‘Arras,’ 18, 53]]</p>
+<p>C- [[‘Arras,’ 18, 53],[‘Laon,’ 31, 48], [‘Lille,’ 23, 62], [‘Valenciennes,’ 24, 67]]</p>
+<p>D- [[‘Valenciennes,’ 67, 24], [‘Lille,’ 62,23], [‘Laon,’ 48, 31], [‘Arras,’ 53, 18]]</p>
+<p>Q103 - On écrit la fonction suivante :</p>
+<p>def extreme(t, test):
+m = t[0]
+for x in t:
+if test(x,m):
+m = x
+return m</p>
+<p>On dispose d’une liste L dont les éléments sont des couples (nom, note).</p>
+<p>Par exemple :</p>
+<p>L = [(‘Alice,’ 17), (‘Barnabé,’ 18),(‘Casimir,’ 17), (‘Doriane,’ 20),(‘Emilien,’ 15), (‘Fabienne,’ 16)]</p>
+<p>On aimerait que l’appel de fonction extreme(L, test) renvoie un couple présentant la note maximale.</p>
+<p>Quelle définition de la fonction test peut-on utiliser ?</p>
+<p>Réponses :</p>
+<p>A-</p>
+<p>def test(a,b):
+return a[0] &lt; b[0]</p>
+<p>B-</p>
+<p>def test(a,b):
+return a[0] &gt; b[0]</p>
+<p>C-</p>
+<p>def test(a,b):
+return a[1] &lt; b[1]</p>
+<p>D-</p>
+<p>def test(a,b):
+return a[1] &gt; b[1]</p>
+<p>Q104 - Une table d’un fichier client contient le nom, le prénom et l’identifiant des clients sous la forme :</p>
+<p>clients = [(“Dupont,” “Paul,” 1),(“Durand,” “Jacques,” 2),(“Dutronc,” “Jean,” 3),…]</p>
+<p>En supposant que plusieurs clients se prénomment Jean, que vaut la liste x après l’exécution du code suivant ?</p>
+<p>x = []
+for i in range(len(clients)):
+if clients[i][1] == “Jean”:
+x = clients[i]</p>
+<p>Réponses :</p>
+<p>A- Une liste de tuples des noms, prénoms et numéros de tous les clients prénommés Jean</p>
+<p>B- Une liste des numéros de tous les clients prénommés Jean</p>
+<p>C- Un tuple avec le nom, prénom et numéro du premier client prénommé Jean</p>
+<p>D- Un tuple avec le nom, prénom et numéro du dernier client prénommé Jean</p>
+<p>Q105 - Quelle est la valeur de x après exécution du programme ci-dessous ?</p>
+<p>t = [[3,4,5,1],[33,6,1,2]]
+x = t[0][0]
+for i in range(len(t)):
+for j in range(len(t[i])):
+if x &lt; t[i][j]:
+x = t[i][j]</p>
+<p>Réponses :</p>
+<p>A- 3</p>
+<p>B- 5</p>
+<p>C- 6</p>
+<p>D- 33</p>
+<p>Q106 - Quelle est la valeur de la variable table après exécution du programme Python suivant ?</p>
+<p>table = [12, 43, 6, 22, 37]
+for i in range(len(table) - 1):
+if table[i] &gt; table[i+1]:
+table[i],table[i+1] = table[i+1], table[i]</p>
+<p>Réponses :</p>
+<p>A- [6, 12, 22, 37, 43]</p>
+<p>B- [12, 6, 22, 37, 43]</p>
+<p>C- [43, 12, 22, 37, 6]</p>
+<p>D- [43, 37, 22, 12, 6]</p>
+<p>Q107 - Laquelle de ces expressions a pour valeur la liste [[0,1,2],[3,4,5],[6,7,8]] ?</p>
+<p>Réponses :</p>
+<p>A- [[i+j for i in range(3)] for j in range(3)]</p>
+<p>B- [[i]*3 for i in range(3)]*3</p>
+<p>C- [[i+j*3 for i in range(3)] for j in range(3)]</p>
+<p>D- [[i+j for i in range(3)] for j in range(3)]*3</p>
+<p>Q108 - Si la variable note est définie par note = [“do,”“ré,”“mi,”“fa,”“sol,”“la,”“si”] alors :</p>
+<p>Réponses :</p>
+<p>A- l’index de “sol” est 5</p>
+<p>B- l’index de note est 0</p>
+<p>C- l’index de “si” est 7</p>
+<p>D- l’index de “mi” est 2</p>
+<p>Q109 - Un programme Python présente la ligne suivante</p>
+<p>x = [ “x1,” “x2,” “x3” ]</p>
+<p>Elle définit :</p>
+<p>Réponses :</p>
+<p>A- une liste de trois éléments</p>
+<p>B- un tuple de trois éléments</p>
+<p>C- une fonction acceptant trois paramètres</p>
+<p>D- un dictionnaire associant la valeur x2 à la clé x1 d’indice x3</p>
+</div>
+<div id="dictionnaires" class="section level2" number="6.2">
+<h2><span class="header-section-number">6.2</span> Dictionnaires</h2>
+<p>Q1 - On définit un dictionnaire :</p>
+<p>d = {‘couleur’: ‘vert,’ ‘taille’: 42, ‘marque’: ‘le coq sportif’}</p>
+<p>Quelle est la valeur de l’expression d.keys() ?</p>
+<p>Réponses :</p>
+<p>A- [‘couleur,’ ‘taille,’ ‘marque’]</p>
+<p>B- [(‘couleur,’ ‘vert’), (‘taille,’ 42), (‘marque,’ ‘le coq sportif’)]</p>
+<p>C- [‘vert,’ 42, ‘le coq sportif’]</p>
+<p>D- [‘couleur’: ‘vert,’ ‘taille’: 42, ‘marque’: ‘le coq sportif’]</p>
+<p>Q2 - Comment peut-on accéder à la valeur associée à une clé dans un dictionnaire ?</p>
+<p>Réponses :</p>
+<p>A- il faut parcourir le dictionnaire avec une boucle à la recherche de la clé</p>
+<p>B- on peut y accéder directement à partir de la clé</p>
+<p>C- on ne peut pas accéder à une valeur contenue dans un dictionnaire à partir d’une clé</p>
+<p>D- il faut d’abord déchiffrer la clé pour accéder à un dictionnaire</p>
+<p>Q3 - On définit le dictionnaire d = {‘a’: 1, ‘b’: 2, ‘c’: 3, ‘z’: 26}. Quelle expression permet de récupérer la valeur de la clé ‘z’ ?</p>
+<p>Réponses :</p>
+<p>A- d[4]</p>
+<p>B- d[26]</p>
+<p>C- d[z]</p>
+<p>D- d[‘z’]</p>
+<p>Q4 - Quel est le type de la variable billes définie par : billes = {‘vert’: 6, ‘rouge’: 15, ‘bleu’: 11, ‘jaune’: 2, ‘orange’: 17 }</p>
+<p>Réponses :</p>
+<p>A- c’est une séquence</p>
+<p>B- c’est une liste</p>
+<p>C- c’est une liste de listes</p>
+<p>D- c’est un dictionnaire</p>
+<p>Q5 - Considérons le dictionnaire suivant : resultats = {‘Paul’:5 , ‘Amina’:1 , ‘Léon’ : 9 , ‘Benoit’:3}</p>
+<p>Quelle affirmation est correcte ?</p>
+<p>Réponses :</p>
+<p>A- resultats[‘Amina’] vaut 1</p>
+<p>B- resultats[1] vaut ‘Amina’</p>
+<p>C- ‘Paul’ est une valeur de ce dictionnaire</p>
+<p>D- 9 est une clé de ce dictionnaire</p>
+<p>Q6 - Après avoir défini : d = { ‘tigre’: ‘félin,’ ‘tortue’: ‘reptile,’ ‘renard’: ‘canidé’ }</p>
+<p>laquelle des quatre expressions suivantes est correcte ?</p>
+<p>Réponses :</p>
+<p>A- d[‘tortue’]</p>
+<p>B- d[‘reptile’]</p>
+<p>C- d[‘tortue’: ‘reptile’]</p>
+<p>D- d[1]</p>
+<p>Q7 - On exécute le script suivant :</p>
+<p>inventaire = {‘pommes’: 430, ‘bananes’: 312,‘oranges’ : 274, ‘poires’ : 137}</p>
+<p>stock = 0
+for fruit in inventaire.keys():
+if fruit != ‘bananes’:
+stock = stock + inventaire[fruit]</p>
+<p>Que contient la variable stock à la fin de cette exécution ?</p>
+<p>Réponses :</p>
+<p>A- {430, 274, 137}</p>
+<p>B- 312</p>
+<p>C- 841</p>
+<p>D- { ‘pommes,’ ‘oranges,’ ‘poires’ }</p>
+<p>Q8 - On définit ainsi une liste P :</p>
+<p>P = [{“nom”:“Turing,”“prénom”:“Alan,”“âge”:28},{“nom”:“Lovelace,”“prénom”:“Ada,”“âge”:27}]</p>
+<p>Que fait alors l’instruction P[1][“âge”] = 25 ?</p>
+<p>Réponses :</p>
+<p>A- elle modifie la valeur de la clé âge du deuxième élément de la liste P</p>
+<p>B- elle modifie la valeur de la clé âge du premier élément de la liste P</p>
+<p>C- elle donne la longueur de la liste P</p>
+<p>D- elle donne la longueur du premier élément de la liste P</p>
+<p>Q9 - La variable sequence contient une liste de lettres, éventuellement répétées, choisies parmi ‘A,’ ‘B,’ ‘C,’ ‘D.’ On veut créer un dictionnaire effectifs associant à chaque lettre le nombre de fois qu’elle apparaît dans la liste sequence.</p>
+<p>Par exemple si sequence contient [‘A,’ ‘B,’ ‘B,’ ‘D,’ ‘B,’ ‘A’], effectifs doit contenir {‘A’:2, ‘B’:3, ‘C’:0, ‘D’:1}.</p>
+<p>Parmi les scripts suivants, lequel réalise cet objectif ?</p>
+<p>Réponses :</p>
+<p>A-</p>
+<p>effectifs = {‘A’:0, ‘B’:0, ‘C’:0, ‘D’:0}
+for lettre in sequence:
+effectifs[lettre] = effectifs[lettre] + 1</p>
+<p>B-</p>
+<p>effectifs = {}
+for lettre in sequence:
+effectifs[lettre] = effectifs[lettre] + 1</p>
+<p>C-</p>
+<p>effectifs = {‘A’:0, ‘B’:0, ‘C’:0, ‘D’:0}
+for lettre in effectifs.keys():
+effectifs[lettre] = len([lettre in effectifs])</p>
+<p>D-</p>
+<p>effectifs = {}
+for lettre in effectifs.keys():
+effectifs[lettre] = len([lettre in effectifs])</p>
+<p>Q10 - On a défini</p>
+<p>dico = { ‘a’: (1,2,3), ‘b’: (4,5,6) }</p>
+<p>Quelle est la valeur de l’expression dico[‘a’][1]?</p>
+<p>Réponses :</p>
+<p>A- 1</p>
+<p>B- 2</p>
+<p>C- (1,2,3)</p>
+<p>D- cette expression est incorrecte, l’évaluer déclenche une erreur</p>
+<p>Q11 - Quelle est la valeur affichée à l’exécution du programme Python suivant ?</p>
+<p>ports = { ‘http’: 80, ‘imap’: 142, ‘smtp’: 25 }
+ports[‘ftp’] = 21
+print(ports[‘ftp’])</p>
+<p>Réponses :</p>
+<p>A- 3</p>
+<p>B- 21</p>
+<p>C- { ‘ftp’: 21 }</p>
+<p>D- Key not found</p>
+<p>Q12 - On dispose du dictionnaire regions ci-dessous :</p>
+<p>regions = {‘Mayotte’: 376, ‘Pays de la Loire’: 32082,‘La Réunion’: 2504, ‘Grand Est’: 57441,‘Martinique’: 1128, ‘Corse’: 8680,‘Bretagne’: 27208, ‘Nouvelle-Aquitaine’: 84036}</p>
+<p>Parmi les instructions suivantes, laquelle permet d’ajouter une nouvelle région ?</p>
+<p>Réponses :</p>
+<p>A- INSERT “‘Hauts de France’:31806” INTO regions</p>
+<p>B- regions = dict([‘Hauts de France’] = 31806)</p>
+<p>C- regions(‘Hauts de France’) = 31806</p>
+<p>D- regions[‘Hauts de France’] = 31806</p>
+<p>Q13 - On définit ainsi une liste P :</p>
+<p>P = [ {“nom”:“Turing,”“prénom”:“Alan,”“âge”:28},{“nom”:“Lovelace,”“prénom”:“Ada,”“âge”:27} ]</p>
+<p>Comment accéder à la chaîne de caractères “Alan” ?</p>
+<p>Réponses :</p>
+<p>A- P[0]</p>
+<p>B- P[1]</p>
+<p>C- P[0][“prénom”]</p>
+<p>D- P[1][“prénom”]</p>
+<p>Q14 - On exécute le script suivant :</p>
+<p>def ajoute(stock,element,quantite):
+if element in stock:
+stock[element] = stock[element] + quantite
+else:
+stock[element] = quantite</p>
+<p>stock = { ‘clous’: 14, ‘vis’: 27, ‘boulons’: 8, ‘écrous’: 24 }
+ajoute(stock,‘vis,’5)
+ajoute(stock,‘chevilles,’3)</p>
+<p>Quelle est la valeur de la variable stock à la fin de cette exécution ?</p>
+<p>Réponses :</p>
+<p>A- {‘clous’: 14, ‘vis’: 27, ‘boulons’: 8, ‘écrous’: 24}</p>
+<p>B- {‘clous’: 14, ‘vis’: 32, ‘boulons’: 8, ‘écrous’: 24}</p>
+<p>C- {‘clous’: 14, ‘vis’: 27, ‘boulons’: 8, ‘écrous’: 24, ‘chevilles’: 3}</p>
+<p>D- {‘clous’: 14, ‘vis’: 32, ‘boulons’: 8, ‘écrous’: 24, ‘chevilles’: 3}</p>
+<p>Q15 - On considère le code suivant :</p>
+<p>D = { ‘a’: ‘1,’ ‘2’: ‘a,’ ‘b’: ‘a,’ ‘c’: ‘3’}</p>
+<p>Que vaut D[‘a’] à la fin de son exécution ?</p>
+<p>Réponses :</p>
+<p>A- ‘1’</p>
+<p>B- 2</p>
+<p>C- [ ‘2,’ ‘b’ ]</p>
+<p>D- [ ‘1,’ ‘3’ ]</p>
+<p>Q16 - On a défini un dictionnaire :</p>
+<p>contacts = {‘Paul’: ‘0601010182,’ ‘Jacques’: ‘0602413824,’ ‘Claire’: ‘0632451153’}</p>
+<p>Quelle instruction écrire pour ajouter à ce dictionnaire un nouveau contact nommé Juliette avec le numéro de téléphone 0603040506 ?</p>
+<p>Réponses :</p>
+<p>A- ‘Juliette’: ‘0603040506’</p>
+<p>B- contacts.append(‘Juliette’: ‘0603040506’)</p>
+<p>C- contacts[‘Juliette’] = ‘0603040506’</p>
+<p>D- contacts.append(‘Juliette,’ ‘0603040506’)</p>
+<p>Q17 - On considère le script suivant :</p>
+<p>billes = {‘vert’: 6, ‘rouge’: 15, ‘bleu’: 11, ‘jaune’: 2, ‘orange’: 17 }
+total = 0
+for n in billes.XXXXXXX():
+total = total + n</p>
+<p>Par quoi faut-il remplacer XXXXXXX dans ce script pour qu’à la fin de son exécution la variable total contienne le nombre total de billes ?</p>
+<p>Réponses :</p>
+<p>A- keys</p>
+<p>B- values</p>
+<p>C- items</p>
+<p>D- numbers</p>
+<p>Q18 - On définit :</p>
+<p>dico = {“Herve”: 15, “Kevin”:17, “Fatima”:16}</p>
+<p>qui associe nom et âge de trois élèves.</p>
+<p>Comment accéder à l’âge de Kevin ?</p>
+<p>Réponses :</p>
+<p>A- dico[1]</p>
+<p>B- dico[Kevin]</p>
+<p>C- dico[“Kevin”]</p>
+<p>D- dico(“Kevin”)</p>
+<p>Q19 - On exécute le code suivant :</p>
+<p>placard = { ‘chemise’: 3, ‘pantalon’: 6, ‘tee shirt’: 7 }
+placard[‘chaussette’] = 4
+placard[‘chemise’] = 5</p>
+<p>L = list(placard.values())</p>
+<p>Quelle est la valeur de la variable L à l’issue de cette exécution ?</p>
+<p>Réponses :</p>
+<p>A- [ 3, 6, 7 ]</p>
+<p>B- [ 3, 6, 7, 4 ]</p>
+<p>C- [ 5, 6, 7 ]</p>
+<p>D- [ 5, 6, 7, 4 ]</p>
+<p>Q20 - Pour gérer certaines données EXIF de photographies, on a utilisé le code suivant pour stocker dans une liste L de dictionnaires quelques données :</p>
+<p>L = []
+L.append({‘marque’: ‘Canon,’ ‘modele’: ‘EOS 7D,’ ‘focale’: ‘19mm,’ ‘flash’: False})
+L.append({‘marque’: ‘Nikon,’ ‘modele’: ‘CoolPix A1000,’ ‘focale’: ‘19mm,’ ‘flash’: True})
+L.append({‘marque’: ‘Sony,’ ‘modele’: ‘HK 350,’ ‘focale’: ‘24mm,’ ‘flash’: False})
+L.append({‘marque’: ‘Sony,’ ‘modele’: ‘HK 350,’ ‘focale’: ‘19mm,’ ‘flash’: True})
+# ……
+# et ainsi de suite, d’autres informations ont été ajoutées
+# ……</p>
+<p>On veut extraire de ces informations la liste Z des photographies obtenues avec un Canon ou un Nikon et une distance focale de 19 mm.</p>
+<p>Quelle instruction permet de réaliser cette extraction ?</p>
+<p>Réponses :</p>
+<p>A-</p>
+<p>Z = [ p for p in L if (p[‘marque’] == ‘Canon’ or p[‘focale’] == ‘19mm’) and (p[‘marque’] == ‘Nikon’ or p[‘focale’] == ‘19mm’) ]</p>
+<p>B-</p>
+<p>Z = [ p for p in L if (p[‘marque’] == ‘Canon’ and p[‘focale’] == ‘19mm’) and (p[‘marque’] == ‘Nikon’ and p[‘focale’] == ‘19mm’) ]</p>
+<p>C-</p>
+<p>Z = [ p for p in L if (p[‘marque’] == ‘Canon’ or p[‘focale’] == ‘19mm’) or (p[‘marque’] == ‘Nikon’ or p[‘focale’] == ‘19mm’) ]</p>
+<p>D-</p>
+<p>Z = [ p for p in L if (p[‘marque’] == ‘Canon’ and p[‘focale’] == ‘19mm’) or (p[‘marque’] == ‘Nikon’ and p[‘focale’] == ‘19mm’) ]</p>
+<p>Q21 - On définit :</p>
+<p>contacts = {‘Toto’: ‘<a href="mailto:toto@nsi.fr" class="email">toto@nsi.fr</a>,’ ‘Chloé’: ‘<a href="mailto:chloe@nsi.com" class="email">chloe@nsi.com</a>,’‘Paul’: ‘<a href="mailto:paul@nsi.net" class="email">paul@nsi.net</a>,’ ‘Clémence’: ‘<a href="mailto:clemence@nsi.org" class="email">clemence@nsi.org</a>’ }</p>
+<p>Parmi les propositions suivantes, laquelle est exacte ?</p>
+<p>Réponses :</p>
+<p>A- ‘Chloé’ est une valeur de la variable contacts</p>
+<p>B- ‘Chloé’ est une clé de la variable contacts</p>
+<p>C- ‘Chloé’ est un attribut de la variable contacts</p>
+<p>D- ‘Chloé’ est un champ de la variable contacts</p>
+<p>Q22 - On considère la table suivants :</p>
+<p>t = [{‘type’: ‘marteau,’ ‘prix’: 17, ‘quantité’: 32},{‘type’: ‘scie,’ ‘prix’: 24, ‘quantité’: 3},{‘type’: ‘tournevis,’ ‘prix’: 8, ‘quantité’: 45}]</p>
+<p>Quelle expression permet d’obtenir la quantié de scies ?</p>
+<p>Réponses :</p>
+<p>A- t[2][‘quantité’]</p>
+<p>B- t[1][‘quantité’]</p>
+<p>C- t[‘quantité’][1]</p>
+<p>D- t[‘scies’][‘quantité’]</p>
+<p>Q23 - On définit ainsi une liste t :</p>
+<p>t = [ {‘id’:1, ‘age’:23, ‘sejour’:‘PEKIN’},{‘id’:2, ‘age’:27, ‘sejour’:‘ISTANBUL’},{‘id’:3, ‘age’:53, ‘sejour’:‘LONDRES’},{‘id’:4, ‘age’:41, ‘sejour’:‘ISTANBUL’},{‘id’:5, ‘age’:62, ‘sejour’:‘RIO’},{‘id’:6, ‘age’:28, ‘sejour’:‘ALGER’}]</p>
+<p>Quelle affirmation est correcte ?</p>
+<p>Réponses :</p>
+<p>A- t est une liste de listes</p>
+<p>B- t est une liste de dictionnaires</p>
+<p>C- t est un dictionnaire de listes</p>
+<p>D- t est une liste de tuples</p>
+<p>Q24 - On exécute le code suivant :</p>
+<p>dict = {“alexandre” : 17, “mehdi” : 18, “jeanne” : 16,“charlotte” : 19, “celina” : 18, “noé” : 19}</p>
+<p>def f(dic):
+for cle, valeur in dic.items() :
+if valeur &gt; 18:
+return cle</p>
+<p>Que renvoie l’appel f(dict) ?</p>
+<p>Réponses :</p>
+<p>A- 19</p>
+<p>B- 19,19</p>
+<p>C- “charlotte”</p>
+<p>D- “charlotte,”“noé”</p>
+<p>Q25 - On définit la variable suivante : lettres = {“a”: 1, “b”: 2, “c”: 3}.</p>
+<p>Quelle est la valeur de l’expression list(lettres.keys()) ?</p>
+<p>Réponses :</p>
+<p>A- [a,b,c]</p>
+<p>B- [1,2,3]</p>
+<p>C- [“a,”“b,”“c”]</p>
+<p>D- {“a”: 1, “b”: 2, “c”: 3}</p>
+<p>Q26 - On exécute le script suivant :</p>
+<p>notes = {“Paul”: 12, “Jean”: 16, “Clara”: 14, “Aïssa”: 18}
+t = list(notes.keys())</p>
+<p>Quelle est la valeur de t à la fin de cette exécution ?</p>
+<p>Réponses :</p>
+<p>A- Paul</p>
+<p>B- [“Paul,” ‘“Jean,” “Clara,” "’Aïssa’]</p>
+<p>C- [12, 16, 14, 18]</p>
+<p>D- [ “Paul”: 12, “Jean”: 16, “Clara”: 14, “Aïssa”: 18 ]</p>
+<p>Q27 - Par quelle expression remplacer les pointillés dans le programme Python suivant, pour que son exécution affiche le numéro de Dupond ?</p>
+<p>repertoire = [{‘nom’:‘Dupont,’ ‘tel’:‘5234’},{‘nom’:‘Tournesol,’ ‘tel’:‘5248’}, {‘nom’:‘Dupond,’ ‘tel’:‘3452’}]
+for i in range(len(repertoire)):
+if …… :
+print(repertoire[i][‘tel’])</p>
+<p>Réponses :</p>
+<p>A- nom == ‘Dupond’</p>
+<p>B- repertoire[‘nom’] == ‘Dupond’</p>
+<p>C- repertoire[i] == ‘Dupond’</p>
+<p>D- repertoire[i][‘nom’] == ‘Dupond’</p>
+<p>Q28 - On définit :</p>
+<p>T = [{‘fruit’: ‘banane,’ ‘nombre’: 25}, {‘fruit’: ‘orange,’ ‘nombre’: 124}, {‘fruit’: ‘pomme,’ ‘nombre’: 75}, {‘fruit’: ‘kiwi,’ ‘nombre’: 51}]</p>
+<p>Quelle expression a-t-elle pour valeur le nombre de pommes ?</p>
+<p>Réponses :</p>
+<p>A- T[2][‘nombre’]</p>
+<p>B- T[2,‘nombre’]</p>
+<p>C- T[3][‘nombre’]</p>
+<p>D- T[3,‘nombre’]</p>
+<p>Q29 - Quelle expression Python permet d’accéder au numéro de téléphone de Tournesol, sachant que le répertoire a été défini par l’affectation suivante :</p>
+<p>repertoire = [{‘nom’:‘Dupont,’ ‘tel’:‘5234’}, {‘nom’:‘Tournesol,’ ‘tel’:‘5248’}, {‘nom’:‘Dupond,’ ‘tel’:‘3452’}]</p>
+<p>Réponses :</p>
+<p>A- repertoire[‘Tournesol’]</p>
+<p>B- repertoire[‘tel’][1]</p>
+<p>C- repertoire[1][‘tel’]</p>
+<p>D- repertoire[‘Tournesol’][tel]</p>
+<p>Q30 - On définit ainsi une liste t puis une liste r :</p>
+<p>t = [ {‘id’:1, ‘age’:23, ‘sejour’:‘PEKIN’},{‘id’:2, ‘age’:27, ‘sejour’:‘ISTANBUL’},{‘id’:3, ‘age’:53, ‘sejour’:‘LONDRES’},{‘id’:4, ‘age’:41, ‘sejour’:‘ISTANBUL’},{‘id’:5, ‘age’:62, ‘sejour’:‘RIO’},{‘id’:6, ‘age’:28, ‘sejour’:‘ALGER’}]</p>
+<p>r = [ c for c in t if c[‘age’]&gt;30 and c[‘sejour’]==‘ISTANBUL’ ]</p>
+<p>Combien la liste r contient-elle d’éléments ?</p>
+<p>Réponses :</p>
+<p>A- 0</p>
+<p>B- 1</p>
+<p>C- 2</p>
+<p>D- 3</p>
+<p>Q31 - On définit ainsi une liste t :</p>
+<p>t = [ {‘id’:1, ‘age’:23, ‘sejour’:‘PEKIN’},{‘id’:2, ‘age’:27, ‘sejour’:‘ISTANBUL’},{‘id’:3, ‘age’:53, ‘sejour’:‘LONDRES’},{‘id’:4, ‘age’:41, ‘sejour’:‘ISTANBUL’},{‘id’:5, ‘age’:62, ‘sejour’:‘RIO’},{‘id’:6, ‘age’:28, ‘sejour’:‘ALGER’}]</p>
+<p>Quelle expression vaut-elle ‘RIO’ parmi les suivantes ?</p>
+<p>Réponses :</p>
+<p>A- t[4][‘sejour’]</p>
+<p>B- t[5][‘sejour’]</p>
+<p>C- t(‘id’=5)</p>
+<p>D- t.[‘id’=5].[‘sejour’]</p>
+<p>Q32 - On considère des dictionnaires comme</p>
+<p>{ ‘nom’: ‘Jérôme,’ ‘NSI’: 16.2, ‘maths’: 11.4, ‘physique’: 13.0 }</p>
+<p>pour retenir les notes d’un élève.</p>
+<p>On définit :</p>
+<p>def somme(notes):
+return notes[‘NSI’] + notes[‘maths’] + notes[‘physique’]</p>
+<p>def plusPetit(n1, n2):
+if n1[‘NSI’] &lt; n2[‘NSI’]:
+return True
+if n1[‘NSI’] == n2[‘NSI’]:
+if somme(n1) &lt; somme(n2):
+return True
+elif somme(n1) == somme(n2) and n1[‘nom’] &lt; n2[‘nom’]:
+return True
+return False</p>
+<p>pour définir un ordre croissant sur ces dictionnaires.</p>
+<p>Ranger dans l’ordre croissant les dictionnaires suivants :</p>
+<p>n1 = { ‘nom’: “Albert,” ‘NSI’: 12.3, ‘maths’: 14.0, ‘physique’: 8.7 }
+n2 = { ‘nom’: “Béatrice,” ‘NSI’: 12.3, ‘maths’: 11.0, ‘physique’: 12.5 }
+n3 = { ‘nom’: “Colin,” ‘NSI’: 12.3, ‘maths’: 7.0, ‘physique’: 15.7 }
+n4 = { ‘nom’: “Daniel,” ‘NSI’: 13.4, ‘maths’: 9.0, ‘physique’: 5.2 }
+n5 = { ‘nom’: “Emilie,” ‘NSI’: 16.1, ‘maths’: 5.3, ‘physique’: 14.4 }</p>
+<p>Réponses :</p>
+<p>A- n1, n2, n3, n4, n5</p>
+<p>B- n1, n4, n2, n4, n5</p>
+<p>C- n1, n3, n2, n4, n5</p>
+<p>D- n5, n4, n2, n3, n1</p>
+<p>Q33 - Par quoi faut-il remplacer les pointillés dans le script suivant :</p>
+<p>relevé = [{‘matière’:‘EPS,’‘moyenne’:11}, {‘matière’:‘Sciences,’‘moyenne’:6}, {‘matière’:‘LV1,’‘moyenne’:14}, {‘matière’:‘Histoire,’‘moyenne’:9}, {‘matière’:‘LV2,’‘moyenne’:15}]
+a = ……
+b = ……
+for i in relevé :
+if i[a] &gt; 10:
+print(i[b])</p>
+<p>pour qu’il affiche</p>
+<p>EPS
+LV1
+LV2</p>
+<p>Réponses :</p>
+<p>A-</p>
+<p>a = ‘moyenne’
+b = ‘matière’</p>
+<p>B-</p>
+<p>a = ‘matière
+b = ’moyenne’</p>
+<p>C-</p>
+<p>a = 0
+b = 1</p>
+<p>D-</p>
+<p>a = 1
+b = 0</p>
+<p>Q34 - On définit :</p>
+<p>stock = [{‘nom’: ‘flageolets,’ ‘quantité’: 50, ‘prix’: 5.68},{‘nom’: ‘caviar,’ ‘quantité’: 0, ‘prix’: 99.99},………,………,{‘nom’: ‘biscuits,’ ‘quantité’: 100, ‘prix’: 7.71}]</p>
+<p>Quelle expression permet d’obtenir la liste des noms des produits effectivement présents dans le stock (c’est-à-dire ceux dont la quantité n’est pas nulle) ?</p>
+<p>Réponses :</p>
+<p>A- [‘nom’ for p in stock if ‘quantité’ != 0]</p>
+<p>B- [p for p in stock if p[‘quantité’] != 0]</p>
+<p>C- [p[‘nom’] for p in stock if ‘quantité’ != 0]</p>
+<p>D- [p[‘nom’] for p in stock if p[‘quantité’] != 0]</p>
+<p>Q35 - On considère le code suivant :</p>
+<p>def clearfield(f):
+for i in range(len(f)):
+fiche[i][‘code’] = None
+return f</p>
+<p>fiche = [{“nom”: “pierre,” “note”: 5.99, “code”: 125},{“nom”: “pol,” “note”: 2.99, “code”: 82},{“nom”: “jack,” “note”: 7.99, “code”: 135}]</p>
+<p>Que renvoie clearfield(fiche) ?</p>
+<p>Réponses :</p>
+<p>A-</p>
+<p>[{“nom”: “pierre,” “note”: 5.99, “code”: 125},{“nom”: “pol,” “note”: 2.99, “code”: 82},{“nom”: “jack,” “note”: 7.99, “code”: 135}]</p>
+<p>B-</p>
+<p>[{“nom”: “pierre,” “note”: None, “code”: 125},{“nom”: “pol,” “note”: None, “code”: 82},{“nom”: “jack,” “note”: None, “code”: 135}]</p>
+<p>C-</p>
+<p>[{“nom”: “pierre,” “note”: 5.99, “None”: 125},{“nom”: “pol,” “note”: 2.99, “None”: 82},{“nom”: “jack,” “note”: 7.99, “None”: 135}]</p>
+<p>D-</p>
+<p>[{“nom”: “pierre,” “note”: 5.99, “code”: None},{“nom”: “pol,” “note”: 2.99, “code”: None},{“nom”: “jack,” “note”: 7.99, “code”: None}]</p>
+<p>Q36 - On a défini</p>
+<p>repertoire = [{‘nom’: ‘Francette,’ ‘poste’: 412},{‘nom’: ‘Jeanne,’ ‘poste’: 222},{‘nom’: ‘Éric,’ ‘poste’: 231}]</p>
+<p>Quelle expression permet d’accéder au poste d’Éric ?</p>
+<p>Réponses :</p>
+<p>A- repertoire[2][‘poste’]</p>
+<p>B- repertoire[‘poste’][2]</p>
+<p>C- repertoire[‘Éric’][‘poste’]</p>
+<p>D- repertoire[‘Éric’]</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="references.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["book.pdf", "book.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

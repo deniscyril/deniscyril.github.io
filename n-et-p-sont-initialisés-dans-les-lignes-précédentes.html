@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>References | A Minimal Book Example</title>
+  <title>Chapitre 7 n et p sont initialisés dans les lignes précédentes | A Minimal Book Example</title>
   <meta name="description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="References | A Minimal Book Example" />
+  <meta property="og:title" content="Chapitre 7 n et p sont initialisés dans les lignes précédentes | A Minimal Book Example" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="References | A Minimal Book Example" />
+  <meta name="twitter:title" content="Chapitre 7 n et p sont initialisés dans les lignes précédentes | A Minimal Book Example" />
   
   <meta name="twitter:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="listes-et-tuples.html"/>
-<link rel="next" href="qcm.html"/>
+<link rel="prev" href="qcm.html"/>
+<link rel="next" href="à-la-fin-on-a-légalité.html"/>
 <script src="libs/header-attrs-2.8/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -189,7 +189,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6" data-path="qcm.html"><a href="qcm.html"><i class="fa fa-check"></i><b>6</b> QCM</a>
 <ul>
 <li class="chapter" data-level="6.1" data-path="qcm.html"><a href="qcm.html#listes-et-tuples-1"><i class="fa fa-check"></i><b>6.1</b> Listes et tuples</a></li>
-<li class="chapter" data-level="6.2" data-path="qcm.html"><a href="qcm.html#dictionnaires"><i class="fa fa-check"></i><b>6.2</b> Dictionnaires</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="n-et-p-sont-initialisés-dans-les-lignes-précédentes.html"><a href="n-et-p-sont-initialisés-dans-les-lignes-précédentes.html"><i class="fa fa-check"></i><b>7</b> n et p sont initialisés dans les lignes précédentes</a></li>
+<li class="chapter" data-level="8" data-path="à-la-fin-on-a-légalité.html"><a href="à-la-fin-on-a-légalité.html"><i class="fa fa-check"></i><b>8</b> à la fin, on a l’égalité :</a></li>
+<li class="chapter" data-level="9" data-path="à-la-fin-on-a-légalité-1.html"><a href="à-la-fin-on-a-légalité-1.html"><i class="fa fa-check"></i><b>9</b> à la fin, on a l’égalité :</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="à-la-fin-on-a-légalité-1.html"><a href="à-la-fin-on-a-légalité-1.html#dictionnaires"><i class="fa fa-check"></i><b>9.1</b> Dictionnaires</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -211,17 +216,342 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="references" class="section level1 unnumbered">
-<h1>References</h1>
-
+<div id="n-et-p-sont-initialisés-dans-les-lignes-précédentes" class="section level1" number="7">
+<h1><span class="header-section-number">Chapitre 7</span> n et p sont initialisés dans les lignes précédentes</h1>
+<p>t = [ [ 0 for j in range(p) ] for i in range(n) ]</p>
+<p>for k in range(n*p):
+t[k%n][k%p] = k</p>
+<p>Une et une seule des affirmations suivantes est fausse. Laquelle ?</p>
+<p>Réponses :</p>
+<p>A- La liste t contient des entiers tels que 0 &lt;= k &lt; n x p</p>
+<p>B- Pour tout j tel que 0 &lt;= j &lt; n-1, t[j][0] est un multiple de p.</p>
+<p>C- La liste t[0] contient des entiers qui sont tous multiples de n.</p>
+<p>D- Pour tout j tel que 0 &lt;= j &lt; n-1, t[0][j] est un multiple de p.</p>
+<p>Q12 - Que vaut l’expression [ 2*k for k in range(5) ] ?</p>
+<p>Réponses :</p>
+<p>A- [0,2,4,6,8]</p>
+<p>B- [2,4,6,8,10]</p>
+<p>C- [1,2,4,8,16]</p>
+<p>D- [2,4,8,16,32]</p>
+<p>Q13 - On exécute le code suivant :</p>
+<p>A = [ [1,2,3], [4,5,6], [7,8,9] ]
+B = [ [0,0,0], [0,0,0], [0,0,0] ]
+for i in range(3):
+for j in range(3):
+B[i][j] = A[j][i]</p>
+<p>Que vaut B à la fin de l’exécution ?</p>
+<p>Réponses :</p>
+<p>A- rien du tout, le programme déclenche une erreur d’exécution</p>
+<p>B- [ [3,2,1], [6,5,4], [9,8,7] ]</p>
+<p>C- [ [1,4,7], [2,5,8], [3,6,9] ]</p>
+<p>D- [ [7,8,9], [4,5,6], [1,2,3] ]</p>
+<p>Q14 - Après l’affectation suivante :</p>
+<p>alphabet = [ ‘A,’ ‘B,’ ‘C,’ ‘D,’ ‘E,’ ‘F,’ ‘G,’ ‘H,’ ‘I,’ ‘J,’ ‘K,’ ‘L,’ ‘M,’ ‘N,’ ‘O,’ ‘P,’ ‘Q,’ ‘R,’ ‘S,’ ‘T,’ ‘U,’ ‘V,’ ‘W,’ ‘X,’ ‘Y,’ ‘Z’ ]</p>
+<p>quelle est l’expression qui permet d’accéder à la lettre E ?</p>
+<p>Réponses :</p>
+<p>A- alphabet.E</p>
+<p>B- alphabet[‘E’]</p>
+<p>C- alphabet[4]</p>
+<p>D- alphabet[5]</p>
+<p>Q15 - On définit : L = [10,9,8,7,6,5,4,3,2,1]. Quelle est la valeur de L[L[3]] ?</p>
+<p>Réponses :</p>
+<p>A- 3</p>
+<p>B- 4</p>
+<p>C- 7</p>
+<p>D- 8</p>
+<p>Q16 - On considère le code suivant :</p>
+<p>t = [0, 3, 5, 7, 9]
+t[9] = 3 + t[5]</p>
+<p>Que vaut t à la fin de son exécution ?</p>
+<p>Réponses :</p>
+<p>A- [0, 3, 5, 7, 9]</p>
+<p>B- [0, 3, 5, 7, 9, 3]</p>
+<p>C- [0, 3, 5, 7, 9, 8]</p>
+<p>D- l’exécution déclenche une erreur</p>
+<p>Q17 - On définit :</p>
+<p>resultat = [ i*2 for i in range(10) ]</p>
+<p>Quelle est la valeur de resultat ?</p>
+<p>Réponses :</p>
+<p>A- [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</p>
+<p>B- [0, 2, 4, 6, 8, 10, 12, 14, 16, 18]</p>
+<p>C- [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20]</p>
+<p>D- [2, 4, 6, 8, 10, 12, 14, 16, 18]</p>
+<p>Q18 - On considère la fonction suivante :</p>
+<p>def somme(tab):
+s = 0
+for i in range(len(tab)):
+……
+return s</p>
+<p>Par quelle instruction faut-il remplacer les points de suspension pour que l’appel somme([10,11,12,13,14]) renvoie 60 ?</p>
+<p>Réponses :</p>
+<p>A- s = tab[i]</p>
+<p>B- s = s + tab[i]</p>
+<p>C- tab[i] = tab[i] + s</p>
+<p>D- s = s + i</p>
+<p>Q19 - On exécute le script suivant.</p>
+<p>m = []
+for i in range(5):
+n = []
+for j in range(3):
+n.append(i*j)
+m.append(n)</p>
+<p>Quelle est la valeur de m à la fin de son exécution ?</p>
+<p>Réponses :</p>
+<p>A- [ [0, 0, 0, 0, 0], [0, 1, 2, 3, 4], [0, 2, 4, 6, 8] ]</p>
+<p>B- [ [0, 0, 0], [0, 1, 2], [0, 2, 4], [0, 3, 6], [0, 4, 8] ]</p>
+<p>C- [ [1, 1, 1], [2, 4, 6], [3, 6, 9], [4, 8, 12], [5, 10, 15] ]</p>
+<p>D- [ [1, 1, 1, 1, 1], [2, 4, 6, 8, 10], [3, 6, 9, 12, 15], [4, 8, 12, 16, 20], [5, 10, 15, 20, 25] ]</p>
+<p>Q20 - On considère le code suivant :</p>
+<p>def feed(t):
+for i in range(len(t)):
+t[i] = 0
+return t</p>
+<p>Que renvoie feed([12, 24, 32]) ?</p>
+<p>Réponses :</p>
+<p>A- [120, 240, 320]</p>
+<p>B- [0, 0, 0]</p>
+<p>C- [ ]</p>
+<p>D- [0]</p>
+<p>Q21 - L est une liste d’entiers. On définit la fonction suivante :</p>
+<p>def f(L):
+m = L[0]
+for x in L:
+if x &gt; m:
+m = x
+return m</p>
+<p>Que calcule cette fonction ?</p>
+<p>Réponses :</p>
+<p>A- le maximum de la liste L passée en argument</p>
+<p>B- le minimum de la liste L passée en argument</p>
+<p>C- le premier terme de la liste L passée en argument</p>
+<p>D- le dernier terme de la liste L passée en argument</p>
+<p>Q22 - On considère le code suivant :</p>
+<p>t = [1, 6, 8, 3, 21]
+u = [x for x in t if x &gt; 3]</p>
+<p>Que vaut u à la fin de son exécution ?</p>
+<p>Réponses :</p>
+<p>A- [1, 6, 8, 21]</p>
+<p>B- [6, 8, 3, 21]</p>
+<p>C- [6, 8, 21]</p>
+<p>D- [1, 3, 6, 21]</p>
+<p>Q23 - On exécute le code suivant :</p>
+<p>t = [1,2,3,4,5,6,7,8,9]
+v = [c for c in t if c%3 == 0]</p>
+<p>Quelle est la valeur de la variable v à la fin de cette exécution ?</p>
+<p>Réponses :</p>
+<p>A- 18</p>
+<p>B- [1,4,7]</p>
+<p>C- [3,6,9]</p>
+<p>D- [1,2,3,4,5,6,7,8,9]</p>
+<p>Q24 - On a défini : T = [[1,2,3], [4,5,6], [7,8,9]].</p>
+<p>Quelle expression parmi les suivantes a pour valeur le nombre 8 ?</p>
+<p>Réponses :</p>
+<p>A- T[1,2]</p>
+<p>B- T[1][2]</p>
+<p>C- T[2,1]</p>
+<p>D- T[2][1]</p>
+<p>Q25 - On définit :
+L = [ [“lundi,”10,0.87], [“mardi,”11,0.82], [“mercredi,”12,0.91] ]</p>
+<p>Quel est le type de la variable a définie par a = L[1][2] ?</p>
+<p>Réponses :</p>
+<p>A- nombre entier</p>
+<p>B- liste</p>
+<p>C- nombre flottant</p>
+<p>D- chaîne de caractères</p>
+<p>Q26 - n définit la liste L ainsi : L = [ [1], [1,2], [1,2,3] ]</p>
+<p>Des égalités suivantes, une seule est fausse. Laquelle ?</p>
+<p>Réponses :</p>
+<p>A- len(L[0]) == 1</p>
+<p>B- len(L) == 6</p>
+<p>C- len(L[2]) == 3</p>
+<p>D- L[2][2] == 3</p>
+<p>Q27 - On définit L = [[1,2,3,4,5],[6,7,8,9,10],[11,12,13,14,15]].</p>
+<p>Quelle est la valeur de L[0][2] ?</p>
+<p>Réponses :</p>
+<p>A- 2</p>
+<p>B- 3</p>
+<p>C- 11</p>
+<p>D- 12</p>
+<p>Q28 - On considère deux entiers strictement positifs L et C. On note n = L*C leur produit et on écrit la fonction suivante, qui construit un tableau de L lignes et C colonnes, contenant les entiers consécutifs de 0 à n-1 :</p>
+<p>def construitTable(L,C):
+t = []
+for i in range(L):
+ligne = []
+for j in range(C):
+……
+t.append(ligne)
+return t</p>
+<p>Par exemple, l’appel construitTable(2,3) doit renvoyer la table : [[0, 1, 2],[3, 4, 5]]</p>
+<p>Que faut-il écrire à la place des points de suspension pour obtenir ce résultat ?</p>
+<p>Réponses :</p>
+<p>A- ligne.append(i + C*j)</p>
+<p>B- ligne.append(L*i + j)</p>
+<p>C- ligne.append(i + L*j)</p>
+<p>D- ligne.append(C*i + j)</p>
+<p>Q29 - La fonction ci-dessous prend en argument deux nombres entiers.</p>
+<p>def f(n1,n2):
+etendue = max(n1,n2)-min(n1,n2)
+moyenne = (n1+n2)/2
+return etendue,moyenne</p>
+<p>Quel est le type de la valeur renvoyée par un appel à cette fonction ?</p>
+<p>Réponses :</p>
+<p>A- un entier</p>
+<p>B- un réel (ou flottant)</p>
+<p>C- un tuple</p>
+<p>D- une liste</p>
+<p>Q30 - Si on tape dans la console d’exécution la commande :</p>
+<p>[1,4,3] + [2,4,5]</p>
+<p>qu’obtient-on ?</p>
+<p>Réponses :</p>
+<p>A- [3, 8, 8]</p>
+<p>B- [19]</p>
+<p>C- [1, 4, 3, 2, 4, 5]</p>
+<p>D- un message d’erreur car l’addition n’est pas compatible avec les listes</p>
+<p>Q31 - Quelle est la valeur de l’expression [(a,b) for a in range(3) for b in range(3) if a &gt; b] ?</p>
+<p>Réponses :</p>
+<p>A- [(a,b),(a,b),(a,b),(a,b),(a,b),(a,b),(a,b),(a,b),(a,b)]</p>
+<p>B- [(0,0),(0,1),(0,2),(1,0),(1,1),(1,2),(2,0),(2,1),(2,2)]</p>
+<p>C- [(1,0),(2,0),(2,1)]</p>
+<p>D- [(0,0),(0,1),(0,2),(1,0),(1,1),(1,2),(1,0),(1,1),(1,2)]</p>
+<p>Q32 - Quelle est la valeur de l’expression [[i for i in range(5)] for j in range(3)] ?</p>
+<p>Réponses :</p>
+<p>A- [[0, 1, 2], [0, 1, 2], [0, 1, 2], [0, 1, 2], [0, 1, 2]]</p>
+<p>B- [[0, 1, 2, 3, 4], [0, 1, 2, 3, 4], [0, 1, 2, 3, 4]]</p>
+<p>C- [[0, 1, 2, 3], [0, 1, 2, 3], [0, 1, 2, 3], [0, 1, 2, 3], [0, 1, 2, 3]]</p>
+<p>D- [[0, 1, 2, 3, 4, 5], [0, 1, 2, 3, 4, 5], [0, 1, 2, 3, 4, 5]]</p>
+<p>Q33 - On définit une grille G remplie de 0, sous la forme d’une liste de listes, où toutes les sous-listes ont le même nombre d’éléments.</p>
+<p>G =[[0, 0, 0, …, 0],
+[0, 0, 0, …, 0],
+[0, 0, 0, …, 0]
+….
+[0, 0, 0, …, 0]]</p>
+<p>On appelle hauteur de la grille le nombre de sous-listes contenues dans G et largeur de la grille le nombre d’éléments dans chacune de ces sous-listes. Comment peut-on les obtenir ?</p>
+<p>Réponses :</p>
+<p>A- hauteur = len(G[0])</p>
+<p>largeur = len(G)</p>
+<p>B- hauteur = len(G)</p>
+<p>largeur = len(G[0])</p>
+<p>C- hauteur = len(G[0])</p>
+<p>largeur = len(G[1])</p>
+<p>D- hauteur = len(G[1])</p>
+<p>largeur = len(G[0])</p>
+<p>Q34 - Laquelle des expressions suivantes a-t-elle pour valeur la liste des carrés des premiers entiers qui ne sont pas multiples de 5 ?</p>
+<p>Réponses :</p>
+<p>A- [x*x for x in range (11) if x//5 != 0]</p>
+<p>B- [x*x if x%5 != 0 for x in range (11)]</p>
+<p>C- [x*x if x//5 != 0 for x in range (11)]</p>
+<p>D- [x*x for x in range (11) if x%5 != 0]</p>
+<p>Q35 - On définit :</p>
+<p>tab = [ (‘Léa,’ 14), (‘Guillaume,’ 12), (‘Anthony,’ 16), (‘Anne,’ 15) ]</p>
+<p>Quelle est la valeur de l’expression [x[0] for x in tab if x[1]&gt;=15] ?</p>
+<p>Réponses :</p>
+<p>A- [(‘Anthony,’ 16), (‘Anne,’ 15)]</p>
+<p>B- [‘Anthony,’ ‘Anne’]</p>
+<p>C- [16, 15]</p>
+<p>D- TypeError : ‘tuple’ object is not callable</p>
+<p>Q36 - On définit : matrice = [[1,2,3], [4,5,6], [7,8,9], [10,11,12]].</p>
+<p>Quelle est la valeur de matrice[1][2] ?</p>
+<p>Réponses :</p>
+<p>A- 2</p>
+<p>B- 4</p>
+<p>C- 6</p>
+<p>D- 8</p>
+<p>Q37 - On crée la liste suivante :</p>
+<p>t = [ [1,2,3,4], [5,6,7,8], [9,10,11,12] ]</p>
+<p>Que vaut t[1][2] :</p>
+<p>Réponses :</p>
+<p>A- 2</p>
+<p>B- 7</p>
+<p>C- 10</p>
+<p>D- on obtient un message d’erreur “indexError : list index out of range”</p>
+<p>Q38 - Le premier élément d’une liste Python L est noté :</p>
+<p>Réponses :</p>
+<p>A- L(0)</p>
+<p>B- L(1)</p>
+<p>C- L[0]</p>
+<p>D- L[1]</p>
+<p>Q39 - Quelle expression Python a pour valeur la liste [1,3,5,7,9,11] ?</p>
+<p>Réponses :</p>
+<p>A- [2*i - 1 for i in range(6)]</p>
+<p>B- [2*i + 1 for i in range(6)]</p>
+<p>C- [2*i + 1 for i in range(5)]</p>
+<p>D- [2*i - 1 for i in range(7)]</p>
+<p>Q40 - Après avoir défini m = [[1, 2, 3], [4, 5, 6]]</p>
+<p>laquelle des quatre expressions suivantes a la valeur 4 ?</p>
+<p>Réponses :</p>
+<p>A- m[0][1]</p>
+<p>B- m[1][0]</p>
+<p>C- m(0,1)</p>
+<p>D- m(1,0)</p>
+<p>Q41 - On définit tableau = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]. Quelle est la valeur de tableau[2][1] ?</p>
+<p>Réponses :</p>
+<p>A- 2</p>
+<p>B- 4</p>
+<p>C- 6</p>
+<p>D- 8</p>
+<p>Q42 - On s’intéresse à la valeur 14 présente dans la liste suivante:</p>
+<p>T = [[1,2,3,4,5], [6,7,8,9,10], [11,12,13,14,15], [16,17,18,19,20]].</p>
+<p>Quelle expression vaut 14 parmi les suivantes ?</p>
+<p>Réponses :</p>
+<p>A- T[2][3]</p>
+<p>B- T[3][4]</p>
+<p>C- T[3][2]</p>
+<p>D- T[4][3]</p>
+<p>Q43 - On définit : t = [2, 8, 9, 2]</p>
+<p>Quelle est la valeur de l’expression [ x*x for x in t ] ?</p>
+<p>Réponses :</p>
+<p>A- une erreur</p>
+<p>B- [[2, 8, 9, 2], [2, 8, 9, 2]]</p>
+<p>C- [2, 8, 8, 9, 9, 9, 2, 2, 2, 2]</p>
+<p>D- [4, 64, 81, 4]</p>
+<p>Q44 - De quelle expression la liste suivante est-elle la valeur ?</p>
+<p>[[0,0,0,0], [1,1,1,1], [2,2,2,2]]</p>
+<p>Réponses :</p>
+<p>A- [[i] * 4 for i in range(4)]</p>
+<p>B- [[i] * 3 for i in range(4)]</p>
+<p>C- [[i] * 4 for i in range(3)]</p>
+<p>D- [[i] * 3 for i in range(3)]</p>
+<p>Q45 - On définit :</p>
+<p>notes = [(‘Toto,’ 20), (‘John,’ 12), (‘Johnny,’ 2), (‘Superman,’ 16)]</p>
+<p>Quelle est l’expression donnant la note de Superman ?</p>
+<p>Réponses :</p>
+<p>A- notes[4][2]</p>
+<p>B- notes[3][1]</p>
+<p>C- notes[Superman]</p>
+<p>D- notes[‘Superman’]</p>
+<p>Q46 - Quelle est la valeur de l’expression [[n,n+2] for n in range(3)] ?</p>
+<p>Réponses :</p>
+<p>A- [0,2,1,3,2,4]</p>
+<p>B- [1,3,2,4,3,5]</p>
+<p>C- [[0,2],[1,3],[2,4]]</p>
+<p>D- [[1,3],[2,4],[3,5]]</p>
+<p>Q47 - On construit une matrice par compréhension :</p>
+<p>M = [ [i*j for j in range(4)] for i in range(4) ]</p>
+<p>Laquelle des conditions suivantes est-elle vérifiée ?</p>
+<p>Réponses :</p>
+<p>A- M[4][4] == 16</p>
+<p>B- M[0][1] == 1</p>
+<p>C- M[2][3] == 6</p>
+<p>D- M[1][2] == 3</p>
+<p>Q48 - Quelle est l’expression qui a pour valeur la liste [1,4,9,16,25,36] ?</p>
+<p>Réponses :</p>
+<p>A- { n*n for n in range(1,7) }</p>
+<p>B- { n*n for n in range(6) }</p>
+<p>C- [ n*n for n in range(1,7) ]</p>
+<p>D- [ n*n for n in range(6) ]</p>
+<p>Q49 - On dispose d’une table tab constituée d’une liste de trois sous-listes contenant chacune quatre caractères.</p>
+<p>tab=[[‘A,’ ‘B,’ ‘C,’ ‘D’],
+[‘E,’ ‘F,’ ‘G,’ ‘H’],
+[‘I,’ ‘J,’ ‘K,’ ‘L’] ]</p>
+<p>Parmi les propositions suivantes, laquelle permet de convertir cette table en une liste L contenant dans l’ordre, ligne par ligne, les 12 caractères de tab ?</p>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="listes-et-tuples.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="qcm.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="qcm.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="à-la-fin-on-a-légalité.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
