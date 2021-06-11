@@ -24,7 +24,7 @@
 <meta name="author" content="Lycée Dumézil" />
 
 
-<meta name="date" content="2021-06-10" />
+<meta name="date" content="2021-06-11" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -157,10 +157,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.1" data-path="structures-conditionnelles.html"><a href="structures-conditionnelles.html#activité-1-expression-booléenne"><i class="fa fa-check"></i><b>2.1</b> Activité 1: Expression booléenne</a></li>
 <li class="chapter" data-level="2.2" data-path="structures-conditionnelles.html"><a href="structures-conditionnelles.html#activité-2-si-alors"><i class="fa fa-check"></i><b>2.2</b> Activité 2: Si … Alors</a></li>
 <li class="chapter" data-level="2.3" data-path="structures-conditionnelles.html"><a href="structures-conditionnelles.html#activité-3-if..-elif..else"><i class="fa fa-check"></i><b>2.3</b> Activité 3: if.. elif..else</a></li>
-<li class="chapter" data-level="2.4" data-path="structures-conditionnelles.html"><a href="structures-conditionnelles.html#activité-4"><i class="fa fa-check"></i><b>2.4</b> Activité 4:</a></li>
+<li class="chapter" data-level="2.4" data-path="structures-conditionnelles.html"><a href="structures-conditionnelles.html#activité-4-combinaisons-de-if-elif-else"><i class="fa fa-check"></i><b>2.4</b> Activité 4: Combinaisons de if, elif, else</a></li>
 <li class="chapter" data-level="2.5" data-path="structures-conditionnelles.html"><a href="structures-conditionnelles.html#corrigés-des-activités-1"><i class="fa fa-check"></i><b>2.5</b> Corrigés des activités</a>
 <ul>
 <li class="chapter" data-level="2.5.1" data-path="structures-conditionnelles.html"><a href="structures-conditionnelles.html#activité-1"><i class="fa fa-check"></i><b>2.5.1</b> Activité 1</a></li>
+<li class="chapter" data-level="2.5.2" data-path="structures-conditionnelles.html"><a href="structures-conditionnelles.html#activité-2"><i class="fa fa-check"></i><b>2.5.2</b> Activité 2</a></li>
+<li class="chapter" data-level="2.5.3" data-path="structures-conditionnelles.html"><a href="structures-conditionnelles.html#activité-3"><i class="fa fa-check"></i><b>2.5.3</b> Activité 3</a></li>
+<li class="chapter" data-level="2.5.4" data-path="structures-conditionnelles.html"><a href="structures-conditionnelles.html#activité-4"><i class="fa fa-check"></i><b>2.5.4</b> Activité 4</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="fonctions.html"><a href="fonctions.html"><i class="fa fa-check"></i><b>3</b> Fonctions</a>
@@ -219,16 +222,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Dans une console Python, saisie les entrées suivantes:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="types-de-variables.html#cb1-1" aria-hidden="true" tabindex="-1"></a>nombre_entier <span class="op">=</span> <span class="dv">3</span> </span>
 <span id="cb1-2"><a href="types-de-variables.html#cb1-2" aria-hidden="true" tabindex="-1"></a>nombre_flottant <span class="op">=</span> <span class="fl">3.14</span></span>
-<span id="cb1-3"><a href="types-de-variables.html#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(nombre_entier)</span></code></pre></div>
-<pre><code>## &lt;class &#39;int&#39;&gt;</code></pre>
-<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="types-de-variables.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(nombre_flottant)</span></code></pre></div>
-<pre><code>## &lt;class &#39;float&#39;&gt;</code></pre>
-<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="types-de-variables.html#cb5-1" aria-hidden="true" tabindex="-1"></a>double <span class="op">=</span> nombre_entier <span class="op">*</span> <span class="dv">2</span></span>
-<span id="cb5-2"><a href="types-de-variables.html#cb5-2" aria-hidden="true" tabindex="-1"></a>somme <span class="op">=</span> nombre_entier <span class="op">+</span> nombre_flottant</span>
-<span id="cb5-3"><a href="types-de-variables.html#cb5-3" aria-hidden="true" tabindex="-1"></a>double</span></code></pre></div>
-<pre><code>## 6</code></pre>
-<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="types-de-variables.html#cb7-1" aria-hidden="true" tabindex="-1"></a>somme</span></code></pre></div>
-<pre><code>## 6.140000000000001</code></pre>
+<span id="cb1-3"><a href="types-de-variables.html#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(nombre_entier)</span>
+<span id="cb1-4"><a href="types-de-variables.html#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(nombre_flottant)</span>
+<span id="cb1-5"><a href="types-de-variables.html#cb1-5" aria-hidden="true" tabindex="-1"></a>double <span class="op">=</span> nombre_entier <span class="op">*</span> <span class="dv">2</span></span>
+<span id="cb1-6"><a href="types-de-variables.html#cb1-6" aria-hidden="true" tabindex="-1"></a>somme <span class="op">=</span> nombre_entier <span class="op">+</span> nombre_flottant</span>
+<span id="cb1-7"><a href="types-de-variables.html#cb1-7" aria-hidden="true" tabindex="-1"></a>double</span>
+<span id="cb1-8"><a href="types-de-variables.html#cb1-8" aria-hidden="true" tabindex="-1"></a>somme</span></code></pre></div>
 <ol style="list-style-type: decimal">
 <li>Quel est le type de la variable <code>double</code>. Vérifie en utilisant l’instruction <code>type(double)</code>.</li>
 <li>Quel est le type de la variable <code>somme</code>.</li>
@@ -244,11 +243,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p>La division habituelle: <code>/</code></p></li>
 <li><p>Saisie dans la console Python les calculs suivants:</p></li>
 </ol>
-<div class="sourceCode" id="cb9"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="types-de-variables.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="dv">16</span> <span class="op">/</span> <span class="dv">5</span></span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="types-de-variables.html#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dv">16</span> <span class="op">/</span> <span class="dv">5</span></span></code></pre></div>
 <pre><code>## 3.2</code></pre>
-<div class="sourceCode" id="cb11"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb11-1"><a href="types-de-variables.html#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="dv">16</span> <span class="op">//</span> <span class="dv">5</span></span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="types-de-variables.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="dv">16</span> <span class="op">//</span> <span class="dv">5</span></span></code></pre></div>
 <pre><code>## 3</code></pre>
-<div class="sourceCode" id="cb13"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb13-1"><a href="types-de-variables.html#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="dv">16</span> <span class="op">%</span> <span class="dv">5</span></span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="types-de-variables.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="dv">16</span> <span class="op">%</span> <span class="dv">5</span></span></code></pre></div>
 <pre><code>## 1</code></pre>
 <ol start="2" style="list-style-type: decimal">
 <li>Réécrire le code précédent mais en utilisant des variables pour stocker 16 et 5 ainsi que les résultats des calculs.</li>
@@ -266,14 +265,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2><span class="header-section-number">1.3</span> Activité 3: Chaînes</h2>
 <p>Objectifs: type chaine, concaténation, conversion de type, affichage</p>
 <p>Les chaînes sont un type de variable pouvant contenir: un caractère, un mot, un texte.</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb15-1"><a href="types-de-variables.html#cb15-1" aria-hidden="true" tabindex="-1"></a>ma_chaine <span class="op">=</span> <span class="st">&quot;Hello world !&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="types-de-variables.html#cb8-1" aria-hidden="true" tabindex="-1"></a>ma_chaine <span class="op">=</span> <span class="st">&quot;Hello world !&quot;</span></span></code></pre></div>
 <ol style="list-style-type: decimal">
 <li>Vérifie avec l’instruction <code>type</code> le type de la variable <code>ma_chaine</code>.</li>
 </ol>
-<div class="sourceCode" id="cb16"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb16-1"><a href="types-de-variables.html#cb16-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="st">&quot;Je&quot;</span></span>
-<span id="cb16-2"><a href="types-de-variables.html#cb16-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="st">&quot; vois&quot;</span></span>
-<span id="cb16-3"><a href="types-de-variables.html#cb16-3" aria-hidden="true" tabindex="-1"></a>nb <span class="op">=</span> <span class="dv">3</span></span>
-<span id="cb16-4"><a href="types-de-variables.html#cb16-4" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> <span class="st">&quot; pommes dans cet arbre.&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="types-de-variables.html#cb9-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="st">&quot;Je&quot;</span></span>
+<span id="cb9-2"><a href="types-de-variables.html#cb9-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="st">&quot; vois&quot;</span></span>
+<span id="cb9-3"><a href="types-de-variables.html#cb9-3" aria-hidden="true" tabindex="-1"></a>nb <span class="op">=</span> <span class="dv">3</span></span>
+<span id="cb9-4"><a href="types-de-variables.html#cb9-4" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> <span class="st">&quot; pommes dans cet arbre.&quot;</span></span></code></pre></div>
 <ol start="2" style="list-style-type: decimal">
 <li>Ajoute les chaînes a et b. Quel résultat obtiens-tu ? On dit que les chaînes a et b ont été <code>concaténées</code>.</li>
 <li>Stocke le résultat de <code>a+b</code> dans une variable <code>chaine_1</code>.</li>
@@ -283,17 +282,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ol start="5" style="list-style-type: decimal">
 <li>Saisie le code suivant:</li>
 </ol>
-<div class="sourceCode" id="cb17"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb17-1"><a href="types-de-variables.html#cb17-1" aria-hidden="true" tabindex="-1"></a>chaine_nb <span class="op">=</span> <span class="bu">str</span>(nb)</span>
-<span id="cb17-2"><a href="types-de-variables.html#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(chaine_nb)</span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb10-1"><a href="types-de-variables.html#cb10-1" aria-hidden="true" tabindex="-1"></a>chaine_nb <span class="op">=</span> <span class="bu">str</span>(nb)</span>
+<span id="cb10-2"><a href="types-de-variables.html#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(chaine_nb)</span></code></pre></div>
 <p>Explique à quoi sert <code>str()</code></p>
 <ol start="6" style="list-style-type: decimal">
 <li>Complète le programme pour que <code>message</code> contienne la chaîne: “Je vois 3 pommes dans cet arbre”</li>
 </ol>
-<div class="sourceCode" id="cb18"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb18-1"><a href="types-de-variables.html#cb18-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="st">&quot;Je vois &quot;</span></span>
-<span id="cb18-2"><a href="types-de-variables.html#cb18-2" aria-hidden="true" tabindex="-1"></a>nb <span class="op">=</span> <span class="dv">3</span></span>
-<span id="cb18-3"><a href="types-de-variables.html#cb18-3" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> <span class="st">&quot; pommes dans cet arbre&quot;</span></span>
-<span id="cb18-4"><a href="types-de-variables.html#cb18-4" aria-hidden="true" tabindex="-1"></a>nombre <span class="op">=</span> ...</span>
-<span id="cb18-5"><a href="types-de-variables.html#cb18-5" aria-hidden="true" tabindex="-1"></a>message <span class="op">=</span> a <span class="op">+</span> nombre <span class="op">+</span> c</span></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb11-1"><a href="types-de-variables.html#cb11-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="st">&quot;Je vois &quot;</span></span>
+<span id="cb11-2"><a href="types-de-variables.html#cb11-2" aria-hidden="true" tabindex="-1"></a>nb <span class="op">=</span> <span class="dv">3</span></span>
+<span id="cb11-3"><a href="types-de-variables.html#cb11-3" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> <span class="st">&quot; pommes dans cet arbre&quot;</span></span>
+<span id="cb11-4"><a href="types-de-variables.html#cb11-4" aria-hidden="true" tabindex="-1"></a>nombre <span class="op">=</span> ...</span>
+<span id="cb11-5"><a href="types-de-variables.html#cb11-5" aria-hidden="true" tabindex="-1"></a>message <span class="op">=</span> a <span class="op">+</span> nombre <span class="op">+</span> c</span></code></pre></div>
 <div style="page-break-after: always;"></div>
 </div>
 <div id="activité-4-affichage-de-chaines" class="section level2" number="1.4">
@@ -303,10 +302,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ol style="list-style-type: decimal">
 <li>Saisie dans la console python le code suivant:</li>
 </ol>
-<div class="sourceCode" id="cb19"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb19-1"><a href="types-de-variables.html#cb19-1" aria-hidden="true" tabindex="-1"></a>c1 <span class="op">=</span> <span class="st">&quot;bonjour&quot;</span></span>
-<span id="cb19-2"><a href="types-de-variables.html#cb19-2" aria-hidden="true" tabindex="-1"></a>c2 <span class="op">=</span> <span class="st">&#39; le monde !&#39;</span></span>
-<span id="cb19-3"><a href="types-de-variables.html#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;hello&#39;</span>)</span>
-<span id="cb19-4"><a href="types-de-variables.html#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(c1 <span class="op">+</span> c2)</span></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb12-1"><a href="types-de-variables.html#cb12-1" aria-hidden="true" tabindex="-1"></a>c1 <span class="op">=</span> <span class="st">&quot;bonjour&quot;</span></span>
+<span id="cb12-2"><a href="types-de-variables.html#cb12-2" aria-hidden="true" tabindex="-1"></a>c2 <span class="op">=</span> <span class="st">&#39; le monde !&#39;</span></span>
+<span id="cb12-3"><a href="types-de-variables.html#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;hello&#39;</span>)</span>
+<span id="cb12-4"><a href="types-de-variables.html#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(c1 <span class="op">+</span> c2)</span></code></pre></div>
 <ol start="2" style="list-style-type: decimal">
 <li>Détaille ligne à ligne l’exécution de ce script.</li>
 <li>Modifie la dernière ligne du script afin d’affiche: <code>bonjour bonjour le monde !</code></li>
@@ -315,11 +314,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ol style="list-style-type: decimal">
 <li>Saisie dans la console python le code suivant:</li>
 </ol>
-<div class="sourceCode" id="cb20"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb20-1"><a href="types-de-variables.html#cb20-1" aria-hidden="true" tabindex="-1"></a>prof <span class="op">=</span> <span class="st">&quot;M.DENIS&quot;</span></span>
-<span id="cb20-2"><a href="types-de-variables.html#cb20-2" aria-hidden="true" tabindex="-1"></a>matiere <span class="op">=</span> <span class="st">&quot;NSI&quot;</span></span>
-<span id="cb20-3"><a href="types-de-variables.html#cb20-3" aria-hidden="true" tabindex="-1"></a>nb_eleve <span class="op">=</span> <span class="dv">19</span></span>
-<span id="cb20-4"><a href="types-de-variables.html#cb20-4" aria-hidden="true" tabindex="-1"></a>msg <span class="op">=</span> <span class="ss">f&quot;</span><span class="sc">{</span>prof<span class="sc">}</span><span class="ss"> enseigne la </span><span class="sc">{</span>matiere<span class="sc">}</span><span class="ss"> a </span><span class="sc">{</span>nb_eleve<span class="sc">}</span><span class="ss"> élèves de première.&quot;</span></span>
-<span id="cb20-5"><a href="types-de-variables.html#cb20-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(msg)</span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb13-1"><a href="types-de-variables.html#cb13-1" aria-hidden="true" tabindex="-1"></a>prof <span class="op">=</span> <span class="st">&quot;M.DENIS&quot;</span></span>
+<span id="cb13-2"><a href="types-de-variables.html#cb13-2" aria-hidden="true" tabindex="-1"></a>matiere <span class="op">=</span> <span class="st">&quot;NSI&quot;</span></span>
+<span id="cb13-3"><a href="types-de-variables.html#cb13-3" aria-hidden="true" tabindex="-1"></a>nb_eleve <span class="op">=</span> <span class="dv">19</span></span>
+<span id="cb13-4"><a href="types-de-variables.html#cb13-4" aria-hidden="true" tabindex="-1"></a>msg <span class="op">=</span> <span class="ss">f&quot;</span><span class="sc">{</span>prof<span class="sc">}</span><span class="ss"> enseigne la </span><span class="sc">{</span>matiere<span class="sc">}</span><span class="ss"> a </span><span class="sc">{</span>nb_eleve<span class="sc">}</span><span class="ss"> élèves de première.&quot;</span></span>
+<span id="cb13-5"><a href="types-de-variables.html#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(msg)</span></code></pre></div>
 <ol start="2" style="list-style-type: decimal">
 <li>Détaille ligne à ligne l’exécution de ce script.</li>
 <li>Modifie ce code pour afficher M.MARTIN enseigne la Mathématique a 35 élèves de première.</li>
@@ -334,10 +333,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ol style="list-style-type: decimal">
 <li>Saisie le code suivant:</li>
 </ol>
-<div class="sourceCode" id="cb21"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb21-1"><a href="types-de-variables.html#cb21-1" aria-hidden="true" tabindex="-1"></a>n1 <span class="op">=</span> <span class="fl">3.1415926</span></span>
-<span id="cb21-2"><a href="types-de-variables.html#cb21-2" aria-hidden="true" tabindex="-1"></a>n2 <span class="op">=</span> <span class="dv">6358</span></span>
-<span id="cb21-3"><a href="types-de-variables.html#cb21-3" aria-hidden="true" tabindex="-1"></a>n3 <span class="op">=</span> <span class="op">-</span> <span class="fl">123.0034</span></span>
-<span id="cb21-4"><a href="types-de-variables.html#cb21-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f&#39;nombre 1 </span><span class="sc">{n1</span> <span class="sc">:</span> <span class="op">&lt;</span><span class="dv">10</span><span class="sc">_</span><span class="fl">.2</span><span class="sc">f}</span><span class="ss"> nombre 2 </span><span class="sc">{n2</span> <span class="sc">:</span> <span class="op">&lt;</span><span class="dv">10</span><span class="sc">_</span><span class="fl">.3</span><span class="sc">e}</span><span class="ss">&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb14-1"><a href="types-de-variables.html#cb14-1" aria-hidden="true" tabindex="-1"></a>n1 <span class="op">=</span> <span class="fl">3.1415926</span></span>
+<span id="cb14-2"><a href="types-de-variables.html#cb14-2" aria-hidden="true" tabindex="-1"></a>n2 <span class="op">=</span> <span class="dv">6358</span></span>
+<span id="cb14-3"><a href="types-de-variables.html#cb14-3" aria-hidden="true" tabindex="-1"></a>n3 <span class="op">=</span> <span class="op">-</span> <span class="fl">123.0034</span></span>
+<span id="cb14-4"><a href="types-de-variables.html#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f&#39;nombre 1 </span><span class="sc">{n1</span> <span class="sc">:</span> <span class="op">&lt;</span><span class="dv">10</span><span class="sc">_</span><span class="fl">.2</span><span class="sc">f}</span><span class="ss"> nombre 2 </span><span class="sc">{n2</span> <span class="sc">:</span> <span class="op">&lt;</span><span class="dv">10</span><span class="sc">_</span><span class="fl">.3</span><span class="sc">e}</span><span class="ss">&#39;</span>)</span></code></pre></div>
 <ol start="2" style="list-style-type: decimal">
 <li>En utilisant la documentation ci-dessous, détaille et justifie l’affichage du programme ci-dessus.</li>
 </ol>
@@ -377,17 +376,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><code>Le poids d un homme de 50 kg vaut sur la Terre 490.0      N.</code></li>
 <li><code>Le poids d un homme de 50 kg vaut sur la Lune 6.2        N.</code></li>
 </ul>
-<div class="sourceCode" id="cb22"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb22-1"><a href="types-de-variables.html#cb22-1" aria-hidden="true" tabindex="-1"></a>G <span class="op">=</span> <span class="fl">6.67e-11</span></span>
-<span id="cb22-2"><a href="types-de-variables.html#cb22-2" aria-hidden="true" tabindex="-1"></a>M_terre <span class="op">=</span> <span class="fl">5.98e24</span></span>
-<span id="cb22-3"><a href="types-de-variables.html#cb22-3" aria-hidden="true" tabindex="-1"></a>M_lune <span class="op">=</span> <span class="fl">7.6e22</span></span>
-<span id="cb22-4"><a href="types-de-variables.html#cb22-4" aria-hidden="true" tabindex="-1"></a>m <span class="op">=</span> <span class="dv">50</span></span>
-<span id="cb22-5"><a href="types-de-variables.html#cb22-5" aria-hidden="true" tabindex="-1"></a>r_T <span class="op">=</span> <span class="fl">6380e3</span> <span class="co">#rayon de la Terre </span></span>
-<span id="cb22-6"><a href="types-de-variables.html#cb22-6" aria-hidden="true" tabindex="-1"></a>r_L <span class="op">=</span> <span class="fl">1737e3</span> <span class="co">#rayon de la Lune </span></span>
-<span id="cb22-7"><a href="types-de-variables.html#cb22-7" aria-hidden="true" tabindex="-1"></a>F_T <span class="op">=</span> G<span class="op">*</span>m<span class="op">*</span>M_terre<span class="op">/</span>r_T<span class="op">**</span><span class="dv">2</span> <span class="co">#Calcul du poids sur Terre</span></span>
-<span id="cb22-8"><a href="types-de-variables.html#cb22-8" aria-hidden="true" tabindex="-1"></a>F_L <span class="op">=</span> .. à compléter ... </span>
-<span id="cb22-9"><a href="types-de-variables.html#cb22-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-10"><a href="types-de-variables.html#cb22-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f&#39;Le poids d un homme de </span><span class="sc">{</span> <span class="sc">à</span> compl<span class="sc">é</span>ter<span class="sc">}</span><span class="ss"> kg vaut sur la Terre </span><span class="sc">{</span>F_T <span class="sc">:</span> <span class="op">&lt;</span><span class="fl">10.</span><span class="sc">..</span>compl<span class="sc">é</span>ter<span class="sc">...}</span><span class="ss"> N.&#39;</span>)</span>
-<span id="cb22-11"><a href="types-de-variables.html#cb22-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(...Compléter...)</span></code></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb15-1"><a href="types-de-variables.html#cb15-1" aria-hidden="true" tabindex="-1"></a>G <span class="op">=</span> <span class="fl">6.67e-11</span></span>
+<span id="cb15-2"><a href="types-de-variables.html#cb15-2" aria-hidden="true" tabindex="-1"></a>M_terre <span class="op">=</span> <span class="fl">5.98e24</span></span>
+<span id="cb15-3"><a href="types-de-variables.html#cb15-3" aria-hidden="true" tabindex="-1"></a>M_lune <span class="op">=</span> <span class="fl">7.6e22</span></span>
+<span id="cb15-4"><a href="types-de-variables.html#cb15-4" aria-hidden="true" tabindex="-1"></a>m <span class="op">=</span> <span class="dv">50</span></span>
+<span id="cb15-5"><a href="types-de-variables.html#cb15-5" aria-hidden="true" tabindex="-1"></a>r_T <span class="op">=</span> <span class="fl">6380e3</span> <span class="co">#rayon de la Terre </span></span>
+<span id="cb15-6"><a href="types-de-variables.html#cb15-6" aria-hidden="true" tabindex="-1"></a>r_L <span class="op">=</span> <span class="fl">1737e3</span> <span class="co">#rayon de la Lune </span></span>
+<span id="cb15-7"><a href="types-de-variables.html#cb15-7" aria-hidden="true" tabindex="-1"></a>F_T <span class="op">=</span> G<span class="op">*</span>m<span class="op">*</span>M_terre<span class="op">/</span>r_T<span class="op">**</span><span class="dv">2</span> <span class="co">#Calcul du poids sur Terre</span></span>
+<span id="cb15-8"><a href="types-de-variables.html#cb15-8" aria-hidden="true" tabindex="-1"></a>F_L <span class="op">=</span> .. à compléter ... </span>
+<span id="cb15-9"><a href="types-de-variables.html#cb15-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-10"><a href="types-de-variables.html#cb15-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f&#39;Le poids d un homme de </span><span class="sc">{</span> <span class="sc">à</span> compl<span class="sc">é</span>ter<span class="sc">}</span><span class="ss"> kg vaut sur la Terre </span><span class="sc">{</span>F_T <span class="sc">:</span> <span class="op">&lt;</span><span class="fl">10.</span><span class="sc">..</span>compl<span class="sc">é</span>ter<span class="sc">...}</span><span class="ss"> N.&#39;</span>)</span>
+<span id="cb15-11"><a href="types-de-variables.html#cb15-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(...Compléter...)</span></code></pre></div>
 <div style="page-break-after: always;"></div>
 </div>
 <div id="corrigés-des-activités" class="section level2" number="1.5">
@@ -403,29 +402,29 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="activité-2-divisions-et-modulo-correction" class="section level3" number="1.5.2">
 <h3><span class="header-section-number">1.5.2</span> Activité 2: Divisions et modulo correction</h3>
-<div class="sourceCode" id="cb23"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb23-1"><a href="types-de-variables.html#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="dv">16</span> <span class="op">/</span> <span class="dv">5</span></span></code></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb16-1"><a href="types-de-variables.html#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="dv">16</span> <span class="op">/</span> <span class="dv">5</span></span></code></pre></div>
 <pre><code>## 3.2</code></pre>
-<div class="sourceCode" id="cb25"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb25-1"><a href="types-de-variables.html#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="dv">16</span> <span class="op">//</span> <span class="dv">5</span></span></code></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb18-1"><a href="types-de-variables.html#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="dv">16</span> <span class="op">//</span> <span class="dv">5</span></span></code></pre></div>
 <pre><code>## 3</code></pre>
-<div class="sourceCode" id="cb27"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb27-1"><a href="types-de-variables.html#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="dv">16</span> <span class="op">%</span> <span class="dv">5</span></span></code></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb20-1"><a href="types-de-variables.html#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="dv">16</span> <span class="op">%</span> <span class="dv">5</span></span></code></pre></div>
 <pre><code>## 1</code></pre>
-<div class="sourceCode" id="cb29"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb29-1"><a href="types-de-variables.html#cb29-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">16</span></span>
-<span id="cb29-2"><a href="types-de-variables.html#cb29-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="dv">5</span></span>
-<span id="cb29-3"><a href="types-de-variables.html#cb29-3" aria-hidden="true" tabindex="-1"></a>quotient <span class="op">=</span> a <span class="op">/</span> b</span>
-<span id="cb29-4"><a href="types-de-variables.html#cb29-4" aria-hidden="true" tabindex="-1"></a>quotient_entier <span class="op">=</span> a <span class="op">//</span> b</span>
-<span id="cb29-5"><a href="types-de-variables.html#cb29-5" aria-hidden="true" tabindex="-1"></a>reste <span class="op">=</span> a <span class="op">%</span> b</span></code></pre></div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb22-1"><a href="types-de-variables.html#cb22-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">16</span></span>
+<span id="cb22-2"><a href="types-de-variables.html#cb22-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb22-3"><a href="types-de-variables.html#cb22-3" aria-hidden="true" tabindex="-1"></a>quotient <span class="op">=</span> a <span class="op">/</span> b</span>
+<span id="cb22-4"><a href="types-de-variables.html#cb22-4" aria-hidden="true" tabindex="-1"></a>quotient_entier <span class="op">=</span> a <span class="op">//</span> b</span>
+<span id="cb22-5"><a href="types-de-variables.html#cb22-5" aria-hidden="true" tabindex="-1"></a>reste <span class="op">=</span> a <span class="op">%</span> b</span></code></pre></div>
 <ol start="2" style="list-style-type: decimal">
 <li><code>/</code> calcul le quotient décimal</li>
 <li><code>//</code> renvoie la valeur entière du quotient.</li>
 <li></li>
 </ol>
-<div class="sourceCode" id="cb30"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb30-1"><a href="types-de-variables.html#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="co"># NB de popcorns pour chaque personne</span></span>
-<span id="cb30-2"><a href="types-de-variables.html#cb30-2" aria-hidden="true" tabindex="-1"></a>popcorns <span class="op">=</span> <span class="dv">257</span></span>
-<span id="cb30-3"><a href="types-de-variables.html#cb30-3" aria-hidden="true" tabindex="-1"></a>nb_personnes <span class="op">=</span> <span class="dv">3</span></span>
-<span id="cb30-4"><a href="types-de-variables.html#cb30-4" aria-hidden="true" tabindex="-1"></a>popcorns <span class="op">//</span> nb_personnes</span>
-<span id="cb30-5"><a href="types-de-variables.html#cb30-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Pour Médor</span></span></code></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb23-1"><a href="types-de-variables.html#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># NB de popcorns pour chaque personne</span></span>
+<span id="cb23-2"><a href="types-de-variables.html#cb23-2" aria-hidden="true" tabindex="-1"></a>popcorns <span class="op">=</span> <span class="dv">257</span></span>
+<span id="cb23-3"><a href="types-de-variables.html#cb23-3" aria-hidden="true" tabindex="-1"></a>nb_personnes <span class="op">=</span> <span class="dv">3</span></span>
+<span id="cb23-4"><a href="types-de-variables.html#cb23-4" aria-hidden="true" tabindex="-1"></a>popcorns <span class="op">//</span> nb_personnes</span>
+<span id="cb23-5"><a href="types-de-variables.html#cb23-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Pour Médor</span></span></code></pre></div>
 <pre><code>## 85</code></pre>
-<div class="sourceCode" id="cb32"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb32-1"><a href="types-de-variables.html#cb32-1" aria-hidden="true" tabindex="-1"></a>popcorns <span class="op">%</span> nb_personnes</span></code></pre></div>
+<div class="sourceCode" id="cb25"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb25-1"><a href="types-de-variables.html#cb25-1" aria-hidden="true" tabindex="-1"></a>popcorns <span class="op">%</span> nb_personnes</span></code></pre></div>
 <pre><code>## 2</code></pre>
 <div style="page-break-after: always;"></div>
 </div>
@@ -436,50 +435,50 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ol style="list-style-type: decimal">
 <li>Vérifie avec l’instruction <code>type</code> le type de la variable <code>ma_chaine</code>.</li>
 </ol>
-<div class="sourceCode" id="cb34"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb34-1"><a href="types-de-variables.html#cb34-1" aria-hidden="true" tabindex="-1"></a>ma_chaine <span class="op">=</span> <span class="st">&quot;Hello world !&quot;</span></span>
-<span id="cb34-2"><a href="types-de-variables.html#cb34-2" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(ma_chaine)</span></code></pre></div>
+<div class="sourceCode" id="cb27"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb27-1"><a href="types-de-variables.html#cb27-1" aria-hidden="true" tabindex="-1"></a>ma_chaine <span class="op">=</span> <span class="st">&quot;Hello world !&quot;</span></span>
+<span id="cb27-2"><a href="types-de-variables.html#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(ma_chaine)</span></code></pre></div>
 <pre><code>## &lt;class &#39;str&#39;&gt;</code></pre>
 <ol start="2" style="list-style-type: decimal">
 <li>Ajoute les chaînes a et b. Quel résultat obtiens-tu ? On dit que les chaînes a et b ont été <code>concaténées</code>.</li>
 </ol>
-<div class="sourceCode" id="cb36"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb36-1"><a href="types-de-variables.html#cb36-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="st">&quot;Je&quot;</span></span>
-<span id="cb36-2"><a href="types-de-variables.html#cb36-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="st">&quot; vois&quot;</span></span>
-<span id="cb36-3"><a href="types-de-variables.html#cb36-3" aria-hidden="true" tabindex="-1"></a>a<span class="op">+</span>b</span></code></pre></div>
+<div class="sourceCode" id="cb29"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb29-1"><a href="types-de-variables.html#cb29-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="st">&quot;Je&quot;</span></span>
+<span id="cb29-2"><a href="types-de-variables.html#cb29-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="st">&quot; vois&quot;</span></span>
+<span id="cb29-3"><a href="types-de-variables.html#cb29-3" aria-hidden="true" tabindex="-1"></a>a<span class="op">+</span>b</span></code></pre></div>
 <pre><code>## &#39;Je vois&#39;</code></pre>
 <ol start="3" style="list-style-type: decimal">
 <li>Stocke le résultat de <code>a+b</code> dans une variable <code>chaine_1</code>.</li>
 </ol>
-<div class="sourceCode" id="cb38"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb38-1"><a href="types-de-variables.html#cb38-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="st">&quot;Je&quot;</span></span>
-<span id="cb38-2"><a href="types-de-variables.html#cb38-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="st">&quot; vois&quot;</span></span>
-<span id="cb38-3"><a href="types-de-variables.html#cb38-3" aria-hidden="true" tabindex="-1"></a>nb <span class="op">=</span> <span class="dv">3</span></span>
-<span id="cb38-4"><a href="types-de-variables.html#cb38-4" aria-hidden="true" tabindex="-1"></a>chaine_1 <span class="op">=</span> a <span class="op">+</span> b</span>
-<span id="cb38-5"><a href="types-de-variables.html#cb38-5" aria-hidden="true" tabindex="-1"></a>chaine_1</span></code></pre></div>
+<div class="sourceCode" id="cb31"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb31-1"><a href="types-de-variables.html#cb31-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="st">&quot;Je&quot;</span></span>
+<span id="cb31-2"><a href="types-de-variables.html#cb31-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="st">&quot; vois&quot;</span></span>
+<span id="cb31-3"><a href="types-de-variables.html#cb31-3" aria-hidden="true" tabindex="-1"></a>nb <span class="op">=</span> <span class="dv">3</span></span>
+<span id="cb31-4"><a href="types-de-variables.html#cb31-4" aria-hidden="true" tabindex="-1"></a>chaine_1 <span class="op">=</span> a <span class="op">+</span> b</span>
+<span id="cb31-5"><a href="types-de-variables.html#cb31-5" aria-hidden="true" tabindex="-1"></a>chaine_1</span></code></pre></div>
 <pre><code>## &#39;Je vois&#39;</code></pre>
 <ol start="4" style="list-style-type: decimal">
 <li>Essaye d’ajouter <code>chaine_1</code> à <code>nb</code>. Relève le message d’erreur qui apparaît. Explique cette erreur.</li>
 </ol>
-<div class="sourceCode" id="cb40"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb40-1"><a href="types-de-variables.html#cb40-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="st">&quot;Je&quot;</span></span>
-<span id="cb40-2"><a href="types-de-variables.html#cb40-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="st">&quot; vois&quot;</span></span>
-<span id="cb40-3"><a href="types-de-variables.html#cb40-3" aria-hidden="true" tabindex="-1"></a>nb <span class="op">=</span> <span class="dv">3</span></span>
-<span id="cb40-4"><a href="types-de-variables.html#cb40-4" aria-hidden="true" tabindex="-1"></a>chaine_1 <span class="op">=</span> a <span class="op">+</span> b</span>
-<span id="cb40-5"><a href="types-de-variables.html#cb40-5" aria-hidden="true" tabindex="-1"></a>chaine_1 <span class="op">+</span> nb</span></code></pre></div>
+<div class="sourceCode" id="cb33"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb33-1"><a href="types-de-variables.html#cb33-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="st">&quot;Je&quot;</span></span>
+<span id="cb33-2"><a href="types-de-variables.html#cb33-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="st">&quot; vois&quot;</span></span>
+<span id="cb33-3"><a href="types-de-variables.html#cb33-3" aria-hidden="true" tabindex="-1"></a>nb <span class="op">=</span> <span class="dv">3</span></span>
+<span id="cb33-4"><a href="types-de-variables.html#cb33-4" aria-hidden="true" tabindex="-1"></a>chaine_1 <span class="op">=</span> a <span class="op">+</span> b</span>
+<span id="cb33-5"><a href="types-de-variables.html#cb33-5" aria-hidden="true" tabindex="-1"></a>chaine_1 <span class="op">+</span> nb</span></code></pre></div>
 <p><strong>Explication</strong> <code>chaine_1</code> et <code>nb</code> sont deux variables qui contiennent des informations de type différents. On ne peut additionner que des données de même type. On peut additionner deux entiers, un flottant avec un entier ou encore deux chaines mais pas une chaine et un entier.</p>
 <ol start="5" style="list-style-type: decimal">
 <li>Saisie le code suivant:</li>
 </ol>
-<div class="sourceCode" id="cb41"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb41-1"><a href="types-de-variables.html#cb41-1" aria-hidden="true" tabindex="-1"></a>chaine_nb <span class="op">=</span> <span class="bu">str</span>(nb)</span>
-<span id="cb41-2"><a href="types-de-variables.html#cb41-2" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(chaine_nb)</span></code></pre></div>
+<div class="sourceCode" id="cb34"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb34-1"><a href="types-de-variables.html#cb34-1" aria-hidden="true" tabindex="-1"></a>chaine_nb <span class="op">=</span> <span class="bu">str</span>(nb)</span>
+<span id="cb34-2"><a href="types-de-variables.html#cb34-2" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(chaine_nb)</span></code></pre></div>
 <pre><code>## &lt;class &#39;str&#39;&gt;</code></pre>
 <p><code>str()</code> permet de convertir le nombre <code>nb</code> en une donnée de type chaine de caractère. La valeur 3 contenue dans nb est transformée en <strong>chaine de caractère</strong> “3.” Il est alors possible de concaténé “3” avec une autre chaine.</p>
 <ol start="6" style="list-style-type: decimal">
 <li>Complète le programme pour que <code>message</code> contienne la chaîne: “Je vois 3 pommes dans cet arbre”</li>
 </ol>
-<div class="sourceCode" id="cb43"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb43-1"><a href="types-de-variables.html#cb43-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="st">&quot;Je vois &quot;</span></span>
-<span id="cb43-2"><a href="types-de-variables.html#cb43-2" aria-hidden="true" tabindex="-1"></a>nb <span class="op">=</span> <span class="dv">3</span></span>
-<span id="cb43-3"><a href="types-de-variables.html#cb43-3" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> <span class="st">&quot; pommes dans cet arbre&quot;</span></span>
-<span id="cb43-4"><a href="types-de-variables.html#cb43-4" aria-hidden="true" tabindex="-1"></a>nombre <span class="op">=</span> <span class="bu">str</span>(nb)</span>
-<span id="cb43-5"><a href="types-de-variables.html#cb43-5" aria-hidden="true" tabindex="-1"></a>message <span class="op">=</span> a <span class="op">+</span> nombre <span class="op">+</span> c</span>
-<span id="cb43-6"><a href="types-de-variables.html#cb43-6" aria-hidden="true" tabindex="-1"></a>message</span></code></pre></div>
+<div class="sourceCode" id="cb36"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb36-1"><a href="types-de-variables.html#cb36-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="st">&quot;Je vois &quot;</span></span>
+<span id="cb36-2"><a href="types-de-variables.html#cb36-2" aria-hidden="true" tabindex="-1"></a>nb <span class="op">=</span> <span class="dv">3</span></span>
+<span id="cb36-3"><a href="types-de-variables.html#cb36-3" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> <span class="st">&quot; pommes dans cet arbre&quot;</span></span>
+<span id="cb36-4"><a href="types-de-variables.html#cb36-4" aria-hidden="true" tabindex="-1"></a>nombre <span class="op">=</span> <span class="bu">str</span>(nb)</span>
+<span id="cb36-5"><a href="types-de-variables.html#cb36-5" aria-hidden="true" tabindex="-1"></a>message <span class="op">=</span> a <span class="op">+</span> nombre <span class="op">+</span> c</span>
+<span id="cb36-6"><a href="types-de-variables.html#cb36-6" aria-hidden="true" tabindex="-1"></a>message</span></code></pre></div>
 <pre><code>## &#39;Je vois 3 pommes dans cet arbre&#39;</code></pre>
 </div>
 <div id="activité-4-fstring-correction" class="section level3" number="1.5.4">
@@ -488,56 +487,56 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ol start="2" style="list-style-type: decimal">
 <li></li>
 </ol>
-<div class="sourceCode" id="cb45"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb45-1"><a href="types-de-variables.html#cb45-1" aria-hidden="true" tabindex="-1"></a>c1 <span class="op">=</span> <span class="st">&quot;bonjour&quot;</span> <span class="co">#affectation de &quot;bonjour&quot; à la variable c1</span></span>
-<span id="cb45-2"><a href="types-de-variables.html#cb45-2" aria-hidden="true" tabindex="-1"></a>c2 <span class="op">=</span> <span class="st">&#39; le monde !&#39;</span> <span class="co">#affectation de &quot; le monde !&quot; à la variable c2</span></span>
-<span id="cb45-3"><a href="types-de-variables.html#cb45-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;hello&#39;</span>) <span class="co">#affiche le message hello</span></span></code></pre></div>
+<div class="sourceCode" id="cb38"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb38-1"><a href="types-de-variables.html#cb38-1" aria-hidden="true" tabindex="-1"></a>c1 <span class="op">=</span> <span class="st">&quot;bonjour&quot;</span> <span class="co">#affectation de &quot;bonjour&quot; à la variable c1</span></span>
+<span id="cb38-2"><a href="types-de-variables.html#cb38-2" aria-hidden="true" tabindex="-1"></a>c2 <span class="op">=</span> <span class="st">&#39; le monde !&#39;</span> <span class="co">#affectation de &quot; le monde !&quot; à la variable c2</span></span>
+<span id="cb38-3"><a href="types-de-variables.html#cb38-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;hello&#39;</span>) <span class="co">#affiche le message hello</span></span></code></pre></div>
 <pre><code>## hello</code></pre>
-<div class="sourceCode" id="cb47"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb47-1"><a href="types-de-variables.html#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(c1 <span class="op">+</span> c2) <span class="co"># affiche la valeur de c1 + c2 c est a dire bonjour le monde</span></span></code></pre></div>
+<div class="sourceCode" id="cb40"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb40-1"><a href="types-de-variables.html#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(c1 <span class="op">+</span> c2) <span class="co"># affiche la valeur de c1 + c2 c est a dire bonjour le monde</span></span></code></pre></div>
 <pre><code>## bonjour le monde !</code></pre>
 <ol start="3" style="list-style-type: decimal">
 <li>On ajoute " " entre deux c1 pour obtenir l’espace entre les deux bonjour.</li>
 </ol>
-<div class="sourceCode" id="cb49"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb49-1"><a href="types-de-variables.html#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(c1<span class="op">+</span> <span class="st">&quot; &quot;</span> <span class="op">+</span> c1 <span class="op">+</span> c2)</span></code></pre></div>
+<div class="sourceCode" id="cb42"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb42-1"><a href="types-de-variables.html#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(c1<span class="op">+</span> <span class="st">&quot; &quot;</span> <span class="op">+</span> c1 <span class="op">+</span> c2)</span></code></pre></div>
 <pre><code>## bonjour bonjour le monde !</code></pre>
 <p><strong>fstrings</strong></p>
 <ol style="list-style-type: decimal">
 <li>msg est une <code>fstring</code>. Entre accolade on trouve le nom des variables dont on veut afficher le contenu.</li>
 </ol>
-<div class="sourceCode" id="cb51"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb51-1"><a href="types-de-variables.html#cb51-1" aria-hidden="true" tabindex="-1"></a>prof <span class="op">=</span> <span class="st">&quot;M.DENIS&quot;</span></span>
-<span id="cb51-2"><a href="types-de-variables.html#cb51-2" aria-hidden="true" tabindex="-1"></a>matiere <span class="op">=</span> <span class="st">&quot;NSI&quot;</span></span>
-<span id="cb51-3"><a href="types-de-variables.html#cb51-3" aria-hidden="true" tabindex="-1"></a>nb_eleve <span class="op">=</span> <span class="dv">19</span></span>
-<span id="cb51-4"><a href="types-de-variables.html#cb51-4" aria-hidden="true" tabindex="-1"></a>msg <span class="op">=</span> <span class="ss">f&quot;</span><span class="sc">{</span>prof<span class="sc">}</span><span class="ss"> enseigne la </span><span class="sc">{</span>matiere<span class="sc">}</span><span class="ss"> a </span><span class="sc">{</span>nb_eleve<span class="sc">}</span><span class="ss"> élèves de première.&quot;</span> </span>
-<span id="cb51-5"><a href="types-de-variables.html#cb51-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(msg)</span></code></pre></div>
+<div class="sourceCode" id="cb44"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb44-1"><a href="types-de-variables.html#cb44-1" aria-hidden="true" tabindex="-1"></a>prof <span class="op">=</span> <span class="st">&quot;M.DENIS&quot;</span></span>
+<span id="cb44-2"><a href="types-de-variables.html#cb44-2" aria-hidden="true" tabindex="-1"></a>matiere <span class="op">=</span> <span class="st">&quot;NSI&quot;</span></span>
+<span id="cb44-3"><a href="types-de-variables.html#cb44-3" aria-hidden="true" tabindex="-1"></a>nb_eleve <span class="op">=</span> <span class="dv">19</span></span>
+<span id="cb44-4"><a href="types-de-variables.html#cb44-4" aria-hidden="true" tabindex="-1"></a>msg <span class="op">=</span> <span class="ss">f&quot;</span><span class="sc">{</span>prof<span class="sc">}</span><span class="ss"> enseigne la </span><span class="sc">{</span>matiere<span class="sc">}</span><span class="ss"> a </span><span class="sc">{</span>nb_eleve<span class="sc">}</span><span class="ss"> élèves de première.&quot;</span> </span>
+<span id="cb44-5"><a href="types-de-variables.html#cb44-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(msg)</span></code></pre></div>
 <pre><code>## M.DENIS enseigne la NSI a 19 élèves de première.</code></pre>
 <ol start="2" style="list-style-type: decimal">
 <li>Détaille ligne à ligne l’exécution de ce script.</li>
 <li>Modifie ce code pour afficher M.MARTIN enseigne la Mathématique a 35 élèves de première.</li>
 </ol>
-<div class="sourceCode" id="cb53"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb53-1"><a href="types-de-variables.html#cb53-1" aria-hidden="true" tabindex="-1"></a>prof <span class="op">=</span> <span class="st">&quot;M.MARTN&quot;</span></span>
-<span id="cb53-2"><a href="types-de-variables.html#cb53-2" aria-hidden="true" tabindex="-1"></a>matiere <span class="op">=</span> <span class="st">&quot;Mathématique&quot;</span></span>
-<span id="cb53-3"><a href="types-de-variables.html#cb53-3" aria-hidden="true" tabindex="-1"></a>nb_eleve <span class="op">=</span> <span class="dv">35</span></span>
-<span id="cb53-4"><a href="types-de-variables.html#cb53-4" aria-hidden="true" tabindex="-1"></a>niveau <span class="op">=</span> <span class="st">&quot;terminale&quot;</span></span>
-<span id="cb53-5"><a href="types-de-variables.html#cb53-5" aria-hidden="true" tabindex="-1"></a>msg <span class="op">=</span> <span class="ss">f&quot;</span><span class="sc">{</span>prof<span class="sc">}</span><span class="ss"> enseigne la </span><span class="sc">{</span>matiere<span class="sc">}</span><span class="ss"> a </span><span class="sc">{</span>nb_eleve<span class="sc">}</span><span class="ss"> élèves de première.&quot;</span> </span>
-<span id="cb53-6"><a href="types-de-variables.html#cb53-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(msg)</span></code></pre></div>
+<div class="sourceCode" id="cb46"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb46-1"><a href="types-de-variables.html#cb46-1" aria-hidden="true" tabindex="-1"></a>prof <span class="op">=</span> <span class="st">&quot;M.MARTN&quot;</span></span>
+<span id="cb46-2"><a href="types-de-variables.html#cb46-2" aria-hidden="true" tabindex="-1"></a>matiere <span class="op">=</span> <span class="st">&quot;Mathématique&quot;</span></span>
+<span id="cb46-3"><a href="types-de-variables.html#cb46-3" aria-hidden="true" tabindex="-1"></a>nb_eleve <span class="op">=</span> <span class="dv">35</span></span>
+<span id="cb46-4"><a href="types-de-variables.html#cb46-4" aria-hidden="true" tabindex="-1"></a>niveau <span class="op">=</span> <span class="st">&quot;terminale&quot;</span></span>
+<span id="cb46-5"><a href="types-de-variables.html#cb46-5" aria-hidden="true" tabindex="-1"></a>msg <span class="op">=</span> <span class="ss">f&quot;</span><span class="sc">{</span>prof<span class="sc">}</span><span class="ss"> enseigne la </span><span class="sc">{</span>matiere<span class="sc">}</span><span class="ss"> a </span><span class="sc">{</span>nb_eleve<span class="sc">}</span><span class="ss"> élèves de première.&quot;</span> </span>
+<span id="cb46-6"><a href="types-de-variables.html#cb46-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(msg)</span></code></pre></div>
 <pre><code>## M.MARTN enseigne la Mathématique a 35 élèves de première.</code></pre>
 <ol start="4" style="list-style-type: decimal">
 <li>Ajoute une nouvelle variable <code>niveau</code> qui contient la chaine “terminale” afin d’afficher: <code>M.MARTIN enseigne la Mathématique a 35 élèves de terminale.</code></li>
 </ol>
-<div class="sourceCode" id="cb55"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb55-1"><a href="types-de-variables.html#cb55-1" aria-hidden="true" tabindex="-1"></a>prof <span class="op">=</span> <span class="st">&quot;M.MARTN&quot;</span></span>
-<span id="cb55-2"><a href="types-de-variables.html#cb55-2" aria-hidden="true" tabindex="-1"></a>matiere <span class="op">=</span> <span class="st">&quot;Mathématique&quot;</span></span>
-<span id="cb55-3"><a href="types-de-variables.html#cb55-3" aria-hidden="true" tabindex="-1"></a>nb_eleve <span class="op">=</span> <span class="dv">35</span></span>
-<span id="cb55-4"><a href="types-de-variables.html#cb55-4" aria-hidden="true" tabindex="-1"></a>niveau <span class="op">=</span> <span class="st">&quot;terminale&quot;</span></span>
-<span id="cb55-5"><a href="types-de-variables.html#cb55-5" aria-hidden="true" tabindex="-1"></a>msg <span class="op">=</span> <span class="ss">f&quot;</span><span class="sc">{</span>prof<span class="sc">}</span><span class="ss"> enseigne la </span><span class="sc">{</span>matiere<span class="sc">}</span><span class="ss"> a </span><span class="sc">{</span>nb_eleve<span class="sc">}</span><span class="ss"> élèves de </span><span class="sc">{</span>niveau<span class="sc">}</span><span class="ss">.&quot;</span> </span>
-<span id="cb55-6"><a href="types-de-variables.html#cb55-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(msg)</span></code></pre></div>
+<div class="sourceCode" id="cb48"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb48-1"><a href="types-de-variables.html#cb48-1" aria-hidden="true" tabindex="-1"></a>prof <span class="op">=</span> <span class="st">&quot;M.MARTN&quot;</span></span>
+<span id="cb48-2"><a href="types-de-variables.html#cb48-2" aria-hidden="true" tabindex="-1"></a>matiere <span class="op">=</span> <span class="st">&quot;Mathématique&quot;</span></span>
+<span id="cb48-3"><a href="types-de-variables.html#cb48-3" aria-hidden="true" tabindex="-1"></a>nb_eleve <span class="op">=</span> <span class="dv">35</span></span>
+<span id="cb48-4"><a href="types-de-variables.html#cb48-4" aria-hidden="true" tabindex="-1"></a>niveau <span class="op">=</span> <span class="st">&quot;terminale&quot;</span></span>
+<span id="cb48-5"><a href="types-de-variables.html#cb48-5" aria-hidden="true" tabindex="-1"></a>msg <span class="op">=</span> <span class="ss">f&quot;</span><span class="sc">{</span>prof<span class="sc">}</span><span class="ss"> enseigne la </span><span class="sc">{</span>matiere<span class="sc">}</span><span class="ss"> a </span><span class="sc">{</span>nb_eleve<span class="sc">}</span><span class="ss"> élèves de </span><span class="sc">{</span>niveau<span class="sc">}</span><span class="ss">.&quot;</span> </span>
+<span id="cb48-6"><a href="types-de-variables.html#cb48-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(msg)</span></code></pre></div>
 <pre><code>## M.MARTN enseigne la Mathématique a 35 élèves de terminale.</code></pre>
 <p><strong>Mise en forme de l’affichage des nombres</strong></p>
 <ol style="list-style-type: decimal">
 <li>Saisie le code suivant:</li>
 </ol>
-<div class="sourceCode" id="cb57"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb57-1"><a href="types-de-variables.html#cb57-1" aria-hidden="true" tabindex="-1"></a>n1 <span class="op">=</span> <span class="fl">3.1415926</span> </span>
-<span id="cb57-2"><a href="types-de-variables.html#cb57-2" aria-hidden="true" tabindex="-1"></a>n2 <span class="op">=</span> <span class="dv">6358</span></span>
-<span id="cb57-3"><a href="types-de-variables.html#cb57-3" aria-hidden="true" tabindex="-1"></a>n3 <span class="op">=</span> <span class="op">-</span> <span class="fl">123.0034</span></span>
-<span id="cb57-4"><a href="types-de-variables.html#cb57-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f&#39;nombre 1 </span><span class="sc">{n1</span> <span class="sc">:</span> <span class="op">&lt;</span><span class="dv">10</span><span class="sc">_</span><span class="fl">.2</span><span class="sc">f}</span><span class="ss"> nombre 2 </span><span class="sc">{n2</span> <span class="sc">:</span> <span class="op">&lt;</span><span class="dv">10</span><span class="sc">_</span><span class="fl">.3</span><span class="sc">e}</span><span class="ss">&#39;</span>) </span></code></pre></div>
+<div class="sourceCode" id="cb50"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb50-1"><a href="types-de-variables.html#cb50-1" aria-hidden="true" tabindex="-1"></a>n1 <span class="op">=</span> <span class="fl">3.1415926</span> </span>
+<span id="cb50-2"><a href="types-de-variables.html#cb50-2" aria-hidden="true" tabindex="-1"></a>n2 <span class="op">=</span> <span class="dv">6358</span></span>
+<span id="cb50-3"><a href="types-de-variables.html#cb50-3" aria-hidden="true" tabindex="-1"></a>n3 <span class="op">=</span> <span class="op">-</span> <span class="fl">123.0034</span></span>
+<span id="cb50-4"><a href="types-de-variables.html#cb50-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f&#39;nombre 1 </span><span class="sc">{n1</span> <span class="sc">:</span> <span class="op">&lt;</span><span class="dv">10</span><span class="sc">_</span><span class="fl">.2</span><span class="sc">f}</span><span class="ss"> nombre 2 </span><span class="sc">{n2</span> <span class="sc">:</span> <span class="op">&lt;</span><span class="dv">10</span><span class="sc">_</span><span class="fl">.3</span><span class="sc">e}</span><span class="ss">&#39;</span>) </span></code></pre></div>
 <pre><code>## nombre 1 3.14       nombre 2 6.358e+03</code></pre>
 <ol start="2" style="list-style-type: decimal">
 <li></li>
@@ -549,21 +548,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ol start="3" style="list-style-type: decimal">
 <li>Modifie le code précédent pour afficher dans un espace de 10 caractères, aligné à gauche, n3 en écriture scientifique avec 3 chiffres derrière la virgule.</li>
 </ol>
-<div class="sourceCode" id="cb59"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb59-1"><a href="types-de-variables.html#cb59-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f&quot;nombre 3 </span><span class="sc">{n3</span> <span class="sc">:</span> <span class="op">&lt;</span><span class="dv">10</span><span class="sc">_</span><span class="fl">.3</span><span class="sc">e}</span><span class="ss">&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb52"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb52-1"><a href="types-de-variables.html#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f&quot;nombre 3 </span><span class="sc">{n3</span> <span class="sc">:</span> <span class="op">&lt;</span><span class="dv">10</span><span class="sc">_</span><span class="fl">.3</span><span class="sc">e}</span><span class="ss">&quot;</span>)</span></code></pre></div>
 <pre><code>## nombre 3 -1.230e+02</code></pre>
 <ol start="4" style="list-style-type: decimal">
 <li></li>
 </ol>
-<div class="sourceCode" id="cb61"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb61-1"><a href="types-de-variables.html#cb61-1" aria-hidden="true" tabindex="-1"></a>G <span class="op">=</span> <span class="fl">6.67e-11</span></span>
-<span id="cb61-2"><a href="types-de-variables.html#cb61-2" aria-hidden="true" tabindex="-1"></a>M_terre <span class="op">=</span> <span class="fl">5.98e24</span></span>
-<span id="cb61-3"><a href="types-de-variables.html#cb61-3" aria-hidden="true" tabindex="-1"></a>M_lune <span class="op">=</span> <span class="fl">7.6e22</span></span>
-<span id="cb61-4"><a href="types-de-variables.html#cb61-4" aria-hidden="true" tabindex="-1"></a>m <span class="op">=</span> <span class="dv">50</span></span>
-<span id="cb61-5"><a href="types-de-variables.html#cb61-5" aria-hidden="true" tabindex="-1"></a>r <span class="op">=</span> <span class="fl">6380e3</span></span>
-<span id="cb61-6"><a href="types-de-variables.html#cb61-6" aria-hidden="true" tabindex="-1"></a>F_T <span class="op">=</span> G<span class="op">*</span>m<span class="op">*</span>M_terre<span class="op">/</span>r<span class="op">**</span><span class="dv">2</span></span>
-<span id="cb61-7"><a href="types-de-variables.html#cb61-7" aria-hidden="true" tabindex="-1"></a>F_L <span class="op">=</span> G<span class="op">*</span>m<span class="op">*</span>M_lune<span class="op">/</span>r<span class="op">**</span><span class="dv">2</span></span>
-<span id="cb61-8"><a href="types-de-variables.html#cb61-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb61-9"><a href="types-de-variables.html#cb61-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f&#39;Le poids d un homme de </span><span class="sc">{m}</span><span class="ss"> kg vaut sur la Terre </span><span class="sc">{</span>F_T <span class="sc">:</span> <span class="op">&lt;</span><span class="dv">10</span><span class="sc">_</span><span class="fl">.1</span><span class="sc">f}</span><span class="ss"> N.&#39;</span>)</span>
-<span id="cb61-10"><a href="types-de-variables.html#cb61-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f&#39;Le poids d un homme de </span><span class="sc">{m}</span><span class="ss"> kg vaut sur la Lune </span><span class="sc">{</span>F_L <span class="sc">:</span> <span class="op">&lt;</span><span class="dv">10</span><span class="sc">_</span><span class="fl">.1</span><span class="sc">f}</span><span class="ss"> N.&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb54"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb54-1"><a href="types-de-variables.html#cb54-1" aria-hidden="true" tabindex="-1"></a>G <span class="op">=</span> <span class="fl">6.67e-11</span></span>
+<span id="cb54-2"><a href="types-de-variables.html#cb54-2" aria-hidden="true" tabindex="-1"></a>M_terre <span class="op">=</span> <span class="fl">5.98e24</span></span>
+<span id="cb54-3"><a href="types-de-variables.html#cb54-3" aria-hidden="true" tabindex="-1"></a>M_lune <span class="op">=</span> <span class="fl">7.6e22</span></span>
+<span id="cb54-4"><a href="types-de-variables.html#cb54-4" aria-hidden="true" tabindex="-1"></a>m <span class="op">=</span> <span class="dv">50</span></span>
+<span id="cb54-5"><a href="types-de-variables.html#cb54-5" aria-hidden="true" tabindex="-1"></a>r <span class="op">=</span> <span class="fl">6380e3</span></span>
+<span id="cb54-6"><a href="types-de-variables.html#cb54-6" aria-hidden="true" tabindex="-1"></a>F_T <span class="op">=</span> G<span class="op">*</span>m<span class="op">*</span>M_terre<span class="op">/</span>r<span class="op">**</span><span class="dv">2</span></span>
+<span id="cb54-7"><a href="types-de-variables.html#cb54-7" aria-hidden="true" tabindex="-1"></a>F_L <span class="op">=</span> G<span class="op">*</span>m<span class="op">*</span>M_lune<span class="op">/</span>r<span class="op">**</span><span class="dv">2</span></span>
+<span id="cb54-8"><a href="types-de-variables.html#cb54-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-9"><a href="types-de-variables.html#cb54-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f&#39;Le poids d un homme de </span><span class="sc">{m}</span><span class="ss"> kg vaut sur la Terre </span><span class="sc">{</span>F_T <span class="sc">:</span> <span class="op">&lt;</span><span class="dv">10</span><span class="sc">_</span><span class="fl">.1</span><span class="sc">f}</span><span class="ss"> N.&#39;</span>)</span>
+<span id="cb54-10"><a href="types-de-variables.html#cb54-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f&#39;Le poids d un homme de </span><span class="sc">{m}</span><span class="ss"> kg vaut sur la Lune </span><span class="sc">{</span>F_L <span class="sc">:</span> <span class="op">&lt;</span><span class="dv">10</span><span class="sc">_</span><span class="fl">.1</span><span class="sc">f}</span><span class="ss"> N.&#39;</span>)</span></code></pre></div>
 
 </div>
 </div>

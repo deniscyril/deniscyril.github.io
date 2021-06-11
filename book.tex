@@ -145,7 +145,7 @@
 
 \title{Activités Python 1ère NSI}
 \author{Lycée Dumézil}
-\date{2021-06-10}
+\date{2021-06-11}
 
 \begin{document}
 \maketitle
@@ -158,9 +158,13 @@
 \chapter*{Python Première}\label{python-premiuxe8re}}
 \addcontentsline{toc}{chapter}{Python Première}
 
-Remember each Rmd file contains one and only one chapter, and a chapter is defined by the first-level heading \texttt{\#}.
-
-To compile this example to PDF, you need XeLaTeX. You are recommended to install TinyTeX (which includes XeLaTeX): \url{https://yihui.org/tinytex/}.
+\begin{itemize}
+\tightlist
+\item
+  Vous trouverez ici des activités qui vont vous permettre de réactiver et renforcer vos compétences en Python.
+\item
+  Comme tout ce qu'on apprend, on l'oublie si on ne pratique pas assez souvent. Alors revenez souvent ici ;-)
+\end{itemize}
 
 \hypertarget{types-de-variables}{%
 \chapter{Types de Variables}\label{types-de-variables}}
@@ -175,44 +179,13 @@ Dans une console Python, saisie les entrées suivantes:
 \NormalTok{nombre\_entier }\OperatorTok{=} \DecValTok{3} 
 \NormalTok{nombre\_flottant }\OperatorTok{=} \FloatTok{3.14}
 \BuiltInTok{type}\NormalTok{(nombre\_entier)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## <class 'int'>
-\end{verbatim}
-
-\begin{Shaded}
-\begin{Highlighting}[]
 \BuiltInTok{type}\NormalTok{(nombre\_flottant)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## <class 'float'>
-\end{verbatim}
-
-\begin{Shaded}
-\begin{Highlighting}[]
 \NormalTok{double }\OperatorTok{=}\NormalTok{ nombre\_entier }\OperatorTok{*} \DecValTok{2}
 \NormalTok{somme }\OperatorTok{=}\NormalTok{ nombre\_entier }\OperatorTok{+}\NormalTok{ nombre\_flottant}
 \NormalTok{double}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## 6
-\end{verbatim}
-
-\begin{Shaded}
-\begin{Highlighting}[]
 \NormalTok{somme}
 \end{Highlighting}
 \end{Shaded}
-
-\begin{verbatim}
-## 6.140000000000001
-\end{verbatim}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -1100,11 +1073,251 @@ Les chaînes sont un type de variable pouvant contenir: un caractère, un mot, u
 \hypertarget{activituxe9-2-si-alors}{%
 \section{Activité 2: Si \ldots{} Alors}\label{activituxe9-2-si-alors}}
 
+L'instruction IF permet d'exécuter un bloc d'insctrtions à la condition qu'une expression booléenne possède la valeur vrai. Par exemple:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{expression\_1 }\OperatorTok{=} \VariableTok{True}
+
+\ControlFlowTok{if}\NormalTok{ expression\_1 :}
+  \BuiltInTok{print}\NormalTok{(}\StringTok{"Bloc 1"}\NormalTok{)}
+\NormalTok{  expression\_1 }\OperatorTok{=} \VariableTok{False}
+
+\BuiltInTok{print}\NormalTok{(}\StringTok{"Bloc 2"}\NormalTok{)}
+
+\ControlFlowTok{if}\NormalTok{ expression\_1 :}
+  \BuiltInTok{print}\NormalTok{(}\StringTok{"Bloc 3"}\NormalTok{)}
+
+\BuiltInTok{print}\NormalTok{(}\StringTok{"FIN"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Recopie et test le programme ci-dessus.
+\item
+  Explique et justifie ligne à ligne son exécution.
+\item
+  Modifie le code suivant afin que le programme affiche ``Accès autorisé'' si l'age est supérieur ou égal à 18.
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{age }\OperatorTok{=} \DecValTok{15}
+\ControlFlowTok{if}\NormalTok{ .... :}
+  \BuiltInTok{print}\NormalTok{(}\StringTok{"Accès autorisé"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  Corriger les erreurs dans le programme suivant:
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{admin }\OperatorTok{=} \VariableTok{True}
+\NormalTok{age }\OperatorTok{=} \DecValTok{21}
+\ControlFlowTok{if}\NormalTok{ (admin }\OperatorTok{=} \VariableTok{True}\NormalTok{) }\KeywordTok{and}\NormalTok{ (age }\OperatorTok{\textgreater{}} \DecValTok{18}\NormalTok{)}
+\BuiltInTok{print}\NormalTok{(}\StringTok{"Connecté en tant qu\textquotesingle{} ADMIN !"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{4}
+\tightlist
+\item
+  Un hôtel loue des chambres avec un tarif intéressant si on arrive pas trop tard. Plus on arrive tôt et moins on paye.
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  Le prix de la chambre est de 10 pièces à midi, et augmente de 5 pièces chaque heure après midi. Il est donc de 15 pièces à 13h, etc. Il ne peut cependant pas dépasser 53 pièces.
+\item
+  Dans votre programme, utilisez une variable nommée \texttt{heure} qui contient un entier représentant l'heure d'arrivée. \texttt{heure} vaut 0 si on arrive à midi, 1 si on arrive à 1h de l'après-midi, etc, 12 si on arrive à minuit.
+\item
+  Votre programme devra afficher le prix à payer correspondant à l'heure d'arrivée.
+\end{itemize}
+
 \hypertarget{activituxe9-3-if..-elif..else}{%
 \section{Activité 3: if.. elif..else}\label{activituxe9-3-if..-elif..else}}
 
-\hypertarget{activituxe9-4}{%
-\section{Activité 4:}\label{activituxe9-4}}
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Saisir et commenter en détail le programme suivant:
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{note }\OperatorTok{=} \DecValTok{11}
+\ControlFlowTok{if}\NormalTok{ note }\OperatorTok{\textgreater{}=}\DecValTok{10}\NormalTok{:}
+  \BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}Bonne note\textquotesingle{}}\NormalTok{)}
+\ControlFlowTok{else}\NormalTok{: }
+  \BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}Mauvaise note\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Modifier le programme pour qu'il affiche ``Mauvaise note''.
+\item
+  Corriger l'erreur dans le programme suivant:
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{a }\OperatorTok{=} \DecValTok{12}
+\ControlFlowTok{if}\NormalTok{ a }\OperatorTok{\textgreater{}=} \DecValTok{18}\NormalTok{:}
+  \BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}majeur\textquotesingle{}}\NormalTok{)}
+\ControlFlowTok{else}\NormalTok{ a}\OperatorTok{\textless{}}\DecValTok{18}\NormalTok{:}
+  \BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}mineur\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  Compléter le programme suivant attribue une mention au bac.
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  Inférieur à 10: Recalé
+\item
+  Entre 10 et 12: Passable
+\item
+  Entre 12 et 14: Assez-bien
+\item
+  Entre 14 et 16: Bien
+\item
+  16 et plus: Très bien
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{note }\OperatorTok{=} \DecValTok{15}
+\ControlFlowTok{if}\NormalTok{ note }\OperatorTok{\textgreater{}=} \DecValTok{16}\NormalTok{:}
+  \BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}Très bien\textquotesingle{}}\NormalTok{)}
+\ControlFlowTok{elif}\NormalTok{ note }\OperatorTok{\textgreater{}=} \DecValTok{14}\NormalTok{: }
+  \BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}Bien\textquotesingle{}}\NormalTok{)}
+\ControlFlowTok{elif}\NormalTok{ ... : }
+  \BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}Assez{-}bien\textquotesingle{}}\NormalTok{)}
+\ControlFlowTok{elif}\NormalTok{ note }\OperatorTok{\textgreater{}=} \DecValTok{10}\NormalTok{:}
+\NormalTok{  ....}
+\ControlFlowTok{else}\NormalTok{:}
+\NormalTok{  ....}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{4}
+\tightlist
+\item
+  Modifier le programme précédent en inversant l'odre des deux premiers tests conditionnels. Que se passe-t-il ? Justifie.
+\item
+  Ecrire un programme qui affiche ``pair'' si la valeur de la variable \texttt{n} est paire et ``impair'' dans les autres cas. Pour savoir si un nombre est pair, on utilise le fait que le reste de la division par 2 de ce nombre vaut 0. On utilisera donc l'opérateur \texttt{\%}.
+\end{enumerate}
+
+\hypertarget{activituxe9-4-combinaisons-de-if-elif-else}{%
+\section{Activité 4: Combinaisons de if, elif, else}\label{activituxe9-4-combinaisons-de-if-elif-else}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Prédire et expliquer la valeur de \texttt{b} après exécution du programme suivant:
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{a}\OperatorTok{=}\DecValTok{2}
+\NormalTok{b}\OperatorTok{=}\DecValTok{0}
+\ControlFlowTok{if}\NormalTok{ a}\OperatorTok{\textless{}}\DecValTok{0}\NormalTok{:}
+\NormalTok{    b}\OperatorTok{=}\DecValTok{1}
+\ControlFlowTok{elif}\NormalTok{ a}\OperatorTok{\textgreater{}}\DecValTok{0} \KeywordTok{and}\NormalTok{ a}\OperatorTok{\textless{}}\DecValTok{5}\NormalTok{:}
+\NormalTok{    b}\OperatorTok{=}\DecValTok{2}
+\ControlFlowTok{else}\NormalTok{:}
+\NormalTok{    b}\OperatorTok{=}\DecValTok{3}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Commenter l'exécution du programme suivant:
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{x }\OperatorTok{=} \OperatorTok{{-}}\DecValTok{3}
+\ControlFlowTok{if}\NormalTok{ x }\OperatorTok{\textless{}} \DecValTok{0}\NormalTok{:}
+  \ControlFlowTok{if}\NormalTok{ x }\OperatorTok{\%} \DecValTok{2} \OperatorTok{==} \DecValTok{0}\NormalTok{:}
+    \BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}pair et négatif\textquotesingle{}}\NormalTok{)}
+  \ControlFlowTok{else}\NormalTok{: }
+    \BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}impair et négatif\textquotesingle{}}\NormalTok{)}
+\ControlFlowTok{else}\NormalTok{:}
+    \BuiltInTok{print}\NormalTok{(}\StringTok{"pair et c\textquotesingle{}est tout ce qui m\textquotesingle{}intéresse"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  Modifier le programme afin qu'il affiche pair et positif ou impair et positif si c'est le cas.
+\item
+  Le programme suivant est buggé. On souhaite que lorsque l'utilisateur a plus de 18 ans et possède son code et le permis le programme affiche ``vous pouvez conduire''. Modifiez légèrement le programme afin de fixer cette erreur.
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{age }\OperatorTok{=} \DecValTok{19}
+\NormalTok{code }\OperatorTok{=} \VariableTok{True}
+\NormalTok{permis }\OperatorTok{=} \VariableTok{True}
+
+\ControlFlowTok{if}\NormalTok{ age }\OperatorTok{\textgreater{}=} \DecValTok{14}\NormalTok{:}
+    \BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}vous pouvez apprendre à conduire un scooter\textquotesingle{}}\NormalTok{)}
+\ControlFlowTok{elif}\NormalTok{ code }\OperatorTok{==} \VariableTok{True} \KeywordTok{and}\NormalTok{ age }\OperatorTok{\textgreater{}=}\DecValTok{18}\NormalTok{:}
+    \ControlFlowTok{if}\NormalTok{ permis }\OperatorTok{==} \VariableTok{True}\NormalTok{:}
+        \BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}vous pouvez conduire une voiture\textquotesingle{}}\NormalTok{)}
+    \ControlFlowTok{else}\NormalTok{:}
+        \BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}vous pouvez apprendre à conduire une voiture\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## vous pouvez apprendre à conduire un scooter
+\end{verbatim}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\item
+  Ecrire un programme qui affiche la phrase ``il va faire très froid / froid / frais / bon / un peu chaud / chaud / très chaud.'' selon la valeur de la variable \texttt{t} représentant la température maximale prévue. Vous choisirez les seuils entre chaque niveau de température.
+\item
+  Une année est bissextile si elle est divisible par 4. Cependant les siècles ne sont pas bissextiles, sauf les multiples de 400. Ecrire un programme qui affiche si une année est bisextile. Vérifiez que 2100 n'est pas bissextile contrairement à 2012.
+\item
+  Plus loin: Ecrire une fonction qui reçoit une année et qui renvoie l'année si elle est bissextile et la chaine " " si elle n'est pas bissextile. En utilisant cette fonction écrire un script qui affiche toutes les années bissextiles entre 2000 et 2104.
+\end{enumerate}
 
 \newpage
 
@@ -1303,6 +1516,416 @@ Les chaînes sont un type de variable pouvant contenir: un caractère, un mot, u
 \item
   A l'aide de votre programme écrire la table de vérité de cette opérateur OU-Exclusif
 \end{enumerate}
+
+\hypertarget{activituxe9-2}{%
+\subsection{Activité 2}\label{activituxe9-2}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  /
+\item
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{expression\_1 }\OperatorTok{=} \VariableTok{True}
+
+\ControlFlowTok{if}\NormalTok{ expression\_1 : }\CommentTok{\#si expression\_1 est vrai alors}
+  \BuiltInTok{print}\NormalTok{(}\StringTok{"Bloc 1"}\NormalTok{) }\CommentTok{\#affiche Bloc 1}
+\NormalTok{  expression\_1 }\OperatorTok{=} \VariableTok{False} \CommentTok{\#expression\_1 prend la valeur Faux}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Bloc 1
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{print}\NormalTok{(}\StringTok{"Bloc 2"}\NormalTok{) }\CommentTok{\#affiche Bloc 2}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Bloc 2
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ControlFlowTok{if}\NormalTok{ expression\_1 : }\CommentTok{\#Si application est vrai.. mais ici expression\_1 vaut False donc on saute le bloc}
+  \BuiltInTok{print}\NormalTok{(}\StringTok{"Bloc 3"}\NormalTok{) }\CommentTok{\#Pas exécuter car expression\_1 est False}
+
+\BuiltInTok{print}\NormalTok{(}\StringTok{"FIN"}\NormalTok{) }\CommentTok{\#Affiche Fin}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## FIN
+\end{verbatim}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{age }\OperatorTok{=} \DecValTok{15}
+\ControlFlowTok{if}\NormalTok{ age }\OperatorTok{\textgreater{}=} \DecValTok{18}\NormalTok{ :}
+  \BuiltInTok{print}\NormalTok{(}\StringTok{"Accès autorisé"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\tightlist
+\item
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{admin }\OperatorTok{=} \VariableTok{True}
+\NormalTok{age }\OperatorTok{=} \DecValTok{21}
+\ControlFlowTok{if}\NormalTok{ (admin }\OperatorTok{==} \VariableTok{True}\NormalTok{) }\KeywordTok{and}\NormalTok{ (age }\OperatorTok{\textgreater{}} \DecValTok{18}\NormalTok{):}
+  \BuiltInTok{print}\NormalTok{(}\StringTok{"Connecté en tant qu\textquotesingle{} ADMIN !"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Connecté en tant qu' ADMIN !
+\end{verbatim}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{4}
+\tightlist
+\item
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{heure }\OperatorTok{=} \DecValTok{2}
+\NormalTok{prix }\OperatorTok{=} \DecValTok{10} \OperatorTok{+} \DecValTok{5} \OperatorTok{*}\NormalTok{ heure}
+\ControlFlowTok{if}\NormalTok{ prix }\OperatorTok{\textgreater{}} \DecValTok{53}\NormalTok{:}
+\NormalTok{   prix }\OperatorTok{=} \DecValTok{53}
+\BuiltInTok{print}\NormalTok{(prix)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 20
+\end{verbatim}
+
+\hypertarget{activituxe9-3}{%
+\subsection{Activité 3}\label{activituxe9-3}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{note }\OperatorTok{=} \DecValTok{11}
+\ControlFlowTok{if}\NormalTok{ note }\OperatorTok{\textgreater{}=}\DecValTok{10}\NormalTok{:  }\CommentTok{\#Si note \textgreater{}= 10 Alors Affiche "bonne note"}
+  \BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}Bonne note\textquotesingle{}}\NormalTok{)}
+\ControlFlowTok{else}\NormalTok{:  }\CommentTok{\#Sinon Alors Affiche "Mauvaise Note"}
+  \BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}Mauvaise note\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Bonne note
+\end{verbatim}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Modifier le programme pour qu'il affiche ``Mauvaise note''.
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{note }\OperatorTok{=} \DecValTok{9}
+\ControlFlowTok{if}\NormalTok{ note }\OperatorTok{\textgreater{}=}\DecValTok{10}\NormalTok{:  }\CommentTok{\#Si note \textgreater{}= 10 Alors Affiche "bonne note"}
+  \BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}Bonne note\textquotesingle{}}\NormalTok{)}
+\ControlFlowTok{else}\NormalTok{:  }\CommentTok{\#Sinon Alors Affiche "Mauvaise Note"}
+  \BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}Mauvaise note\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Mauvaise note
+\end{verbatim}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  Corriger l'erreur dans le programme suivant:
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{a }\OperatorTok{=} \DecValTok{12}
+\ControlFlowTok{if}\NormalTok{ a }\OperatorTok{\textgreater{}=} \DecValTok{18}\NormalTok{:}
+  \BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}majeur\textquotesingle{}}\NormalTok{)}
+\ControlFlowTok{else}\NormalTok{ : }\CommentTok{\# Pas de condition après else}
+  \BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}mineur\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## mineur
+\end{verbatim}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  Compléter le programme suivant attribue une mention au bac.
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  Inférieur à 10: Recalé
+\item
+  Entre 10 et 12: Passable
+\item
+  Entre 12 et 14: Assez-bien
+\item
+  Entre 14 et 16: Bien
+\item
+  16 et plus: Très bien
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{note }\OperatorTok{=} \DecValTok{17}
+\ControlFlowTok{if}\NormalTok{ note }\OperatorTok{\textgreater{}=} \DecValTok{16}\NormalTok{:}
+  \BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}Très bien\textquotesingle{}}\NormalTok{)}
+\ControlFlowTok{elif}\NormalTok{ note }\OperatorTok{\textgreater{}=} \DecValTok{14}\NormalTok{: }
+  \BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}Bien\textquotesingle{}}\NormalTok{)}
+\ControlFlowTok{elif}\NormalTok{ note }\OperatorTok{\textgreater{}=} \DecValTok{12}\NormalTok{ : }
+  \BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}Assez{-}bien\textquotesingle{}}\NormalTok{)}
+\ControlFlowTok{elif}\NormalTok{ note }\OperatorTok{\textgreater{}=} \DecValTok{10}\NormalTok{:}
+  \BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}Passable\textquotesingle{}}\NormalTok{)}
+\ControlFlowTok{else}\NormalTok{:}
+  \BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}Recalé\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{4}
+\tightlist
+\item
+  Modifier le programme précédent en inversant l'ordre des deux premiers tests conditionnels. Que se passe-t-il ? Justifie.
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{note }\OperatorTok{=} \DecValTok{17}
+\ControlFlowTok{if}\NormalTok{ note }\OperatorTok{\textgreater{}=} \DecValTok{14}\NormalTok{: }
+  \BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}Bien\textquotesingle{}}\NormalTok{)}
+\ControlFlowTok{elif}\NormalTok{ note }\OperatorTok{\textgreater{}=} \DecValTok{16}\NormalTok{:}
+  \BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}Très bien\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Bien
+\end{verbatim}
+
+La première condition étant vraie la seconde n'est pas exécutée. C'est pourquoi avec note = 15, le programme affiche ``Bien'' et non pas ``Très Bien'' alors que note \textgreater=16 est vraie.
+6. Ecrire un programme qui affiche ``pair'' si la valeur de la variable \texttt{n} est paire et ``impaire'' dans les autres cas. Pour savoir si un nombre est pair, on utilise le fait que le reste de la division par 2 de ce nombre vaut 0. On utilisera donc l'opérateur \texttt{\%}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{n }\OperatorTok{=} \DecValTok{13}
+\ControlFlowTok{if}\NormalTok{ n }\OperatorTok{\%} \DecValTok{2} \OperatorTok{==} \DecValTok{0}\NormalTok{:}
+  \BuiltInTok{print}\NormalTok{(}\SpecialStringTok{f\textquotesingle{}}\SpecialCharTok{\{n\}}\SpecialStringTok{ est un entier pair\textquotesingle{}}\NormalTok{)}
+\ControlFlowTok{else}\NormalTok{:}
+  \BuiltInTok{print}\NormalTok{(}\SpecialStringTok{f\textquotesingle{}}\SpecialCharTok{\{n\}}\SpecialStringTok{ est un entier impair\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 13 est un entier impair
+\end{verbatim}
+
+\hypertarget{activituxe9-4}{%
+\subsection{Activité 4}\label{activituxe9-4}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Prédire et expliquer la valeur de \texttt{b} après exécution du programme suivant:
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{a}\OperatorTok{=}\DecValTok{2}
+\NormalTok{b}\OperatorTok{=}\DecValTok{0}
+\ControlFlowTok{if}\NormalTok{ a}\OperatorTok{\textless{}}\DecValTok{0}\NormalTok{: }\CommentTok{\#condition fausse}
+\NormalTok{    b}\OperatorTok{=}\DecValTok{1}
+\ControlFlowTok{elif}\NormalTok{ a}\OperatorTok{\textgreater{}}\DecValTok{0} \KeywordTok{and}\NormalTok{ a}\OperatorTok{\textless{}}\DecValTok{5}\NormalTok{: }\CommentTok{\#condition vraie}
+\NormalTok{    b}\OperatorTok{=}\DecValTok{2} \CommentTok{\# b prend la valeur 2}
+\ControlFlowTok{else}\NormalTok{:}
+\NormalTok{    b}\OperatorTok{=}\DecValTok{3}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Commenter l'exécution du programme suivant:
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{x }\OperatorTok{=} \OperatorTok{{-}}\DecValTok{3}
+\ControlFlowTok{if}\NormalTok{ x }\OperatorTok{\textless{}} \DecValTok{0}\NormalTok{: }\CommentTok{\#condition vraie}
+  \ControlFlowTok{if}\NormalTok{ x }\OperatorTok{\%} \DecValTok{2} \OperatorTok{==} \DecValTok{0}\NormalTok{: }\CommentTok{\#sous condition fausse}
+    \BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}pair et négatif\textquotesingle{}}\NormalTok{)}
+  \ControlFlowTok{else}\NormalTok{:  }\CommentTok{\#on exécute le bloc qui suit le else}
+    \BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}impair et négatif\textquotesingle{}}\NormalTok{)}
+\ControlFlowTok{else}\NormalTok{: }\CommentTok{\#pas exécuté car if correspondant vrai}
+    \BuiltInTok{print}\NormalTok{(}\StringTok{"pair et c\textquotesingle{}est tout ce qui m\textquotesingle{}intéresse"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## impair et négatif
+\end{verbatim}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  Modifier le programme afin qu'il affiche pair et positif ou impair et positif si c'est le cas.
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{x }\OperatorTok{=} \DecValTok{7}
+\ControlFlowTok{if}\NormalTok{ x }\OperatorTok{\textless{}} \DecValTok{0}\NormalTok{: }
+    \ControlFlowTok{if}\NormalTok{ x }\OperatorTok{\%} \DecValTok{2} \OperatorTok{==} \DecValTok{0}\NormalTok{: }
+        \BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}pair et négatif\textquotesingle{}}\NormalTok{)}
+    \ControlFlowTok{else}\NormalTok{:  }
+        \BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}impair et négatif\textquotesingle{}}\NormalTok{)}
+\ControlFlowTok{else}\NormalTok{: }
+        \ControlFlowTok{if}\NormalTok{ x }\OperatorTok{\%} \DecValTok{2} \OperatorTok{==} \DecValTok{0}\NormalTok{: }
+            \BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}pair et positif\textquotesingle{}}\NormalTok{)}
+        \ControlFlowTok{else}\NormalTok{:  }
+            \BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}impair et positif\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## impair et positif
+\end{verbatim}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  Le programme suivant est buggé. On souhaite que lorsque l'utilisateur a plus de 18 ans et possède son code et le permis le programme affiche ``vous pouvez conduire''. Modifiez légèrement le programme afin de fixer cette erreur.
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{age }\OperatorTok{=} \DecValTok{19}
+\NormalTok{code }\OperatorTok{=} \VariableTok{True}
+\NormalTok{permis }\OperatorTok{=} \VariableTok{True}
+
+\ControlFlowTok{if}\NormalTok{ age }\OperatorTok{\textgreater{}=} \DecValTok{14}\NormalTok{:}
+    \BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}vous pouvez apprendre à conduire un scooter\textquotesingle{}}\NormalTok{)}
+\ControlFlowTok{elif}\NormalTok{ code }\OperatorTok{==} \VariableTok{True} \KeywordTok{and}\NormalTok{ age }\OperatorTok{\textgreater{}=}\DecValTok{18}\NormalTok{:}
+    \ControlFlowTok{if}\NormalTok{ permis }\OperatorTok{==} \VariableTok{True}\NormalTok{:}
+        \BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}vous pouvez conduire une voiture\textquotesingle{}}\NormalTok{)}
+    \ControlFlowTok{else}\NormalTok{:}
+        \BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}vous pouvez apprendre à conduire une voiture\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## vous pouvez apprendre à conduire un scooter
+\end{verbatim}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  Ecrire un programme qui affiche la phrase ``il va faire très froid / froid / frais / bon / un peu chaud / chaud / très chaud.'' selon la valeur de la variable \texttt{t} représentant la température maximale prévue. Vous choisirez les seuils entre chaque niveau de température.
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{t }\OperatorTok{=} \DecValTok{20}
+\ControlFlowTok{if}\NormalTok{ t}\OperatorTok{\textgreater{}}\DecValTok{30}\NormalTok{:}
+\NormalTok{    mot }\OperatorTok{=} \StringTok{"très chaud"}
+\ControlFlowTok{elif}\NormalTok{ t}\OperatorTok{\textgreater{}}\DecValTok{25}\NormalTok{:}
+\NormalTok{    mot }\OperatorTok{=} \StringTok{"chaud"}
+\ControlFlowTok{elif}\NormalTok{ t}\OperatorTok{\textgreater{}}\DecValTok{23}\NormalTok{:}
+\NormalTok{    mot }\OperatorTok{=} \StringTok{"un peu chaud"}
+\ControlFlowTok{elif}\NormalTok{ t}\OperatorTok{\textgreater{}=}\DecValTok{20}\NormalTok{:}
+\NormalTok{    mot }\OperatorTok{=} \StringTok{"bon"}
+\ControlFlowTok{elif}\NormalTok{ t}\OperatorTok{\textgreater{}}\DecValTok{17}\NormalTok{:}
+\NormalTok{    mot }\OperatorTok{=} \StringTok{"frais"}
+\ControlFlowTok{elif}\NormalTok{ t}\OperatorTok{\textgreater{}}\DecValTok{10}\NormalTok{:}
+\NormalTok{    mot }\OperatorTok{=} \StringTok{"froid"}
+\ControlFlowTok{else}\NormalTok{:}
+\NormalTok{    mot }\OperatorTok{=} \StringTok{"très froid"}
+\BuiltInTok{print}\NormalTok{(}\SpecialStringTok{f"il va faire }\SpecialCharTok{\{}\NormalTok{mot}\SpecialCharTok{\}}\SpecialStringTok{ "}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## il va faire bon
+\end{verbatim}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{4}
+\tightlist
+\item
+  Une année est bissextile si elle est divisible par 4. Cependant les siècles ne sont pas bissextiles, sauf les multiples de 400. Ecrire un programme qui affiche si une année est bisextile.
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{a }\OperatorTok{=} \DecValTok{2012}
+\ControlFlowTok{if}\NormalTok{ a }\OperatorTok{\%} \DecValTok{4} \OperatorTok{==} \DecValTok{0}\NormalTok{ :}
+    \ControlFlowTok{if}\NormalTok{ ((a }\OperatorTok{\%} \DecValTok{100}\NormalTok{) }\OperatorTok{==} \DecValTok{0}\NormalTok{) }\KeywordTok{and} \KeywordTok{not}\NormalTok{(a}\OperatorTok{\%}\DecValTok{400} \OperatorTok{==}\DecValTok{0}\NormalTok{):}
+        \BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}année pas bissextile\textquotesingle{}}\NormalTok{)}
+    \ControlFlowTok{else}\NormalTok{:}
+        \BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}année bissextile\textquotesingle{}}\NormalTok{)}
+\ControlFlowTok{else}\NormalTok{:}
+    \BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}année pas bissextile\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## année bissextile
+\end{verbatim}
 
 \hypertarget{fonctions}{%
 \chapter{Fonctions}\label{fonctions}}
