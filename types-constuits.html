@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapitre 5 Types constuits | Activités Python 1ère NSI</title>
+  <meta name="description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapitre 5 Types constuits | Activités Python 1ère NSI" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapitre 5 Types constuits | Activités Python 1ère NSI" />
+  
+  <meta name="twitter:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  
+
+<meta name="author" content="Lycée Dumézil" />
+
+
+<meta name="date" content="2021-06-19" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="structures-itératives.html"/>
+<link rel="next" href="references.html"/>
+<script src="libs/header-attrs-2.8/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Minimal Book Example</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Python Première</a></li>
+<li class="chapter" data-level="1" data-path="types-de-variables.html"><a href="types-de-variables.html"><i class="fa fa-check"></i><b>1</b> Types de Variables</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="types-de-variables.html"><a href="types-de-variables.html#activité-1-float-et-int"><i class="fa fa-check"></i><b>1.1</b> Activité 1: float et int</a></li>
+<li class="chapter" data-level="1.2" data-path="types-de-variables.html"><a href="types-de-variables.html#activité-2-divisions-et-modulo"><i class="fa fa-check"></i><b>1.2</b> Activité 2: Divisions et modulo</a></li>
+<li class="chapter" data-level="1.3" data-path="types-de-variables.html"><a href="types-de-variables.html#activité-3-chaînes"><i class="fa fa-check"></i><b>1.3</b> Activité 3: Chaînes</a></li>
+<li class="chapter" data-level="1.4" data-path="types-de-variables.html"><a href="types-de-variables.html#activité-4-affichage-de-chaines"><i class="fa fa-check"></i><b>1.4</b> Activité 4: Affichage de chaines</a></li>
+<li class="chapter" data-level="1.5" data-path="types-de-variables.html"><a href="types-de-variables.html#corrigés-des-activités"><i class="fa fa-check"></i><b>1.5</b> Corrigés des Activités</a>
+<ul>
+<li class="chapter" data-level="1.5.1" data-path="types-de-variables.html"><a href="types-de-variables.html#activité-1-corrigé"><i class="fa fa-check"></i><b>1.5.1</b> Activité 1 corrigé</a></li>
+<li class="chapter" data-level="1.5.2" data-path="types-de-variables.html"><a href="types-de-variables.html#activité-2-divisions-et-modulo-correction"><i class="fa fa-check"></i><b>1.5.2</b> Activité 2: Divisions et modulo correction</a></li>
+<li class="chapter" data-level="1.5.3" data-path="types-de-variables.html"><a href="types-de-variables.html#activité-3-chaînes-correction"><i class="fa fa-check"></i><b>1.5.3</b> Activité 3: Chaînes correction</a></li>
+<li class="chapter" data-level="1.5.4" data-path="types-de-variables.html"><a href="types-de-variables.html#activité-4-fstring-correction"><i class="fa fa-check"></i><b>1.5.4</b> Activité 4: fstring correction</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="structures-conditionnelles.html"><a href="structures-conditionnelles.html"><i class="fa fa-check"></i><b>2</b> Structures Conditionnelles</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="structures-conditionnelles.html"><a href="structures-conditionnelles.html#activité-1-expression-booléenne"><i class="fa fa-check"></i><b>2.1</b> Activité 1: Expression booléenne</a></li>
+<li class="chapter" data-level="2.2" data-path="structures-conditionnelles.html"><a href="structures-conditionnelles.html#activité-2-si-alors"><i class="fa fa-check"></i><b>2.2</b> Activité 2: Si … Alors</a></li>
+<li class="chapter" data-level="2.3" data-path="structures-conditionnelles.html"><a href="structures-conditionnelles.html#activité-3-if..-elif..else"><i class="fa fa-check"></i><b>2.3</b> Activité 3: if.. elif..else</a></li>
+<li class="chapter" data-level="2.4" data-path="structures-conditionnelles.html"><a href="structures-conditionnelles.html#activité-4-combinaisons-de-if-elif-else"><i class="fa fa-check"></i><b>2.4</b> Activité 4: Combinaisons de if, elif, else</a></li>
+<li class="chapter" data-level="2.5" data-path="structures-conditionnelles.html"><a href="structures-conditionnelles.html#corrigés-des-activités-1"><i class="fa fa-check"></i><b>2.5</b> Corrigés des activités</a>
+<ul>
+<li class="chapter" data-level="2.5.1" data-path="structures-conditionnelles.html"><a href="structures-conditionnelles.html#activité-1"><i class="fa fa-check"></i><b>2.5.1</b> Activité 1</a></li>
+<li class="chapter" data-level="2.5.2" data-path="structures-conditionnelles.html"><a href="structures-conditionnelles.html#activité-2"><i class="fa fa-check"></i><b>2.5.2</b> Activité 2</a></li>
+<li class="chapter" data-level="2.5.3" data-path="structures-conditionnelles.html"><a href="structures-conditionnelles.html#activité-3"><i class="fa fa-check"></i><b>2.5.3</b> Activité 3</a></li>
+<li class="chapter" data-level="2.5.4" data-path="structures-conditionnelles.html"><a href="structures-conditionnelles.html#activité-4"><i class="fa fa-check"></i><b>2.5.4</b> Activité 4</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="fonctions.html"><a href="fonctions.html"><i class="fa fa-check"></i><b>3</b> Fonctions</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="fonctions.html"><a href="fonctions.html#activité-1-premiers-pas"><i class="fa fa-check"></i><b>3.1</b> Activité 1: Premiers pas</a></li>
+<li class="chapter" data-level="3.2" data-path="fonctions.html"><a href="fonctions.html#activité-2-erreurs-classiques"><i class="fa fa-check"></i><b>3.2</b> Activité 2: Erreurs classiques</a></li>
+<li class="chapter" data-level="3.3" data-path="fonctions.html"><a href="fonctions.html#activité-3-tests-unitaires"><i class="fa fa-check"></i><b>3.3</b> Activité 3: Tests unitaires</a></li>
+<li class="chapter" data-level="3.4" data-path="fonctions.html"><a href="fonctions.html#activité-4-portée-des-variables"><i class="fa fa-check"></i><b>3.4</b> Activité 4: Portée des variables</a></li>
+<li class="chapter" data-level="3.5" data-path="fonctions.html"><a href="fonctions.html#activité-5-passage-darguments"><i class="fa fa-check"></i><b>3.5</b> Activité 5: Passage d’arguments</a></li>
+<li class="chapter" data-level="3.6" data-path="fonctions.html"><a href="fonctions.html#activité-6-importer-de-nouvelles-fonctions"><i class="fa fa-check"></i><b>3.6</b> Activité 6: Importer de nouvelles fonctions</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="structures-itératives.html"><a href="structures-itératives.html"><i class="fa fa-check"></i><b>4</b> Structures Itératives</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="structures-itératives.html"><a href="structures-itératives.html#activité-1-while"><i class="fa fa-check"></i><b>4.1</b> Activité 1: While</a></li>
+<li class="chapter" data-level="4.2" data-path="structures-itératives.html"><a href="structures-itératives.html#activité-2-for"><i class="fa fa-check"></i><b>4.2</b> Activité 2: For</a></li>
+<li class="chapter" data-level="4.3" data-path="structures-itératives.html"><a href="structures-itératives.html#activité-3-boucles-imbriquées"><i class="fa fa-check"></i><b>4.3</b> Activité 3: Boucles imbriquées</a></li>
+<li class="chapter" data-level="4.4" data-path="structures-itératives.html"><a href="structures-itératives.html#activité-4-synthèse"><i class="fa fa-check"></i><b>4.4</b> Activité 4: Synthèse</a></li>
+<li class="chapter" data-level="4.5" data-path="structures-itératives.html"><a href="structures-itératives.html#corrections-des-activités"><i class="fa fa-check"></i><b>4.5</b> Corrections des activités</a>
+<ul>
+<li class="chapter" data-level="4.5.1" data-path="structures-itératives.html"><a href="structures-itératives.html#activité-1-1"><i class="fa fa-check"></i><b>4.5.1</b> Activité 1</a></li>
+<li class="chapter" data-level="4.5.2" data-path="structures-itératives.html"><a href="structures-itératives.html#activité-2-for-1"><i class="fa fa-check"></i><b>4.5.2</b> Activité 2: For</a></li>
+<li class="chapter" data-level="4.5.3" data-path="structures-itératives.html"><a href="structures-itératives.html#activité-4-1"><i class="fa fa-check"></i><b>4.5.3</b> Activité 4</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="types-constuits.html"><a href="types-constuits.html"><i class="fa fa-check"></i><b>5</b> Types constuits</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="types-constuits.html"><a href="types-constuits.html#activité-1-tuples"><i class="fa fa-check"></i><b>5.1</b> Activité 1: Tuples</a></li>
+<li class="chapter" data-level="5.2" data-path="types-constuits.html"><a href="types-constuits.html#activité-2-liste"><i class="fa fa-check"></i><b>5.2</b> Activité 2: Liste</a></li>
+<li class="chapter" data-level="5.3" data-path="types-constuits.html"><a href="types-constuits.html#activité-3-méthodes-de-liste-et-tableaux-2d"><i class="fa fa-check"></i><b>5.3</b> Activité 3: Méthodes de liste et tableaux 2D</a></li>
+<li class="chapter" data-level="5.4" data-path="types-constuits.html"><a href="types-constuits.html#activité-4-pratique-des-listes"><i class="fa fa-check"></i><b>5.4</b> Activité 4: Pratique des listes</a></li>
+<li class="chapter" data-level="5.5" data-path="types-constuits.html"><a href="types-constuits.html#activité-5-dictionnaires"><i class="fa fa-check"></i><b>5.5</b> Activité 5: Dictionnaires</a></li>
+<li class="chapter" data-level="5.6" data-path="types-constuits.html"><a href="types-constuits.html#corrections-des-activités-1"><i class="fa fa-check"></i><b>5.6</b> Corrections des activités</a>
+<ul>
+<li class="chapter" data-level="5.6.1" data-path="types-constuits.html"><a href="types-constuits.html#activité-1-2"><i class="fa fa-check"></i><b>5.6.1</b> Activité 1</a></li>
+<li class="chapter" data-level="5.6.2" data-path="types-constuits.html"><a href="types-constuits.html#activité-2-1"><i class="fa fa-check"></i><b>5.6.2</b> Activité 2</a></li>
+<li class="chapter" data-level="5.6.3" data-path="types-constuits.html"><a href="types-constuits.html#activité-3-2"><i class="fa fa-check"></i><b>5.6.3</b> Activité 3:</a></li>
+<li class="chapter" data-level="5.6.4" data-path="types-constuits.html"><a href="types-constuits.html#activité-4-2"><i class="fa fa-check"></i><b>5.6.4</b> Activité 4:</a></li>
+<li class="chapter" data-level="5.6.5" data-path="types-constuits.html"><a href="types-constuits.html#activité-5"><i class="fa fa-check"></i><b>5.6.5</b> Activité 5:</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="chapter" data-level="6" data-path="qcm.html"><a href="qcm.html"><i class="fa fa-check"></i><b>6</b> QCM</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="qcm.html"><a href="qcm.html#listes-et-tuples"><i class="fa fa-check"></i><b>6.1</b> Listes et tuples</a></li>
+<li class="chapter" data-level="6.2" data-path="qcm.html"><a href="qcm.html#dictionnaires"><i class="fa fa-check"></i><b>6.2</b> Dictionnaires</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Activités Python 1ère NSI</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="types-constuits" class="section level1" number="5">
+<h1><span class="header-section-number">Chapitre 5</span> Types constuits</h1>
+<div id="activité-1-tuples" class="section level2" number="5.1">
+<h2><span class="header-section-number">5.1</span> Activité 1: Tuples</h2>
+<p>Un tuple est une collection ordonnée d’éléments qui ne peuvent pas être modifiés. On dit qu’un tuple n’est pas mutable. On reconnaît un tuple par sa syntaxe avec des parenthèses.</p>
+<ol style="list-style-type: decimal">
+<li>Le programme suivant utilise un tuple pour coder une date. Explique en détail son déroulement.</li>
+</ol>
+<div class="sourceCode" id="cb168"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb168-1"><a href="types-constuits.html#cb168-1" aria-hidden="true" tabindex="-1"></a>date <span class="op">=</span> (<span class="dv">14</span>, <span class="st">&#39;juillet&#39;</span>, <span class="dv">1789</span>)</span>
+<span id="cb168-2"><a href="types-constuits.html#cb168-2" aria-hidden="true" tabindex="-1"></a>jour <span class="op">=</span> date[<span class="dv">0</span>]</span>
+<span id="cb168-3"><a href="types-constuits.html#cb168-3" aria-hidden="true" tabindex="-1"></a>mois <span class="op">=</span> date[<span class="dv">1</span>]</span>
+<span id="cb168-4"><a href="types-constuits.html#cb168-4" aria-hidden="true" tabindex="-1"></a>annee <span class="op">=</span> date[<span class="dv">2</span>]</span>
+<span id="cb168-5"><a href="types-constuits.html#cb168-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f&quot;La révolution française a eu lieu le </span><span class="sc">{</span>jour<span class="sc">}</span><span class="ss"> </span><span class="sc">{</span>mois<span class="sc">}</span><span class="ss"> de l&#39;année </span><span class="sc">{</span>annee<span class="sc">}</span><span class="ss">&quot;</span>)</span></code></pre></div>
+<ol start="2" style="list-style-type: decimal">
+<li>Une fraction peut être considéré comme un comme de deux entiers <code>(n , d)</code>. <code>n</code> est le numérateur et <code>d</code> le dénominateur. La fraction ainsi codée est <span class="math inline">\(\frac{n}{d}\)</span>.
+On veut écrire une fonction <code>mul_frac</code> capable de multiplier deux fractions. Cette fonction reçoit 2 tuples représentant les deux fractions à multiplier. Après calcul, la fonction renvoie sous la forme d’un tuple la fraction calculée. Complète et teste la fonction suivante:</li>
+</ol>
+<div class="sourceCode" id="cb169"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb169-1"><a href="types-constuits.html#cb169-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> mul_frac(n1,d1,n2,d2):</span>
+<span id="cb169-2"><a href="types-constuits.html#cb169-2" aria-hidden="true" tabindex="-1"></a>  <span class="co">&quot;&quot;&quot;</span></span>
+<span id="cb169-3"><a href="types-constuits.html#cb169-3" aria-hidden="true" tabindex="-1"></a><span class="co">  In: n1,d1 première fraction et n2,d2 deuxième fraction</span></span>
+<span id="cb169-4"><a href="types-constuits.html#cb169-4" aria-hidden="true" tabindex="-1"></a><span class="co">  Out: Tuple correspond à la fraction produit</span></span>
+<span id="cb169-5"><a href="types-constuits.html#cb169-5" aria-hidden="true" tabindex="-1"></a><span class="co">  &quot;&quot;&quot;</span></span>
+<span id="cb169-6"><a href="types-constuits.html#cb169-6" aria-hidden="true" tabindex="-1"></a>  n <span class="op">=</span> ... <span class="op">*</span> n2</span>
+<span id="cb169-7"><a href="types-constuits.html#cb169-7" aria-hidden="true" tabindex="-1"></a>  d <span class="op">=</span> ....</span>
+<span id="cb169-8"><a href="types-constuits.html#cb169-8" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> n,...</span>
+<span id="cb169-9"><a href="types-constuits.html#cb169-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb169-10"><a href="types-constuits.html#cb169-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(mul_frac(<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">3</span>))</span></code></pre></div>
+<ol start="3" style="list-style-type: decimal">
+<li>Prédire et expliquer en détail le déroulement du programme suivant. Identifier la propriété des tuples qui est mise en évidence.</li>
+</ol>
+<div class="sourceCode" id="cb170"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb170-1"><a href="types-constuits.html#cb170-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">4</span></span>
+<span id="cb170-2"><a href="types-constuits.html#cb170-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="dv">2</span></span>
+<span id="cb170-3"><a href="types-constuits.html#cb170-3" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> (a, b)</span>
+<span id="cb170-4"><a href="types-constuits.html#cb170-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(t)</span>
+<span id="cb170-5"><a href="types-constuits.html#cb170-5" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">10</span></span>
+<span id="cb170-6"><a href="types-constuits.html#cb170-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(t)</span></code></pre></div>
+<ol start="4" style="list-style-type: decimal">
+<li>Ecrire une fonction <code>distance</code> qui reçoit 2 points et renvoie la distance entre ces deux points. Chaque point est codée à l’aide d’un tuple dont les éléments sont les coordoonées x,y du point. Par exemple, un point A de coordonnées (5,4) sera codée avec le tuple (5,4).</li>
+</ol>
+<div class="sourceCode" id="cb171"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb171-1"><a href="types-constuits.html#cb171-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Fonction norme</span></span>
+<span id="cb171-2"><a href="types-constuits.html#cb171-2" aria-hidden="true" tabindex="-1"></a>...</span>
+<span id="cb171-3"><a href="types-constuits.html#cb171-3" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> (<span class="dv">5</span>, <span class="dv">4</span>)</span>
+<span id="cb171-4"><a href="types-constuits.html#cb171-4" aria-hidden="true" tabindex="-1"></a>B <span class="op">=</span> (<span class="dv">2</span>, <span class="dv">0</span>)</span>
+<span id="cb171-5"><a href="types-constuits.html#cb171-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(distance(A, B)) <span class="co">#doit afficher 5.0</span></span></code></pre></div>
+<ol start="5" style="list-style-type: decimal">
+<li>Vérifier avec un test unitaire que la fonction <code>distance</code> a le fonctionnement attendu.</li>
+</ol>
+</div>
+<div id="activité-2-liste" class="section level2" number="5.2">
+<h2><span class="header-section-number">5.2</span> Activité 2: Liste</h2>
+<ol style="list-style-type: decimal">
+<li>Dérouler à la main le programme suivant:</li>
+</ol>
+<div class="sourceCode" id="cb172"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb172-1"><a href="types-constuits.html#cb172-1" aria-hidden="true" tabindex="-1"></a>pairs <span class="op">=</span> [<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">10</span>]</span>
+<span id="cb172-2"><a href="types-constuits.html#cb172-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(pairs[<span class="dv">1</span>])</span>
+<span id="cb172-3"><a href="types-constuits.html#cb172-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(pairs[<span class="dv">0</span>])</span>
+<span id="cb172-4"><a href="types-constuits.html#cb172-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(pairs[<span class="op">-</span><span class="dv">1</span>])</span>
+<span id="cb172-5"><a href="types-constuits.html#cb172-5" aria-hidden="true" tabindex="-1"></a>pairs[<span class="dv">3</span>] <span class="op">=</span> <span class="dv">8</span></span>
+<span id="cb172-6"><a href="types-constuits.html#cb172-6" aria-hidden="true" tabindex="-1"></a>taille <span class="op">=</span> <span class="bu">len</span>(pairs)</span>
+<span id="cb172-7"><a href="types-constuits.html#cb172-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(taille):</span>
+<span id="cb172-8"><a href="types-constuits.html#cb172-8" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="ss">f&quot;L&#39;élément d&#39;indice </span><span class="sc">{i}</span><span class="ss"> de la liste a pour valeur </span><span class="sc">{</span>pairs[i]<span class="sc">}</span><span class="ss">&quot;</span>)</span>
+<span id="cb172-9"><a href="types-constuits.html#cb172-9" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> n <span class="kw">in</span> pairs:</span>
+<span id="cb172-10"><a href="types-constuits.html#cb172-10" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="ss">f&quot; ... </span><span class="sc">{n}</span><span class="ss">&quot;</span>, end <span class="op">=</span><span class="st">&quot;&quot;</span>)</span></code></pre></div>
+<ol start="2" style="list-style-type: decimal">
+<li>Il existe de manière de parcourir les éléments d’une liste (et aussi d’un tuple). Le programme ci-dessous utilisent le parcours en indice et le parcours par élément. Chaque boucle doit afficher successivement tous les éléments contenus dans <code>liste</code>. Complète le programme suivant:</li>
+</ol>
+<div class="sourceCode" id="cb173"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb173-1"><a href="types-constuits.html#cb173-1" aria-hidden="true" tabindex="-1"></a>liste <span class="op">=</span> [ <span class="va">True</span>, <span class="dv">42</span>, <span class="st">&quot;Dr.Dre&quot;</span>, <span class="fl">3.14</span>]</span>
+<span id="cb173-2"><a href="types-constuits.html#cb173-2" aria-hidden="true" tabindex="-1"></a>taille <span class="op">=</span> <span class="bu">len</span>(liste)</span>
+<span id="cb173-3"><a href="types-constuits.html#cb173-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Parcours en indice</span></span>
+<span id="cb173-4"><a href="types-constuits.html#cb173-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> indice <span class="kw">in</span> ... :</span>
+<span id="cb173-5"><a href="types-constuits.html#cb173-5" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(...)</span>
+<span id="cb173-6"><a href="types-constuits.html#cb173-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Parcours par élément</span></span>
+<span id="cb173-7"><a href="types-constuits.html#cb173-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> ... <span class="kw">in</span> ... :</span>
+<span id="cb173-8"><a href="types-constuits.html#cb173-8" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(e)</span></code></pre></div>
+<ol start="3" style="list-style-type: decimal">
+<li>Générer une liste par compréhension. Ecrire une déclaration de liste en compréhension afin que les tests unitaires passent avec succès.</li>
+</ol>
+<div class="sourceCode" id="cb174"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb174-1"><a href="types-constuits.html#cb174-1" aria-hidden="true" tabindex="-1"></a>l_1 <span class="op">=</span> [<span class="dv">0</span>, <span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">6</span>, <span class="dv">8</span>, <span class="dv">10</span>]</span>
+<span id="cb174-2"><a href="types-constuits.html#cb174-2" aria-hidden="true" tabindex="-1"></a>l_2 <span class="op">=</span> [ <span class="dv">2</span><span class="op">*</span>n <span class="cf">for</span> n <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">6</span>)]</span>
+<span id="cb174-3"><a href="types-constuits.html#cb174-3" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> l_1 <span class="op">==</span> l_2</span>
+<span id="cb174-4"><a href="types-constuits.html#cb174-4" aria-hidden="true" tabindex="-1"></a>l_3 <span class="op">=</span> [<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>, <span class="dv">10</span>, <span class="dv">11</span>, <span class="dv">12</span>, <span class="dv">13</span>, <span class="dv">14</span>, <span class="dv">15</span>, <span class="dv">16</span>, <span class="dv">17</span>, <span class="dv">18</span>, <span class="dv">19</span>, <span class="dv">20</span>]</span>
+<span id="cb174-5"><a href="types-constuits.html#cb174-5" aria-hidden="true" tabindex="-1"></a>l_4 <span class="op">=</span> [...]</span>
+<span id="cb174-6"><a href="types-constuits.html#cb174-6" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> l_3 <span class="op">==</span> l_4</span>
+<span id="cb174-7"><a href="types-constuits.html#cb174-7" aria-hidden="true" tabindex="-1"></a>l_5 <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">9</span>, <span class="dv">11</span>]</span>
+<span id="cb174-8"><a href="types-constuits.html#cb174-8" aria-hidden="true" tabindex="-1"></a>l_6 <span class="op">=</span> [...]</span>
+<span id="cb174-9"><a href="types-constuits.html#cb174-9" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> l_5 <span class="op">==</span> l_6</span>
+<span id="cb174-10"><a href="types-constuits.html#cb174-10" aria-hidden="true" tabindex="-1"></a><span class="co"># liste des entiers privée des multiples de 4</span></span>
+<span id="cb174-11"><a href="types-constuits.html#cb174-11" aria-hidden="true" tabindex="-1"></a>l_7 <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">9</span>, <span class="dv">10</span>, <span class="dv">11</span>, <span class="dv">13</span>, <span class="dv">14</span>, <span class="dv">15</span>, <span class="dv">17</span>, <span class="dv">18</span>, <span class="dv">19</span>]</span>
+<span id="cb174-12"><a href="types-constuits.html#cb174-12" aria-hidden="true" tabindex="-1"></a>l_8 <span class="op">=</span> [ n <span class="cf">for</span> n <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">21</span>) <span class="cf">if</span> ... ]</span>
+<span id="cb174-13"><a href="types-constuits.html#cb174-13" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> l_7 <span class="op">==</span> l_8</span></code></pre></div>
+<ol start="4" style="list-style-type: decimal">
+<li>Ecrire une fonction <code>maxi</code> qui reçoit comme argument une liste contenant des nombres et qui renvoie l’élément maximal. <code>maxi([2, 1, 4.2, 13, -20])</code> retourne la valeur <code>13</code> qui porte bonheur !</li>
+<li>Ecrire un programme qui demande à l’utilisateur combien de notes il a obtenu dans le semestre. Ensuite le programme demande chacune des notes obtenues et le coefficient correspondant. Exemple de sortie:</li>
+</ol>
+<pre><code>Entrer le nombre de notes: 2
+Entrer la note numero 0: 12
+Entrer le coefficient de la note: 3
+Entrer la note numero 1: 11
+Entrer le coefficient de la note: 1
+note numero 0: 12.0 coefficients 3.0
+note numero 1: 11.0 coefficients 1.0
+La moyenne coefficientée vaut: 11.75</code></pre>
+<div class="sourceCode" id="cb176"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb176-1"><a href="types-constuits.html#cb176-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> recap(notes, coeffs):</span>
+<span id="cb176-2"><a href="types-constuits.html#cb176-2" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Affiche le numero des notes, la valeur et le coeff</span></span>
+<span id="cb176-3"><a href="types-constuits.html#cb176-3" aria-hidden="true" tabindex="-1"></a>  ...</span>
+<span id="cb176-4"><a href="types-constuits.html#cb176-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> moyenne_coefficientee(notes, coeffs):</span>
+<span id="cb176-5"><a href="types-constuits.html#cb176-5" aria-hidden="true" tabindex="-1"></a>  <span class="co"># A partir de la liste des notes et des coeffs calcul la moyenne coefficientée</span></span>
+<span id="cb176-6"><a href="types-constuits.html#cb176-6" aria-hidden="true" tabindex="-1"></a>  ...</span>
+<span id="cb176-7"><a href="types-constuits.html#cb176-7" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> ...</span>
+<span id="cb176-8"><a href="types-constuits.html#cb176-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Saisie des notes</span></span>
+<span id="cb176-9"><a href="types-constuits.html#cb176-9" aria-hidden="true" tabindex="-1"></a>nb_notes <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>(<span class="st">&#39;Entrer le nombre de notes: &#39;</span>))</span>
+<span id="cb176-10"><a href="types-constuits.html#cb176-10" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(nb_notes):</span>
+<span id="cb176-11"><a href="types-constuits.html#cb176-11" aria-hidden="true" tabindex="-1"></a>  n <span class="op">=</span> <span class="bu">float</span>(<span class="bu">input</span>(<span class="ss">f&quot;Entrer la note numero </span><span class="sc">{i}</span><span class="ss">: &quot;</span>))</span>
+<span id="cb176-12"><a href="types-constuits.html#cb176-12" aria-hidden="true" tabindex="-1"></a>  notes.append(n)</span>
+<span id="cb176-13"><a href="types-constuits.html#cb176-13" aria-hidden="true" tabindex="-1"></a>  c <span class="op">=</span> <span class="bu">float</span>(<span class="bu">input</span>(<span class="st">&#39;Entrer le coefficient de la note: &#39;</span>))</span>
+<span id="cb176-14"><a href="types-constuits.html#cb176-14" aria-hidden="true" tabindex="-1"></a>  coeffs.append(c)</span>
+<span id="cb176-15"><a href="types-constuits.html#cb176-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Affiche la récap des notes et coeff en appelant la fonction recap</span></span>
+<span id="cb176-16"><a href="types-constuits.html#cb176-16" aria-hidden="true" tabindex="-1"></a>recap(notes, coeffs)</span>
+<span id="cb176-17"><a href="types-constuits.html#cb176-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Calcul la moyenne en appelant la fonction moyenne_coefficientee</span></span>
+<span id="cb176-18"><a href="types-constuits.html#cb176-18" aria-hidden="true" tabindex="-1"></a>moyenne <span class="op">=</span> moyenne_coefficientee(notes,coeffs)</span>
+<span id="cb176-19"><a href="types-constuits.html#cb176-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f&quot;La moyenne coefficientée vaut: </span><span class="sc">{</span>moyenne <span class="sc">:&lt;5.2f}</span><span class="ss">&quot;</span>)</span></code></pre></div>
+</div>
+<div id="activité-3-méthodes-de-liste-et-tableaux-2d" class="section level2" number="5.3">
+<h2><span class="header-section-number">5.3</span> Activité 3: Méthodes de liste et tableaux 2D</h2>
+<ol style="list-style-type: decimal">
+<li>Le programme suivant illustrent les méthodes de listes les plus courantes.
+Etudier le programme suivant. Justifier ce que le programme va afficher.
+méthodes de listes</li>
+</ol>
+<div class="sourceCode" id="cb177"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb177-1"><a href="types-constuits.html#cb177-1" aria-hidden="true" tabindex="-1"></a>l <span class="op">=</span> [<span class="dv">3</span>, <span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">1</span>, <span class="dv">5</span>]</span>
+<span id="cb177-2"><a href="types-constuits.html#cb177-2" aria-hidden="true" tabindex="-1"></a>l.append(<span class="dv">2</span>)</span>
+<span id="cb177-3"><a href="types-constuits.html#cb177-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(l)</span>
+<span id="cb177-4"><a href="types-constuits.html#cb177-4" aria-hidden="true" tabindex="-1"></a>l.remove(<span class="dv">1</span>)</span>
+<span id="cb177-5"><a href="types-constuits.html#cb177-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(l)</span>
+<span id="cb177-6"><a href="types-constuits.html#cb177-6" aria-hidden="true" tabindex="-1"></a><span class="kw">del</span> l[<span class="dv">2</span>]</span>
+<span id="cb177-7"><a href="types-constuits.html#cb177-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(l)</span>
+<span id="cb177-8"><a href="types-constuits.html#cb177-8" aria-hidden="true" tabindex="-1"></a>dernier <span class="op">=</span> l.pop()</span>
+<span id="cb177-9"><a href="types-constuits.html#cb177-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(dernier)</span>
+<span id="cb177-10"><a href="types-constuits.html#cb177-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(l)</span>
+<span id="cb177-11"><a href="types-constuits.html#cb177-11" aria-hidden="true" tabindex="-1"></a>l.insert(<span class="dv">1</span>, <span class="dv">10</span>)</span>
+<span id="cb177-12"><a href="types-constuits.html#cb177-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(l)</span></code></pre></div>
+<ol start="2" style="list-style-type: decimal">
+<li>Le programme suivant crée une liste qui sauvegarde les valeurs obtenues par des jets de dés par l’utilisateur. Compléter le programme ci-dessous afin d’obtenir la sortie suivante:</li>
+</ol>
+<pre><code>Nombre de jets: 3
+entrer la valeur: 5
+entrer la valeur: 1
+entrer la valeur: 3
+Liste de vos jets de dés:
+[5, 1, 3]</code></pre>
+<div class="sourceCode" id="cb179"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb179-1"><a href="types-constuits.html#cb179-1" aria-hidden="true" tabindex="-1"></a>jets<span class="op">=</span>[]</span>
+<span id="cb179-2"><a href="types-constuits.html#cb179-2" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>(<span class="st">&#39;Nombre de jets: &#39;</span>))</span>
+<span id="cb179-3"><a href="types-constuits.html#cb179-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(...):</span>
+<span id="cb179-4"><a href="types-constuits.html#cb179-4" aria-hidden="true" tabindex="-1"></a>    de <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>(<span class="st">&#39;entrer la valeur: &#39;</span>))</span>
+<span id="cb179-5"><a href="types-constuits.html#cb179-5" aria-hidden="true" tabindex="-1"></a>    ...</span>
+<span id="cb179-6"><a href="types-constuits.html#cb179-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb179-7"><a href="types-constuits.html#cb179-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;Liste de vos jets de dés:&#39;</span>)</span>
+<span id="cb179-8"><a href="types-constuits.html#cb179-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(...)</span></code></pre></div>
+<ol start="3" style="list-style-type: decimal">
+<li>Ecrire une fonction <code>insertion</code> qui reçoit une liste <code>l</code> d’entiers triés par ordre croissant et une valeur <code>v</code>. La fonction va insérer au bon endroit dans <code>l</code> afin de maintenir la liste triée. La fonction retourne cette liste actualisée. Par exemple:</li>
+</ol>
+<pre><code>liste = [1, 3, 4, 9]
+liste = insertion(liste, 5)
+# liste contient alors [1, 3, 4, 5, 9]</code></pre>
+<ol start="4" style="list-style-type: decimal">
+<li>Compléter le programme afin que <code>tableau_2d</code> contienne les éléments suivants:</li>
+</ol>
+<pre><code>[[0  , 0  , &#39;T&#39;],
+ [&#39;X&#39;, &#39;X&#39;, &#39;T&#39;],
+ [0  , 0  , &#39;T&#39;]]</code></pre>
+<div class="sourceCode" id="cb182"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb182-1"><a href="types-constuits.html#cb182-1" aria-hidden="true" tabindex="-1"></a>tableau_2d <span class="op">=</span> [[<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span> ],</span>
+<span id="cb182-2"><a href="types-constuits.html#cb182-2" aria-hidden="true" tabindex="-1"></a>              [<span class="dv">1</span>, <span class="dv">0</span> ,<span class="dv">0</span> ],</span>
+<span id="cb182-3"><a href="types-constuits.html#cb182-3" aria-hidden="true" tabindex="-1"></a>              [<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span> ]]</span>
+<span id="cb182-4"><a href="types-constuits.html#cb182-4" aria-hidden="true" tabindex="-1"></a>tableau_2d[<span class="dv">1</span>][<span class="dv">0</span>] <span class="op">=</span> ...</span>
+<span id="cb182-5"><a href="types-constuits.html#cb182-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb182-6"><a href="types-constuits.html#cb182-6" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> colonne <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">3</span>):</span>
+<span id="cb182-7"><a href="types-constuits.html#cb182-7" aria-hidden="true" tabindex="-1"></a>    tableau_2d[...][...] <span class="op">=</span> <span class="st">&quot;X&quot;</span></span>
+<span id="cb182-8"><a href="types-constuits.html#cb182-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb182-9"><a href="types-constuits.html#cb182-9" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> ligne <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">3</span>):</span>
+<span id="cb182-10"><a href="types-constuits.html#cb182-10" aria-hidden="true" tabindex="-1"></a>    tableau_2d[...][...] <span class="op">=</span> <span class="st">&quot;T&quot;</span></span>
+<span id="cb182-11"><a href="types-constuits.html#cb182-11" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb182-12"><a href="types-constuits.html#cb182-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(tableau_2d)</span></code></pre></div>
+<ol start="5" style="list-style-type: decimal">
+<li>Ecrire une fonction qui permet d’afficher la liste précédente sous la forme d’une grille comme l’exemple ci-dessous.</li>
+</ol>
+<pre><code>| 0 | 0 | T |
+| X | X | T |
+| 0 | 0 | T |</code></pre>
+</div>
+<div id="activité-4-pratique-des-listes" class="section level2" number="5.4">
+<h2><span class="header-section-number">5.4</span> Activité 4: Pratique des listes</h2>
+<ol style="list-style-type: decimal">
+<li>La fonction <code>inverse_liste</code> reçoit comme argument une liste et retourne un tableau obtenue en inversant les éléments de la liste passée.</li>
+<li>Ecrire une fonction <code>appartient</code> qui reçoit une valeur <code>v</code> et une liste <code>l</code>. Cette fonction renvoie la valeur de l’indice correspondant à la première occurence de <code>v</code> dans <code>l</code>. Sinon la fonction retourne -1 si <code>v</code> n’appartient à <code>l</code>.</li>
+<li>Ecrire une fonction <code>genere</code> qui reçoit comme argument un entier <code>n</code> et retourne une liste de n valeurs aléatoire comprise entre 1 et 6. La liste obtenue est un simulation de <code>n</code> jets de dé. Dans la suite on appelle <code>jet</code> cette liste.</li>
+<li>A partir de la liste <code>jet</code> précédente, écrire une fonction <code>occurence</code> qui compte l’occurence de chacun des résultats. La fonction <code>occurence</code>.</li>
+<li>A partir des deux fonctions précédentes, écrire un programme qui vérifie pour un grand nombre de tirage que la probabilité de 1, 2, 3, 4, 5 ou 6 vaut environ: 0,167. Afficher les probabilités calculées par le programme pour un tirage de 1000 dés. Exemple de résultats:</li>
+</ol>
+<pre><code>La probabilté de faire 1 est de 0.161
+La probabilté de faire 2 est de 0.164
+La probabilté de faire 3 est de 0.158
+La probabilté de faire 4 est de 0.167
+La probabilté de faire 5 est de 0.177
+La probabilté de faire 6 est de 0.173</code></pre>
+<p>Aide: Pour calculer la probabilité de faire 3, on divise le nombre de fois qu’un 3 est sorti lors du tirage des 1000 dés. Puis on divise par mille qui est le nombre total de dés tirés. Ici le 3 est sorti 158 fois lors des mille tirages sa probabilité est donc 158/1000=0,158.</p>
+</div>
+<div id="activité-5-dictionnaires" class="section level2" number="5.5">
+<h2><span class="header-section-number">5.5</span> Activité 5: Dictionnaires</h2>
+<ol style="list-style-type: decimal">
+<li>Commente ligne à ligne le programme suivant en nommant chacune des manipulations effectuées sur le dictionnaire <code>capitales</code>.</li>
+</ol>
+<div class="sourceCode" id="cb185"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb185-1"><a href="types-constuits.html#cb185-1" aria-hidden="true" tabindex="-1"></a>capitales <span class="op">=</span> {<span class="st">&quot;France&quot;</span>: <span class="st">&quot;Lutèce&quot;</span> , <span class="st">&quot;Italie&quot;</span> : <span class="st">&quot;Rome&quot;</span>, <span class="st">&quot;Suisse&quot;</span> : <span class="st">&quot;Berne&quot;</span>}</span>
+<span id="cb185-2"><a href="types-constuits.html#cb185-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(capitales[<span class="st">&quot;France&quot;</span>])</span>
+<span id="cb185-3"><a href="types-constuits.html#cb185-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(capitales.get(<span class="st">&quot;France&quot;</span>))</span>
+<span id="cb185-4"><a href="types-constuits.html#cb185-4" aria-hidden="true" tabindex="-1"></a>capitales[<span class="st">&quot;France&quot;</span>] <span class="op">=</span> <span class="st">&quot;Paris&quot;</span></span>
+<span id="cb185-5"><a href="types-constuits.html#cb185-5" aria-hidden="true" tabindex="-1"></a>capitales[<span class="st">&quot;Norvège&quot;</span>] <span class="op">=</span> <span class="st">&quot;Oslo&quot;</span></span>
+<span id="cb185-6"><a href="types-constuits.html#cb185-6" aria-hidden="true" tabindex="-1"></a>liste_des_cles <span class="op">=</span> capitales.keys()</span>
+<span id="cb185-7"><a href="types-constuits.html#cb185-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(liste_des_cles)</span>
+<span id="cb185-8"><a href="types-constuits.html#cb185-8" aria-hidden="true" tabindex="-1"></a>liste_des_valeurs <span class="op">=</span> capitales.values()</span>
+<span id="cb185-9"><a href="types-constuits.html#cb185-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(liste_des_valeurs)</span>
+<span id="cb185-10"><a href="types-constuits.html#cb185-10" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> valeur <span class="kw">in</span> capitales.values():</span>
+<span id="cb185-11"><a href="types-constuits.html#cb185-11" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;Capitale : &quot;</span>, valeur)</span>
+<span id="cb185-12"><a href="types-constuits.html#cb185-12" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> cle <span class="kw">in</span> capitales.keys():</span>
+<span id="cb185-13"><a href="types-constuits.html#cb185-13" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;Pays : &quot;</span>, cle)</span>
+<span id="cb185-14"><a href="types-constuits.html#cb185-14" aria-hidden="true" tabindex="-1"></a> <span class="cf">for</span> cle, valeur <span class="kw">in</span> capitales.items():</span>
+<span id="cb185-15"><a href="types-constuits.html#cb185-15" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f&quot;Pays: </span><span class="sc">{</span>cle<span class="sc">}</span><span class="ss"> - Capitale: </span><span class="sc">{</span>valeur<span class="sc">}</span><span class="ss">&quot;</span>)</span></code></pre></div>
+<ol start="2" style="list-style-type: decimal">
+<li>Le programme suivant permet d’enregistrer des contacts (nom et numero de tel) dans un répertoire. Chaque fiche contact est un dictionnaire à deux clés: <code>name</code> et <code>phone</code>. Le répertoire est une liste contenant toutes les fiches contacts. Techniquement le répertoire est une liste dont chaque élément est un dictionnaire.</li>
+</ol>
+<p>Compléter le programme suivant afin de créer un répertoire. Exemple de sortie:</p>
+<pre><code>Entrer le nombre de contacts à enregistrer: 3
+nom du contact Cook
+numero de tel du contact 123456
+nom du contact Gates
+numero de tel du contact 15991123
+nom du contact Bezos
+numero de tel du contact 911
+[{&#39;name&#39;: &#39;Cook&#39;, &#39;phone&#39;: &#39;123456&#39;}, {&#39;name&#39;: &#39;Gates&#39;, &#39;phone&#39;: &#39;15991123&#39;}, {&#39;name&#39;: &#39;Bezos&#39;, &#39;phone&#39;: &#39;911&#39;}]</code></pre>
+<p>Programme à compléter:</p>
+<div class="sourceCode" id="cb187"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb187-1"><a href="types-constuits.html#cb187-1" aria-hidden="true" tabindex="-1"></a>repertoire <span class="op">=</span> []</span>
+<span id="cb187-2"><a href="types-constuits.html#cb187-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> ajouter_contact():</span>
+<span id="cb187-3"><a href="types-constuits.html#cb187-3" aria-hidden="true" tabindex="-1"></a>    contact <span class="op">=</span> {}</span>
+<span id="cb187-4"><a href="types-constuits.html#cb187-4" aria-hidden="true" tabindex="-1"></a>    nom <span class="op">=</span> <span class="bu">input</span>(<span class="st">&#39;nom du contact &#39;</span>)</span>
+<span id="cb187-5"><a href="types-constuits.html#cb187-5" aria-hidden="true" tabindex="-1"></a>    tel <span class="op">=</span> <span class="bu">input</span>(<span class="st">&#39;numero de tel du contact &#39;</span>)</span>
+<span id="cb187-6"><a href="types-constuits.html#cb187-6" aria-hidden="true" tabindex="-1"></a>    contact[<span class="st">&#39;name&#39;</span>] <span class="op">=</span> ...</span>
+<span id="cb187-7"><a href="types-constuits.html#cb187-7" aria-hidden="true" tabindex="-1"></a>    contact[<span class="st">&#39;...&#39;</span>] <span class="op">=</span> tel</span>
+<span id="cb187-8"><a href="types-constuits.html#cb187-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> contact</span>
+<span id="cb187-9"><a href="types-constuits.html#cb187-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Construction du carnet d&#39;adresse</span></span>
+<span id="cb187-10"><a href="types-constuits.html#cb187-10" aria-hidden="true" tabindex="-1"></a>nombre_contacts <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>(<span class="st">&#39;Entrer le nombre de contacts à enregistrer: &#39;</span>))</span>
+<span id="cb187-11"><a href="types-constuits.html#cb187-11" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(...):</span>
+<span id="cb187-12"><a href="types-constuits.html#cb187-12" aria-hidden="true" tabindex="-1"></a>    repertoire.append(...)</span>
+<span id="cb187-13"><a href="types-constuits.html#cb187-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Affichage des enregistrements</span></span>
+<span id="cb187-14"><a href="types-constuits.html#cb187-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(repertoire)</span></code></pre></div>
+<ol start="3" style="list-style-type: decimal">
+<li>Cette question utilise et prolonge la question précédente. Créer une fonction <code>recherche_nom</code> qui reçoit un nom et qui affiche le numero de téléphone du nom correspondant si celui-ci figure bien dans le repertoire.</li>
+</ol>
+<p>Exemple de sortie:</p>
+<pre><code>Entrer un nom à rechercher Cook
+Cook a pour telephone 123456</code></pre>
+<ol start="4" style="list-style-type: decimal">
+<li>Expliquer le fonctionnement du programme suivant. On expliquera en détail la syntaxe: <code>liste[0][0]</code> et <code>liste[0][1]</code></li>
+</ol>
+<div class="sourceCode" id="cb189"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb189-1"><a href="types-constuits.html#cb189-1" aria-hidden="true" tabindex="-1"></a>reponse_1 <span class="op">=</span> { <span class="st">&quot;blanc&quot;</span>: <span class="va">True</span> , <span class="st">&quot;jaune&quot;</span> : <span class="va">False</span> , <span class="st">&quot;vert&quot;</span> : <span class="va">False</span> , <span class="st">&quot;D la réponse D&quot;</span> : <span class="va">False</span>}</span>
+<span id="cb189-2"><a href="types-constuits.html#cb189-2" aria-hidden="true" tabindex="-1"></a>question_1 <span class="op">=</span> <span class="st">&quot;Quelle est la couleur du cheval d&#39;Henri IV ?&quot;</span></span>
+<span id="cb189-3"><a href="types-constuits.html#cb189-3" aria-hidden="true" tabindex="-1"></a>liste <span class="op">=</span> [(question_1, reponse_1)]</span>
+<span id="cb189-4"><a href="types-constuits.html#cb189-4" aria-hidden="true" tabindex="-1"></a><span class="co">#Affiche la premiere question</span></span>
+<span id="cb189-5"><a href="types-constuits.html#cb189-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(liste[<span class="dv">0</span>][<span class="dv">0</span>])</span>
+<span id="cb189-6"><a href="types-constuits.html#cb189-6" aria-hidden="true" tabindex="-1"></a><span class="co">#Affiche les propositions</span></span>
+<span id="cb189-7"><a href="types-constuits.html#cb189-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> cle <span class="kw">in</span> liste[<span class="dv">0</span>][<span class="dv">1</span>]:</span>
+<span id="cb189-8"><a href="types-constuits.html#cb189-8" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(cle)</span>
+<span id="cb189-9"><a href="types-constuits.html#cb189-9" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb189-10"><a href="types-constuits.html#cb189-10" aria-hidden="true" tabindex="-1"></a>response_utilisateur <span class="op">=</span> <span class="bu">input</span>(<span class="st">&#39;Entre votre réponse: &#39;</span>)</span>
+<span id="cb189-11"><a href="types-constuits.html#cb189-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Analyse de la réponse</span></span>
+<span id="cb189-12"><a href="types-constuits.html#cb189-12" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> liste[<span class="dv">0</span>][<span class="dv">1</span>][response_utilisateur] <span class="op">==</span> <span class="va">True</span>:</span>
+<span id="cb189-13"><a href="types-constuits.html#cb189-13" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&#39;Bonne réponse&#39;</span>)</span>
+<span id="cb189-14"><a href="types-constuits.html#cb189-14" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span> :</span>
+<span id="cb189-15"><a href="types-constuits.html#cb189-15" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&#39;FAUX&#39;</span>)</span></code></pre></div>
+<ol start="5" style="list-style-type: decimal">
+<li>Modifier le programme précédent afin de signaler lorsque l’utilisateur commet une faute de frappe en entrant au clavier autre chose qu’une des propositions.</li>
+<li>Améliorer le programme afin qu’il comporte au moins 3 questions. Les questions sont posées dans un ordre aléatoire. Lorsque toutes les questions ont été posées le nombre de bonnes réponses est affichées.</li>
+</ol>
+</div>
+<div id="corrections-des-activités-1" class="section level2" number="5.6">
+<h2><span class="header-section-number">5.6</span> Corrections des activités</h2>
+<div id="activité-1-2" class="section level3" number="5.6.1">
+<h3><span class="header-section-number">5.6.1</span> Activité 1</h3>
+<ol start="4" style="list-style-type: decimal">
+<li></li>
+</ol>
+<div class="sourceCode" id="cb190"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb190-1"><a href="types-constuits.html#cb190-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> math <span class="im">import</span> <span class="op">*</span></span>
+<span id="cb190-2"><a href="types-constuits.html#cb190-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> distance(v1, v2):</span>
+<span id="cb190-3"><a href="types-constuits.html#cb190-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> sqrt((v1[<span class="dv">0</span>] <span class="op">-</span> v2[<span class="dv">0</span>]) <span class="op">**</span><span class="dv">2</span> <span class="op">+</span> (v1[<span class="dv">1</span>] <span class="op">-</span> v2[<span class="dv">1</span>]) <span class="op">**</span><span class="dv">2</span>)</span>
+<span id="cb190-4"><a href="types-constuits.html#cb190-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb190-5"><a href="types-constuits.html#cb190-5" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> (<span class="dv">5</span>, <span class="dv">4</span>)</span>
+<span id="cb190-6"><a href="types-constuits.html#cb190-6" aria-hidden="true" tabindex="-1"></a>B <span class="op">=</span> (<span class="dv">2</span>, <span class="dv">0</span>)</span>
+<span id="cb190-7"><a href="types-constuits.html#cb190-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(distance(A, B))</span></code></pre></div>
+<pre><code>## 5.0</code></pre>
+</div>
+<div id="activité-2-1" class="section level3" number="5.6.2">
+<h3><span class="header-section-number">5.6.2</span> Activité 2</h3>
+<ol style="list-style-type: decimal">
+<li>Sortie</li>
+</ol>
+<pre><code>5.0
+4
+2
+10
+ ... 2 ... 4 ... 6 ... 8 ... 10L&#39;élément d&#39;indice 0 de la liste a pour valeur 2
+L&#39;élément d&#39;indice 1 de la liste a pour valeur 4
+L&#39;élément d&#39;indice 2 de la liste a pour valeur 6
+L&#39;élément d&#39;indice 3 de la liste a pour valeur 8
+L&#39;élément d&#39;indice 4 de la liste a pour valeur 10</code></pre>
+<ol start="5" style="list-style-type: decimal">
+<li></li>
+</ol>
+<div class="sourceCode" id="cb193"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb193-1"><a href="types-constuits.html#cb193-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> recap(notes, coeffs):</span>
+<span id="cb193-2"><a href="types-constuits.html#cb193-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(notes)):</span>
+<span id="cb193-3"><a href="types-constuits.html#cb193-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f&quot;note numero </span><span class="sc">{i}</span><span class="ss">: </span><span class="sc">{</span>notes[i]<span class="sc">}</span><span class="ss"> coefficients </span><span class="sc">{</span>coeffs[i]<span class="sc">}</span><span class="ss">&quot;</span>)</span>
+<span id="cb193-4"><a href="types-constuits.html#cb193-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> moyenne_coefficientee(notes, coeffs):</span>
+<span id="cb193-5"><a href="types-constuits.html#cb193-5" aria-hidden="true" tabindex="-1"></a>  somme_des_points <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb193-6"><a href="types-constuits.html#cb193-6" aria-hidden="true" tabindex="-1"></a>  somme_des_coeffs <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb193-7"><a href="types-constuits.html#cb193-7" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(notes)):</span>
+<span id="cb193-8"><a href="types-constuits.html#cb193-8" aria-hidden="true" tabindex="-1"></a>    somme_des_points <span class="op">+=</span> notes[i] <span class="op">*</span> coeffs[i]</span>
+<span id="cb193-9"><a href="types-constuits.html#cb193-9" aria-hidden="true" tabindex="-1"></a>    somme_des_coeffs <span class="op">+=</span> coeffs[i]</span>
+<span id="cb193-10"><a href="types-constuits.html#cb193-10" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> somme_des_points <span class="op">/</span> somme_des_coeffs</span>
+<span id="cb193-11"><a href="types-constuits.html#cb193-11" aria-hidden="true" tabindex="-1"></a>nb_notes <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>(<span class="st">&#39;Entrer le nombre de notes: &#39;</span>))</span>
+<span id="cb193-12"><a href="types-constuits.html#cb193-12" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(nb_notes):</span>
+<span id="cb193-13"><a href="types-constuits.html#cb193-13" aria-hidden="true" tabindex="-1"></a>  n <span class="op">=</span> <span class="bu">float</span>(<span class="bu">input</span>(<span class="ss">f&quot;Entrer la note numero </span><span class="sc">{i}</span><span class="ss">: &quot;</span>))</span>
+<span id="cb193-14"><a href="types-constuits.html#cb193-14" aria-hidden="true" tabindex="-1"></a>  notes.append(n)</span>
+<span id="cb193-15"><a href="types-constuits.html#cb193-15" aria-hidden="true" tabindex="-1"></a>  c <span class="op">=</span> <span class="bu">float</span>(<span class="bu">input</span>(<span class="st">&#39;Entrer le coefficient de la note: &#39;</span>))</span>
+<span id="cb193-16"><a href="types-constuits.html#cb193-16" aria-hidden="true" tabindex="-1"></a>  coeffs.append(c)</span>
+<span id="cb193-17"><a href="types-constuits.html#cb193-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb193-18"><a href="types-constuits.html#cb193-18" aria-hidden="true" tabindex="-1"></a>recap(notes, coeffs)</span>
+<span id="cb193-19"><a href="types-constuits.html#cb193-19" aria-hidden="true" tabindex="-1"></a>moyenne <span class="op">=</span> moyenne_coefficientee(notes,coeffs)</span>
+<span id="cb193-20"><a href="types-constuits.html#cb193-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f&quot;La moyenne coefficientée vaut: </span><span class="sc">{</span>moyenne <span class="sc">:&lt;5.2f}</span><span class="ss">&quot;</span>)</span></code></pre></div>
+</div>
+<div id="activité-3-2" class="section level3" number="5.6.3">
+<h3><span class="header-section-number">5.6.3</span> Activité 3:</h3>
+<div class="sourceCode" id="cb194"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb194-1"><a href="types-constuits.html#cb194-1" aria-hidden="true" tabindex="-1"></a>tableau_2d <span class="op">=</span> [[<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span> ],</span>
+<span id="cb194-2"><a href="types-constuits.html#cb194-2" aria-hidden="true" tabindex="-1"></a>              [<span class="dv">1</span>, <span class="dv">0</span> ,<span class="dv">0</span> ],</span>
+<span id="cb194-3"><a href="types-constuits.html#cb194-3" aria-hidden="true" tabindex="-1"></a>              [<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span> ]]</span>
+<span id="cb194-4"><a href="types-constuits.html#cb194-4" aria-hidden="true" tabindex="-1"></a>tableau_2d[<span class="dv">1</span>][<span class="dv">0</span>] <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb194-5"><a href="types-constuits.html#cb194-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> colonne <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">3</span>):</span>
+<span id="cb194-6"><a href="types-constuits.html#cb194-6" aria-hidden="true" tabindex="-1"></a>    tableau_2d[<span class="dv">1</span>][colonne] <span class="op">=</span> <span class="st">&quot;X&quot;</span></span>
+<span id="cb194-7"><a href="types-constuits.html#cb194-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> ligne <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">3</span>):</span>
+<span id="cb194-8"><a href="types-constuits.html#cb194-8" aria-hidden="true" tabindex="-1"></a>    tableau_2d[ligne][<span class="dv">2</span>] <span class="op">=</span> <span class="st">&quot;T&quot;</span></span>
+<span id="cb194-9"><a href="types-constuits.html#cb194-9" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb194-10"><a href="types-constuits.html#cb194-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(tableau_2d)</span></code></pre></div>
+<pre><code>## [[0, 0, &#39;T&#39;], [&#39;X&#39;, &#39;X&#39;, &#39;T&#39;], [0, 0, &#39;T&#39;]]</code></pre>
+<div class="sourceCode" id="cb196"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb196-1"><a href="types-constuits.html#cb196-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> ligne <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">3</span>):</span>
+<span id="cb196-2"><a href="types-constuits.html#cb196-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> colonne <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">3</span>):</span>
+<span id="cb196-3"><a href="types-constuits.html#cb196-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f&quot;|</span><span class="sc">{</span>tableau_2d[ligne][colonne] <span class="sc">: ^3}</span><span class="ss">&quot;</span>, end <span class="op">=</span> <span class="st">&quot;&quot;</span>)</span>
+<span id="cb196-4"><a href="types-constuits.html#cb196-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;|&quot;</span>)</span></code></pre></div>
+<pre><code>## | 0 | 0 | T |
+## | X | X | T |
+## | 0 | 0 | T |</code></pre>
+</div>
+<div id="activité-4-2" class="section level3" number="5.6.4">
+<h3><span class="header-section-number">5.6.4</span> Activité 4:</h3>
+<div class="sourceCode" id="cb198"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb198-1"><a href="types-constuits.html#cb198-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> random <span class="im">import</span> randint</span>
+<span id="cb198-2"><a href="types-constuits.html#cb198-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb198-3"><a href="types-constuits.html#cb198-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> jet(n):</span>
+<span id="cb198-4"><a href="types-constuits.html#cb198-4" aria-hidden="true" tabindex="-1"></a>    l <span class="op">=</span> []</span>
+<span id="cb198-5"><a href="types-constuits.html#cb198-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(n):</span>
+<span id="cb198-6"><a href="types-constuits.html#cb198-6" aria-hidden="true" tabindex="-1"></a>        l.append(randint(<span class="dv">1</span>,<span class="dv">6</span>))</span>
+<span id="cb198-7"><a href="types-constuits.html#cb198-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> l</span>
+<span id="cb198-8"><a href="types-constuits.html#cb198-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb198-9"><a href="types-constuits.html#cb198-9" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> occurrence(liste, valeur):</span>
+<span id="cb198-10"><a href="types-constuits.html#cb198-10" aria-hidden="true" tabindex="-1"></a>    compteur <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb198-11"><a href="types-constuits.html#cb198-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> e <span class="kw">in</span> liste:</span>
+<span id="cb198-12"><a href="types-constuits.html#cb198-12" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> e <span class="op">==</span> valeur:</span>
+<span id="cb198-13"><a href="types-constuits.html#cb198-13" aria-hidden="true" tabindex="-1"></a>            compteur <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb198-14"><a href="types-constuits.html#cb198-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> compteur</span>
+<span id="cb198-15"><a href="types-constuits.html#cb198-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb198-16"><a href="types-constuits.html#cb198-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;Tirage &#39;</span>)</span></code></pre></div>
+<pre><code>## Tirage</code></pre>
+<div class="sourceCode" id="cb200"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb200-1"><a href="types-constuits.html#cb200-1" aria-hidden="true" tabindex="-1"></a>resultat <span class="op">=</span> jet(<span class="dv">1000</span>)</span>
+<span id="cb200-2"><a href="types-constuits.html#cb200-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(resultat)</span></code></pre></div>
+<pre><code>## [5, 6, 5, 6, 1, 5, 2, 3, 2, 6, 3, 3, 2, 6, 2, 4, 2, 2, 4, 5, 3, 4, 4, 6, 1, 1, 4, 6, 2, 6, 4, 5, 1, 5, 6, 4, 2, 2, 2, 2, 6, 6, 5, 4, 5, 4, 4, 1, 3, 3, 1, 1, 1, 4, 5, 1, 3, 4, 4, 5, 3, 6, 4, 6, 5, 5, 2, 4, 5, 1, 4, 2, 5, 6, 1, 3, 3, 5, 5, 6, 3, 6, 2, 4, 6, 1, 3, 2, 1, 3, 6, 6, 6, 3, 1, 4, 2, 3, 6, 3, 4, 4, 5, 4, 5, 4, 5, 5, 1, 6, 5, 4, 5, 1, 2, 6, 4, 2, 4, 1, 1, 2, 3, 6, 1, 1, 2, 5, 3, 1, 1, 4, 3, 6, 6, 3, 6, 4, 5, 4, 4, 3, 5, 6, 5, 6, 3, 5, 2, 3, 1, 2, 6, 2, 4, 4, 6, 2, 4, 6, 1, 2, 2, 4, 2, 4, 2, 5, 5, 5, 2, 4, 2, 4, 2, 4, 3, 3, 4, 4, 6, 4, 5, 4, 2, 6, 6, 1, 4, 3, 5, 2, 1, 4, 1, 5, 2, 5, 4, 2, 4, 6, 2, 3, 6, 2, 6, 5, 3, 6, 6, 3, 3, 2, 6, 4, 4, 2, 2, 2, 4, 1, 3, 5, 5, 3, 1, 2, 1, 1, 5, 1, 5, 3, 1, 2, 2, 3, 3, 4, 3, 1, 6, 1, 6, 5, 3, 1, 3, 6, 2, 4, 1, 5, 2, 3, 2, 5, 5, 6, 6, 1, 1, 6, 3, 2, 5, 1, 3, 6, 4, 2, 1, 4, 3, 4, 5, 6, 5, 5, 4, 2, 3, 4, 2, 5, 3, 3, 6, 2, 3, 5, 6, 4, 2, 3, 2, 5, 5, 1, 2, 1, 1, 4, 3, 6, 2, 6, 2, 1, 6, 3, 2, 4, 5, 2, 5, 6, 1, 4, 5, 3, 2, 1, 1, 4, 5, 2, 6, 2, 3, 1, 5, 4, 4, 5, 3, 4, 6, 6, 1, 3, 6, 3, 2, 4, 1, 1, 1, 5, 6, 2, 3, 2, 1, 1, 3, 5, 4, 3, 5, 5, 4, 6, 6, 3, 4, 1, 3, 6, 6, 5, 6, 6, 5, 5, 4, 1, 6, 6, 6, 5, 2, 6, 6, 4, 6, 3, 5, 5, 5, 5, 5, 6, 1, 4, 5, 6, 4, 1, 4, 4, 4, 2, 3, 6, 2, 5, 1, 1, 5, 2, 5, 3, 2, 6, 3, 2, 3, 5, 3, 1, 5, 4, 1, 5, 3, 4, 4, 6, 6, 5, 4, 2, 6, 4, 5, 4, 1, 1, 2, 2, 5, 4, 4, 4, 3, 2, 3, 5, 6, 3, 2, 5, 1, 5, 5, 2, 4, 5, 4, 2, 1, 2, 5, 1, 5, 2, 2, 1, 3, 5, 6, 1, 2, 3, 6, 3, 6, 1, 1, 2, 3, 2, 5, 3, 2, 6, 3, 6, 1, 6, 5, 3, 1, 3, 5, 6, 5, 3, 3, 3, 6, 6, 1, 4, 4, 5, 3, 2, 1, 4, 5, 3, 6, 2, 6, 4, 6, 4, 2, 5, 6, 3, 6, 4, 2, 3, 2, 4, 6, 3, 2, 4, 1, 5, 6, 4, 6, 5, 6, 4, 3, 1, 3, 4, 3, 5, 4, 4, 3, 1, 1, 4, 2, 4, 6, 5, 2, 4, 4, 6, 5, 4, 5, 3, 5, 5, 1, 6, 5, 5, 5, 6, 3, 4, 3, 2, 6, 1, 3, 1, 4, 3, 6, 5, 3, 2, 6, 5, 2, 6, 1, 2, 1, 6, 2, 2, 1, 1, 4, 2, 2, 5, 3, 5, 6, 6, 4, 2, 2, 4, 4, 1, 4, 4, 5, 3, 2, 5, 4, 4, 3, 2, 1, 4, 4, 3, 2, 6, 4, 2, 5, 6, 4, 4, 6, 1, 2, 4, 3, 5, 4, 4, 2, 1, 6, 5, 5, 5, 6, 5, 6, 3, 6, 2, 3, 1, 1, 6, 6, 6, 5, 5, 4, 3, 4, 6, 1, 1, 1, 5, 1, 5, 6, 3, 5, 3, 2, 3, 2, 2, 1, 4, 3, 2, 2, 3, 1, 6, 6, 5, 6, 3, 6, 5, 3, 2, 2, 3, 4, 4, 1, 1, 1, 4, 3, 6, 2, 3, 5, 5, 5, 3, 6, 5, 1, 3, 5, 6, 1, 6, 6, 6, 2, 2, 5, 2, 5, 1, 4, 2, 6, 1, 6, 5, 2, 2, 3, 1, 4, 1, 4, 6, 2, 5, 6, 2, 2, 6, 1, 1, 1, 1, 4, 4, 4, 4, 2, 4, 6, 3, 4, 4, 5, 4, 5, 1, 6, 1, 5, 1, 6, 6, 2, 6, 4, 2, 6, 1, 1, 5, 2, 5, 1, 1, 6, 4, 5, 6, 1, 4, 6, 4, 5, 6, 4, 6, 5, 2, 6, 5, 6, 3, 2, 2, 4, 2, 6, 2, 2, 6, 3, 1, 4, 1, 3, 1, 4, 4, 2, 6, 1, 5, 3, 3, 6, 5, 2, 5, 3, 4, 6, 5, 1, 4, 1, 5, 2, 3, 3, 6, 2, 4, 4, 3, 2, 3, 4, 1, 2, 1, 4, 2, 5, 4, 5, 2, 4, 2, 4, 3, 1, 6, 4, 2, 5, 5, 4, 2, 6, 6, 1, 2, 3, 1, 6, 4, 2, 2, 6, 1, 3, 3, 6, 2, 1, 5, 6, 4, 1, 4, 2, 4, 6, 4, 4, 6, 6, 5, 3, 2, 1, 6, 6, 2, 5, 5, 2, 1, 5, 6, 3, 4, 4, 4, 4, 1, 4, 5, 6, 4, 2, 6, 3, 1, 5, 3, 6, 2, 1, 6, 1, 5, 6, 1, 1, 3, 5, 6, 1, 6, 5, 4, 5, 5, 5, 4, 1, 3, 4, 5, 1, 4, 6, 4, 3, 2, 2, 4, 6, 4, 2, 2, 5, 2, 2, 6, 2, 2, 2, 3, 6, 1, 5, 3, 3, 3, 2, 3, 2, 4, 5, 1, 1, 1, 5, 2, 6, 5, 5, 5, 5, 3, 4, 6, 6, 1, 5, 5]</code></pre>
+<div class="sourceCode" id="cb202"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb202-1"><a href="types-constuits.html#cb202-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> v <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>,<span class="dv">7</span>):</span>
+<span id="cb202-2"><a href="types-constuits.html#cb202-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f&quot;La probabilté de faire </span><span class="sc">{v}</span><span class="ss"> est de </span><span class="sc">{</span>occurrence(resultat, v)<span class="op">/</span><span class="dv">1000</span><span class="sc">}</span><span class="ss">&quot;</span>)</span></code></pre></div>
+<pre><code>## La probabilté de faire 1 est de 0.15
+## La probabilté de faire 2 est de 0.17
+## La probabilté de faire 3 est de 0.144
+## La probabilté de faire 4 est de 0.179
+## La probabilté de faire 5 est de 0.176
+## La probabilté de faire 6 est de 0.181</code></pre>
+</div>
+<div id="activité-5" class="section level3" number="5.6.5">
+<h3><span class="header-section-number">5.6.5</span> Activité 5:</h3>
+<ol style="list-style-type: decimal">
+<li></li>
+</ol>
+<div class="sourceCode" id="cb204"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb204-1"><a href="types-constuits.html#cb204-1" aria-hidden="true" tabindex="-1"></a>capitales <span class="op">=</span> {<span class="st">&quot;France&quot;</span>: <span class="st">&quot;Lutèce&quot;</span> , <span class="st">&quot;Italie&quot;</span> : <span class="st">&quot;Rome&quot;</span>, <span class="st">&quot;Suisse&quot;</span> : <span class="st">&quot;Berne&quot;</span>}</span>
+<span id="cb204-2"><a href="types-constuits.html#cb204-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Récupérer une valeur à partir de la clé</span></span>
+<span id="cb204-3"><a href="types-constuits.html#cb204-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(capitales[<span class="st">&quot;France&quot;</span>])</span></code></pre></div>
+<pre><code>## Lutèce</code></pre>
+<div class="sourceCode" id="cb206"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb206-1"><a href="types-constuits.html#cb206-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(capitales.get(<span class="st">&quot;France&quot;</span>))</span>
+<span id="cb206-2"><a href="types-constuits.html#cb206-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Changement de Valeur</span></span></code></pre></div>
+<pre><code>## Lutèce</code></pre>
+<div class="sourceCode" id="cb208"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb208-1"><a href="types-constuits.html#cb208-1" aria-hidden="true" tabindex="-1"></a>capitales[<span class="st">&quot;France&quot;</span>] <span class="op">=</span> <span class="st">&quot;Paris&quot;</span></span>
+<span id="cb208-2"><a href="types-constuits.html#cb208-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Ajouter un élément dans le dictionnaire</span></span>
+<span id="cb208-3"><a href="types-constuits.html#cb208-3" aria-hidden="true" tabindex="-1"></a>capitales[<span class="st">&quot;Norvège&quot;</span>] <span class="op">=</span> <span class="st">&quot;Oslo&quot;</span></span>
+<span id="cb208-4"><a href="types-constuits.html#cb208-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Récupérer la liste des clés</span></span>
+<span id="cb208-5"><a href="types-constuits.html#cb208-5" aria-hidden="true" tabindex="-1"></a>liste_des_cles <span class="op">=</span> capitales.keys()</span>
+<span id="cb208-6"><a href="types-constuits.html#cb208-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(liste_des_cles)</span>
+<span id="cb208-7"><a href="types-constuits.html#cb208-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Récupérer la liste des valeurs</span></span></code></pre></div>
+<pre><code>## dict_keys([&#39;France&#39;, &#39;Italie&#39;, &#39;Suisse&#39;, &#39;Norvège&#39;])</code></pre>
+<div class="sourceCode" id="cb210"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb210-1"><a href="types-constuits.html#cb210-1" aria-hidden="true" tabindex="-1"></a>liste_des_valeurs <span class="op">=</span> capitales.values()</span>
+<span id="cb210-2"><a href="types-constuits.html#cb210-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(liste_des_valeurs)</span>
+<span id="cb210-3"><a href="types-constuits.html#cb210-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Parcours des valeurs</span></span></code></pre></div>
+<pre><code>## dict_values([&#39;Paris&#39;, &#39;Rome&#39;, &#39;Berne&#39;, &#39;Oslo&#39;])</code></pre>
+<div class="sourceCode" id="cb212"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb212-1"><a href="types-constuits.html#cb212-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> valeur <span class="kw">in</span> capitales.values():</span>
+<span id="cb212-2"><a href="types-constuits.html#cb212-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;Capitale : &quot;</span>, valeur)</span>
+<span id="cb212-3"><a href="types-constuits.html#cb212-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Parcours des clés</span></span></code></pre></div>
+<pre><code>## Capitale :  Paris
+## Capitale :  Rome
+## Capitale :  Berne
+## Capitale :  Oslo</code></pre>
+<div class="sourceCode" id="cb214"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb214-1"><a href="types-constuits.html#cb214-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> cle <span class="kw">in</span> capitales.keys():</span>
+<span id="cb214-2"><a href="types-constuits.html#cb214-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;Pays : &quot;</span>, cle)</span>
+<span id="cb214-3"><a href="types-constuits.html#cb214-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Parcours clé + valeur</span></span></code></pre></div>
+<pre><code>## Pays :  France
+## Pays :  Italie
+## Pays :  Suisse
+## Pays :  Norvège</code></pre>
+<div class="sourceCode" id="cb216"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb216-1"><a href="types-constuits.html#cb216-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> cle, valeur <span class="kw">in</span> capitales.items():</span>
+<span id="cb216-2"><a href="types-constuits.html#cb216-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f&quot;Pays: </span><span class="sc">{</span>cle<span class="sc">}</span><span class="ss"> - Capitale: </span><span class="sc">{</span>valeur<span class="sc">}</span><span class="ss">&quot;</span>)</span></code></pre></div>
+<pre><code>## Pays: France - Capitale: Paris
+## Pays: Italie - Capitale: Rome
+## Pays: Suisse - Capitale: Berne
+## Pays: Norvège - Capitale: Oslo</code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li></li>
+</ol>
+<div class="sourceCode" id="cb218"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb218-1"><a href="types-constuits.html#cb218-1" aria-hidden="true" tabindex="-1"></a>reponse_1 <span class="op">=</span> { <span class="st">&quot;blanc&quot;</span>: <span class="va">True</span> , <span class="st">&quot;jaune&quot;</span> : <span class="va">False</span> , <span class="st">&quot;vert&quot;</span> : <span class="va">False</span> }</span>
+<span id="cb218-2"><a href="types-constuits.html#cb218-2" aria-hidden="true" tabindex="-1"></a>question_1 <span class="op">=</span> <span class="st">&quot;Quelle est la couleur du cheval d&#39;Henri IV ?&quot;</span></span>
+<span id="cb218-3"><a href="types-constuits.html#cb218-3" aria-hidden="true" tabindex="-1"></a>liste <span class="op">=</span> [(question_1, reponse_1)]</span>
+<span id="cb218-4"><a href="types-constuits.html#cb218-4" aria-hidden="true" tabindex="-1"></a><span class="co">#Affiche la premiere question</span></span>
+<span id="cb218-5"><a href="types-constuits.html#cb218-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(liste[<span class="dv">0</span>][<span class="dv">0</span>])</span>
+<span id="cb218-6"><a href="types-constuits.html#cb218-6" aria-hidden="true" tabindex="-1"></a><span class="co">#Affiche les propositions</span></span>
+<span id="cb218-7"><a href="types-constuits.html#cb218-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> cle <span class="kw">in</span> liste[<span class="dv">0</span>][<span class="dv">1</span>]:</span>
+<span id="cb218-8"><a href="types-constuits.html#cb218-8" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(cle)</span>
+<span id="cb218-9"><a href="types-constuits.html#cb218-9" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb218-10"><a href="types-constuits.html#cb218-10" aria-hidden="true" tabindex="-1"></a>response_utilisateur <span class="op">=</span> <span class="bu">input</span>(<span class="st">&#39;Entre votre réponse: &#39;</span>)</span>
+<span id="cb218-11"><a href="types-constuits.html#cb218-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Analyse de la réponse</span></span>
+<span id="cb218-12"><a href="types-constuits.html#cb218-12" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> liste[<span class="dv">0</span>][<span class="dv">1</span>][response_utilisateur] <span class="op">==</span> <span class="va">True</span>:</span>
+<span id="cb218-13"><a href="types-constuits.html#cb218-13" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&#39;Bonne réponse&#39;</span>)</span>
+<span id="cb218-14"><a href="types-constuits.html#cb218-14" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span> :</span>
+<span id="cb218-15"><a href="types-constuits.html#cb218-15" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&#39;FAUX&#39;</span>)</span></code></pre></div>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="structures-itératives.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["book.pdf", "book.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
